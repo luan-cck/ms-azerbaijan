@@ -1,0 +1,27 @@
+{
+  "name": "ms_pj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "css-declaration-sorter": "^7.2.0",
+    "gulp": "^5.0.0",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webserver": "^0.9.1",
+    "sass": "^1.79.4"
+  },
+  "dependencies": {
+    "ress": "^5.0.2"
+  }
+}
