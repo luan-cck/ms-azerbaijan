@@ -7,11 +7,29 @@ $deep_black: #000000;
 $light_gray: #7F7F7F;
 $pure_white: #FFFFFF;
 
+@font-face {
+  font-family: 'Zen Kaku Gothic New, Medium';
+  src: url('../fonts/ZenKakuGothicNew-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic New, Bold';
+  src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir, Book';
+  src: url(../fonts/Avenir\ Book.ttf) format('truetype');
+}
+
 
 @mixin header_button {
-  border: 1px solid $light_gray;
-  border-radius: 10px;
-  padding: 16px;
+  align-items: center;
+  border: 2px solid $pure_white;
+  border-radius: 50%;
+  height: 96px;
+  justify-content: center;
+  width: 96px;
 }
 
 @mixin consortium_content($border_color, $max_width: 916px) {

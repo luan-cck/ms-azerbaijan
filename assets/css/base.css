@@ -1,3 +1,18 @@
+@font-face {
+	font-family: "Zen Kaku Gothic New, Medium";
+	src: url("../fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Zen Kaku Gothic New, Bold";
+	src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Avenir, Book";
+	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
+}
+
 html {
 	font-size: 100%;
 	height: 100%;
@@ -40,9 +55,9 @@ textarea {
 	margin: 0 auto;
 }
 
-.w_1876 {
-	max-width: 1876px;
-	padding: 0 86px;
+.w_1910 {
+	max-width: 1910px;
+	padding: 0 69px;
 	width: 100%;
 }
 
@@ -80,6 +95,18 @@ textarea {
 	font-family: Meiryo UI;
 }
 
+.zen_M {
+	font-family: "Zen Kaku Gothic New, Medium",serif;
+}
+
+.zen_B {
+	font-family: "Zen Kaku Gothic New, Bold",serif;
+}
+
+.avenir {
+	font-family: "Avenir, Book",serif;
+}
+
 .azo_L {
 	font-family: azo-sans-web,sans-serif;
 	font-style: normal;
@@ -104,6 +131,10 @@ textarea {
 	font-weight: 700;
 }
 
+.bg_setting {
+	background-image: url(../img/bg_B.jpg);
+}
+
 .page_title {
 	font-size: 60px;
 }
@@ -119,6 +150,10 @@ textarea {
 	padding: 30px 40px;
 }
 
+.header_left_contents {
+	gap: 15px;
+}
+
 .header_right_contents {
 	align-items: center;
 }
@@ -130,15 +165,16 @@ textarea {
 }
 
 .header_button {
-	border: 1px solid #7f7f7f;
-	border-radius: 10px;
-	height: 76px;
-	padding: 16px;
-	width: 76px;
+	align-items: center;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	height: 96px;
+	justify-content: center;
+	width: 96px;
 }
 
 .top_page_button {
-	background-color: #f2f2f2;
+	background-color: rgba(0,0,0,0);
 	margin-right: 23px;
 }
 
@@ -149,42 +185,16 @@ textarea {
 
 .header_button_image {
 	display: block;
-	width: 44px;
+	height: 44px;
+	width: 52px;
 }
 
-.language-form {
-	border: 1px solid #ccc;
-	border-radius: 15px;
-}
-
-label {
-	align-items: center;
-	border-radius: 15px;
-	cursor: pointer;
-	font-size: 28px;
-	gap: 20px;
-	margin: 10px;
-	padding: 10px 20px;
-	width: 200px;
-}
-
-.checked {
-	background-color: #f2f2f2;
-	border: 1px solid #7f7f7f;
-}
-
-input[type=radio]:checked label {
-	border: 1px solid #ccc;
-	border-radius: 15px;
-}
-
-input[type=radio] {
-	accent-color: #152e67;
-	height: 36px;
-	width: 36px;
-}
-
-input[type=radio]:checked+span {
-	font-weight: bold;
+.language_button {
+	border: 2px solid #fff;
+	border-radius: 8px;
+	color: #fff;
+	display: block;
+	font-size: 40px;
+	padding: 11px 30px;
 }
 
