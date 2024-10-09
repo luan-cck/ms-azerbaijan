@@ -133,6 +133,9 @@ textarea {
 
 .bg_setting {
 	background-image: url(../img/bg_B.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 150%;
 }
 
 .page_title {
@@ -159,7 +162,7 @@ textarea {
 }
 
 .header_heading {
-	color: #152e67;
+	color: #151d41;
 	font-size: 40px;
 	font-weight: 700;
 }
