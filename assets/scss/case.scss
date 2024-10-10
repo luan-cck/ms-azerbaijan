@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import './variables.scss';
+
+/*--------------------
+case_1
+--------------------*/
+
+.case_contents {
+  margin-top: 70px;
+}
+
+.case_content_image {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}

@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "Zen Kaku Gothic New, Medium";
+	src: url("../fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Zen Kaku Gothic New, Bold";
+	src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Avenir, Book";
+	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
+}
+
+.case_contents {
+	margin-top: 70px;
+}
+
+.case_content_image {
+	display: block;
+	width: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+

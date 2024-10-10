@@ -135,11 +135,22 @@ textarea {
 	background-image: url(../img/bg_B.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 150%;
+	background-size: 175%;
+}
+
+.bg_blue {
+	background-color: #151d41;
 }
 
 .page_title {
 	font-size: 60px;
+}
+
+.page_heading {
+	color: #fff;
+	font-size: 54px;
+	font-weight: normal;
+	margin-top: 109px;
 }
 
 .header {

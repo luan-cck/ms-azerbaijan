@@ -13,120 +13,51 @@
 	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
 }
 
-.consortium_main {
-	margin-top: 68px;
-}
-
-.consortium_top_layout {
-	align-items: flex-start;
-	justify-content: space-between;
-}
-
-.page_title {
+.consortium_contents {
 	background-color: #151d41;
-	border-radius: 30px;
-	box-shadow: 0px 12px 5px 0px rgba(0,0,0,.2509803922);
 	color: #fff;
-	font-size: 56px;
-	max-width: 784px;
-	padding: 30px 40px;
+	margin-top: 96px;
+	padding-bottom: 176px;
+	padding-top: 155px;
+}
+
+.consortium_layout {
+	font-size: 26px;
+	gap: 60px;
+	justify-content: center;
+}
+
+.consortium_left_content {
+	flex-direction: column;
+	gap: 37px;
+	justify-content: space-between;
+	max-width: 912px;
+	width: 100%;
+}
+
+.contents_text {
+	margin-top: 20px;
+}
+
+.consortium_right_content {
+	flex-direction: column;
+	gap: 103px;
+	justify-content: center;
+	max-width: 610px;
 	width: 100%;
 }
 
 .company_list_container {
-	border: 3px solid #ed7d31;
-	border-radius: 10px;
-	box-shadow: 0px 4px 10px 0px rgba(0,0,0,.2509803922);
-	max-width: 800px;
-	width: 100%;
-}
-
-.company_title {
-	background-color: #ed7d31;
-	color: #fff;
-	font-size: 30px;
-	padding: 16px 20px;
+	border: 3px solid #fff;
+	padding: 20px 68px 32px 68px;
 }
 
 .company_name {
-	font-size: 30px;
-	font-weight: 400;
 	line-height: 38px;
-	margin: 20px auto 30px 26px;
-}
-
-.consortium_contents {
-	border: 4px solid #7f7f7f;
-	border-radius: 20px;
-	margin-top: 60px;
-	padding: 30px;
-}
-
-.purpose_container {
-	border: 4px solid #902225;
-	border-radius: 14px 10px 10px 10px;
-	font-size: 25px;
-	margin-bottom: 30px;
-	max-width: 1813px;
-	width: 100%;
-}
-
-.section_title {
-	border-radius: 10px 0 10px 0;
-	color: #fff;
-	font-size: 30px;
-	max-width: 190px;
-	padding: 16px 20px;
-	width: 100%;
-}
-
-.purpose_title {
-	background-color: #902225;
-}
-
-.section_text {
-	letter-spacing: .04em;
-	line-height: 38px;
-	margin: 20px auto 30px 26px;
-	max-width: 1396px;
-	width: 100%;
-}
-
-.consortium_contents_layout {
-	align-items: center;
-	justify-content: space-between;
-}
-
-.activity_container {
-	border: 4px solid #366b37;
-	border-radius: 14px 10px 10px 10px;
-	font-size: 25px;
-	margin-bottom: 30px;
-	max-width: 916px;
-	width: 100%;
-}
-
-.activity_title {
-	background-color: #366b37;
-}
-
-.structure_container {
-	border: 4px solid #036dbb;
-	border-radius: 14px 10px 10px 10px;
-	font-size: 25px;
-	margin-bottom: 30px;
-	margin-bottom: 0;
-	max-width: 916px;
-	width: 100%;
-}
-
-.structure_title {
-	background-color: #036dbb;
+	margin-top: 20px;
 }
 
 .consortium_image {
-	display: block;
-	max-width: 700px;
 	width: 100%;
 }
 
