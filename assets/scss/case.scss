@@ -10,8 +10,18 @@ case_1
   margin-top: 70px;
 }
 
+.map_image {
+  position: relative;
+}
+
 .case_content_image {
   display: block;
   width: 100%;
   object-fit: contain;
+}
+
+.magnifier_icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 119px;
 }
