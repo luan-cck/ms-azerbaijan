@@ -104,3 +104,39 @@
 	margin-top: 20px;
 }
 
+@media screen and (max-width: 1024px) {
+
+.top_main {
+	margin-top: 60px;
+}
+
+.top_main .page_title {
+	font-size: 58px;
+}
+
+.top_button {
+	font-size: 48px;
+	gap: 58px;
+	max-width: 532px;
+	padding: 28px 60px 28px 154px;
+}
+
+.consortium_link {
+	font-size: 24px;
+}
+
+.consortium_link .image {
+	height: 40px;
+	width: 40px;
+}
+
+.section_title {
+	font-size: 26px;
+}
+
+.description {
+	font-size: 23px;
+}
+
+}
+

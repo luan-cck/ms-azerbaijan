@@ -81,7 +81,7 @@
 
 .simulation_link {
 	align-items: center;
-	background: rgba(0,0,0,0) linear-gradient(251deg, #6B4BF7 0%, rgba(61, 75, 248, 0.9215686275) 100%) 0% 0% no-repeat padding-box;
+	background: rgba(0,0,0,0) linear-gradient(251deg, #6b4bf7 0%, rgba(61, 75, 248, 0.9215686275) 100%) 0% 0% no-repeat padding-box;
 	border: 2px solid #fff;
 	border-radius: 55px;
 	color: #fff;
@@ -116,5 +116,13 @@
 	margin-top: 29px;
 	padding: 27px 40px 30px 88px;
 	width: 468px;
+}
+
+@media screen and (max-width: 1024px) {
+
+.swiper-wrapper {
+	margin-left: 0;
+}
+
 }
 

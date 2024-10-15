@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import './variables.scss';
+@import "./variables.scss";
 
 /*--------------------
 common_settings
@@ -87,39 +87,15 @@ textarea {
 }
 
 .zen_M {
-  font-family: 'Zen Kaku Gothic New, Medium', serif;
+  font-family: "Zen Kaku Gothic New, Medium", serif;
 }
 
 .zen_B {
-  font-family: 'Zen Kaku Gothic New, Bold', serif;
+  font-family: "Zen Kaku Gothic New, Bold", serif;
 }
 
 .avenir {
-  font-family: 'Avenir, Book', serif;
-}
-
-.azo_L {
-  font-family: azo-sans-web, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.azo_R {
-  font-family: azo-sans-web, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.azo_M {
-  font-family: azo-sans-web, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.azo_B {
-  font-family: azo-sans-web, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-family: "Avenir, Book", serif;
 }
 
 .bg_setting {
@@ -174,7 +150,6 @@ header
 
 .header_button {
   @include header_button;
-
 }
 
 .top_page_button {
@@ -190,7 +165,7 @@ header
 .header_button_image {
   display: block;
   height: 44px;
-    width: 52px;
+  width: 52px;
 }
 
 .language_button {
@@ -200,4 +175,29 @@ header
   display: block;
   font-size: 40px;
   padding: 11px 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  /*--------------------
+    common_settings
+    --------------------*/
+  .bg_setting {
+    background-size: 300%;
+  }
+  /*--------------------
+    header_1024
+  --------------------*/
+  .header_button {
+    height: 72px;
+    width: 72px;
+  }
+
+  .header_button_image {
+    height: 33px;
+    width: 39px;
+  }
+
+  .language_button {
+    font-size: 28px;
+  }
 }

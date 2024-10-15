@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import './variables.scss';
+@import "./variables.scss";
 
 /*--------------------
 common_settings
@@ -77,7 +77,8 @@ case_select
 
 .simulation_link {
   @include link_button(35px, 27px 40px 30px 88px);
-  background: transparent linear-gradient(251deg, #6B4BF7 0%, #3D4BF8EB 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(251deg, #6b4bf7 0%, #3d4bf8eb 100%) 0%
+    0% no-repeat padding-box;
   margin-top: 35px;
   width: 468px;
 }
@@ -100,4 +101,13 @@ case_select
   @include link_button(35px, 27px 40px 30px 88px);
   margin-top: 29px;
   width: 468px;
+}
+
+@media screen and (max-width: 1024px) {
+  /*--------------------
+    case_select_1024
+    --------------------*/
+  .swiper-wrapper {
+    margin-left: 0;
+  }
 }

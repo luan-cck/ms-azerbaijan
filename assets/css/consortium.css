@@ -61,3 +61,21 @@
 	width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+
+.consortium_contents {
+	padding-bottom: 72px;
+	padding-top: 72px;
+}
+
+.consortium_layout {
+	flex-direction: column;
+	font-size: 22px;
+}
+
+.consortium_right_content {
+	margin: 0 auto;
+}
+
+}
+

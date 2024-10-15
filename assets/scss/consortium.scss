@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import './variables.scss';
+@import "./variables.scss";
 
 /*--------------------
 consortium
@@ -20,7 +20,6 @@ consortium
   justify-content: center;
 }
 
-
 .consortium_left_content {
   flex-direction: column;
   gap: 37px;
@@ -28,7 +27,6 @@ consortium
   max-width: 912px;
   width: 100%;
 }
-
 
 .contents_text {
   margin-top: 20px;
@@ -42,20 +40,34 @@ consortium
   width: 100%;
 }
 
-
 .company_list_container {
   border: 3px solid $pure_white;
   padding: 20px 68px 32px 68px;
 }
-
-
 
 .company_name {
   line-height: 38px;
   margin-top: 20px;
 }
 
-
 .consortium_image {
   width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  /*--------------------
+  consortium_1024
+  --------------------*/
+  .consortium_contents {
+    padding-bottom: 72px;
+    padding-top: 72px;
+  }
+  .consortium_layout {
+    flex-direction: column;
+    font-size: 22px;
+  }
+
+  .consortium_right_content {
+    margin: 0 auto;
+  }
 }

@@ -107,30 +107,6 @@ textarea {
 	font-family: "Avenir, Book",serif;
 }
 
-.azo_L {
-	font-family: azo-sans-web,sans-serif;
-	font-style: normal;
-	font-weight: 300;
-}
-
-.azo_R {
-	font-family: azo-sans-web,sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-
-.azo_M {
-	font-family: azo-sans-web,sans-serif;
-	font-style: normal;
-	font-weight: 500;
-}
-
-.azo_B {
-	font-family: azo-sans-web,sans-serif;
-	font-style: normal;
-	font-weight: 700;
-}
-
 .bg_setting {
 	background-image: url(../img/bg_B.jpg);
 	background-position: center;
@@ -210,5 +186,27 @@ textarea {
 	display: block;
 	font-size: 40px;
 	padding: 11px 30px;
+}
+
+@media screen and (max-width: 1024px) {
+
+.bg_setting {
+	background-size: 300%;
+}
+
+.header_button {
+	height: 72px;
+	width: 72px;
+}
+
+.header_button_image {
+	height: 33px;
+	width: 39px;
+}
+
+.language_button {
+	font-size: 28px;
+}
+
 }
 
