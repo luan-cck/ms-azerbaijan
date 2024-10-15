@@ -34,3 +34,30 @@
 	width: 119px;
 }
 
+.case_bottom {
+	height: 160px;
+}
+
+.case_bottom_layout {
+	align-items: center;
+	gap: 30px;
+	height: 100%;
+	justify-content: flex-end;
+	margin-right: 70px;
+}
+
+.btn {
+	border: 2px solid #fff;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 38px;
+	max-width: 258px;
+	padding-bottom: 12px;
+	padding-top: 12px;
+	width: 100%;
+}
+
+.btn.active {
+	background-color: #f552c3;
+}
+

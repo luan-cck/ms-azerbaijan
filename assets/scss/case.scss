@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import './variables.scss';
+@import "./variables.scss";
 
 /*--------------------
 case_1
@@ -24,4 +24,31 @@ case_1
   position: absolute;
   transform: translate(-50%, -50%);
   width: 119px;
+}
+
+.case_bottom {
+  height: 160px;
+}
+
+.case_bottom_layout {
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+  justify-content: flex-end;
+  margin-right: 70px;
+}
+
+.btn {
+  border: 2px solid $pure_white;
+  border-radius: 8px;
+  color: $pure_white;
+  font-size: 38px;
+  max-width: 258px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  width: 100%;
+}
+
+.btn.active {
+  background-color: $pink;
 }
