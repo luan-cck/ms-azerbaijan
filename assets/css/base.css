@@ -13,6 +13,15 @@
 	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
 }
 
+html,
+body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
 html {
 	font-size: 100%;
 	height: 100%;
@@ -79,6 +88,19 @@ textarea {
 	width: 100%;
 }
 
+.layout {
+	align-items: center;
+	background-color: #000;
+}
+
+.aspect-ratio-container {
+	left: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .flex {
 	display: flex;
 }
@@ -115,57 +137,101 @@ textarea {
 }
 
 .bg_blue {
-	background-color: #151d41;
+	background-color: #232739;
 }
 
 .page_title {
-	font-size: 60px;
+	font-size: 52px;
 }
 
 .page_heading {
 	color: #fff;
-	font-size: 54px;
+	font-size: 29px;
 	font-weight: normal;
-	margin-top: 109px;
+	margin-top: 57px;
 }
 
 .header {
 	height: 136px;
+	position: fixed;
 	width: 100%;
 }
 
 .header_layout {
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
 	padding: 30px 40px;
-}
-
-.header_left_contents {
-	gap: 15px;
 }
 
 .header_right_contents {
 	align-items: center;
+	gap: 16px;
 }
 
 .header_heading {
-	color: #151d41;
+	color: #232739;
 	font-size: 40px;
 	font-weight: 700;
 }
 
+.case_select_link {
+	align-items: center;
+	border: 4px solid #fff;
+	border-radius: 51px;
+	color: #fff;
+	font-size: 22px;
+	gap: 12px;
+	justify-content: space-between;
+	padding: 13px 22px;
+}
+
+.case_select_link .image {
+	vertical-align: text-bottom;
+	width: 27px;
+}
+
 .header_button {
 	align-items: center;
-	border: 2px solid #fff;
+	border: 4px solid #fff;
 	border-radius: 50%;
-	height: 96px;
+	height: 57px;
 	justify-content: center;
-	width: 96px;
+	width: 57px;
+}
+
+.language_select {
+	background-color: #fff;
+	border: 3px solid #c0c2c6;
+	color: #232739;
+	cursor: pointer;
+	font-size: 20px;
+	height: 50px;
+	padding: 0 10px;
+	width: 129px;
+}
+
+.select_wrap {
+	position: relative;
+}
+
+.select_wrap::after {
+	color: #232739;
+	content: "▼";
+	display: block;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(-75%, -40%);
+}
+
+.language_select option {
+	align-items: center;
 }
 
 .top_page_button {
 	background-color: rgba(0,0,0,0);
-	margin-right: 23px;
+	margin-right: 31px;
 }
 
 .subpage_button {
@@ -175,8 +241,8 @@ textarea {
 
 .header_button_image {
 	display: block;
-	height: 44px;
-	width: 52px;
+	height: 26px;
+	width: 30px;
 }
 
 .language_button {

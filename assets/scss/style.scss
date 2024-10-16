@@ -10,45 +10,85 @@ common_settings
 fv
 --------------------*/
 .top_main {
-  margin-top: 108px;
+  height: 100%;
+}
+
+.fv {
+  height: 100%;
+}
+
+.fv_container {
+  height: 100%;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.fv_left_contents {
+  align-items: center;
+  justify-content: center;
 }
 
 .top_main .page_title {
   color: $pure_white;
-  font-size: 103px;
+  font-size: 52px;
   font-weight: normal;
   letter-spacing: 7.72px;
   margin: 0 auto;
-  max-width: 1576px;
+  max-width: 800px;
   text-shadow: 0px 0px 10px #1d496429;
 }
 
-.top_button_container {
+.fv_right_contents {
+  align-items: center;
+  background-color: #161a2e;
   flex-direction: column;
+  justify-content: center;
 }
 
-.top_button {
-  align-items: center;
-  border: 4px solid $pure_white;
-  border-radius: 140px;
-  background-color: #3535c1dd;
+.empty {
+  margin-bottom: auto;
+}
+
+.top_button_center {
+  background-color: $blue;
+  border-radius: 3px;
   color: $pure_white;
-  font-size: 88px;
-  gap: 170px;
-  justify-content: center;
-  letter-spacing: 8.8px;
-  margin: 83px auto 0 auto;
-  max-width: 838px;
-  padding: 46px 60px 34px 272px;
+  font-size: 26px;
+  max-width: 320px;
+  padding-bottom: 22px;
+  padding-top: 22px;
   width: 100%;
 }
 
-.top_button .image {
-  width: 25px;
+.description_link_container {
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 26px;
+  margin-top: auto;
 }
 
-.top_button_image {
+.description_link {
+  align-items: center;
+  background-color: $pure_white;
+  border-radius: 3px;
+  color: $dark_blue;
+  font-size: 21px;
+  gap: 17px;
+  height: 78px;
+  justify-content: space-between;
+  max-width: 320px;
+  padding: 24px 22px;
+  width: 100%;
+}
+
+.button_image {
   vertical-align: middle;
+  width: 27px;
+}
+
+.description_link .text {
+  width: 100%;
 }
 
 .consortium_link {
@@ -103,36 +143,14 @@ top_description
   margin-top: 20px;
 }
 
-@media screen and (max-width: 1024px) {
-  .top_main {
-    margin-top: 60px;
+@media screen and (max-width: 1400px) {
+  .top_button_center {
+    font-size: 22px;
+    max-width: 260px;
   }
 
-  .top_main .page_title {
-    font-size: 58px;
-  }
-
-  .top_button {
-    font-size: 48px;
-    gap: 58px;
-    max-width: 532px;
-    padding: 28px 60px 28px 154px;
-  }
-
-  .consortium_link {
-    font-size: 24px;
-  }
-
-  .consortium_link .image {
-    height: 40px;
-    width: 40px;
-  }
-
-  .section_title {
-    font-size: 26px;
-  }
-
-  .description {
-    font-size: 23px;
+  .description_link {
+    font-size: 17px;
+    max-width: 260px;
   }
 }
