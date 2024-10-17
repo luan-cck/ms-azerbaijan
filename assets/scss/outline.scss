@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@import "./variables.scss";
+
+.outline_contents {
+  background-color: $pure_white;
+  height: 55vh;
+  margin: 60px auto 0 auto;
+  max-width: 1500px;
+}
+
+.outline_contents_container {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 66px;
+}
+.outline_text {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 1400px) {
+  .outline_contents {
+    max-width: 1250px;
+  }
+}
