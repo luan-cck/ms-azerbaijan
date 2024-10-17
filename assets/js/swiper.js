@@ -1,3 +1,7 @@
+/*--------------------
+consortium_swiper
+--------------------*/
+
 document.addEventListener("DOMContentLoaded", () => {
   const windowWidth = window.innerWidth;
   const space = Math.max((windowWidth - 1250) / 2, 0);
@@ -43,15 +47,15 @@ consortiumSwiper.on("slideChange", function () {
   }
 });
 
-const swiper = new Swiper(".swiper", {
-  centeredSlides: false,
-  slidesPerView: 2.7,
-  spaceBetween: 44,
-  breakpoints: {
-    0: {
-      slidesPerView: 1.5,
-      spaceBetween: 30,
-      centeredSlides: true,
-    },
-  },
-});
+// const swiper = new Swiper(".swiper", {
+//   centeredSlides: false,
+//   slidesPerView: 2.7,
+//   spaceBetween: 44,
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1.5,
+//       spaceBetween: 30,
+//       centeredSlides: true,
+//     },
+//   },
+// });

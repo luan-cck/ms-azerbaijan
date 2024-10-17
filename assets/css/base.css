@@ -93,7 +93,7 @@ textarea {
 	background-color: #000;
 }
 
-.aspect-ratio-container {
+.aspect_ratio_container {
 	left: 50%;
 	overflow: hidden;
 	position: absolute;
