@@ -46,9 +46,10 @@ function setMarginTop() {
 
   // 332 is the sum of the height of the organization_container and the height of the section_title (including margin).
   // Since this height is fixed, a variable is not used.
-  const organizationMt = (slide.offsetHeight - 332) / 2;
-
-  organization.style.marginTop = `${organizationMt}px`;
+  if (slide) {
+    const organizationMt = (slide.offsetHeight - 332) / 2;
+    organization.style.marginTop = `${organizationMt}px`;
+  }
 }
 
 document.addEventListener("DOMContentLoaded", setMarginTop);
@@ -57,35 +58,36 @@ window.addEventListener("resize", setMarginTop);
 /*--------------------
 set magnifier
 --------------------*/
-const mapContainer = document.querySelector(".map_image");
-const magnifierIcons = document.querySelectorAll(".magnifier_icon");
+// const mapContainer = document.querySelector(".map_image");
+// const magnifierIcons = document.querySelectorAll(".magnifier_icon");
 
-function setIconPositions() {
-  const contiainerWidth = mapContainer.offsetWidth;
-  const containerHeight = mapContainer.offsetHeight;
+// function setIconPositions() {
+//   const contiainerWidth = mapContainer.offsetWidth;
+//   const containerHeight = mapContainer.offsetHeight;
 
-  magnifierIcons.forEach((icon) => {
-    const relativeX = parseFloat(icon.getAttribute("data-x"));
-    const relativeY = parseFloat(icon.getAttribute("data-y"));
+//   magnifierIcons.forEach((icon) => {
+//     const relativeX = parseFloat(icon.getAttribute("data-x"));
+//     const relativeY = parseFloat(icon.getAttribute("data-y"));
 
-    icon.style.left = `${relativeX * contiainerWidth}px`;
-    icon.style.top = `${relativeY * containerHeight}px`;
-  });
-}
+//     icon.style.left = `${relativeX * contiainerWidth}px`;
+//     icon.style.top = `${relativeY * containerHeight}px`;
+//   });
+// }
 
-window.addEventListener("resize", setIconPositions);
-document.addEventListener("DOMContentLoaded", setIconPositions);
+// window.addEventListener("resize", setIconPositions);
+// document.addEventListener("DOMContentLoaded", setIconPositions);
 
 /*--------------------
 switch language
 --------------------*/
-
-document
-  .getElementById("language-form")
-  .addEventListener("change", function (event) {
-    if (event.target.value === "japanese") {
-      window.location.href = "./index.html";
-    } else if (event.target.value === "english") {
-      window.location.href = "/path-to-english";
-    }
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("language_select")
+    .addEventListener("change", function (event) {
+      if (event.target.value === "japanese") {
+        window.location.href = "../index.html";
+      } else if (event.target.value === "english") {
+        window.location.href = "../index_en.html";
+      }
+    });
+});
