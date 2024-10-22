@@ -13,48 +13,45 @@ case_select
 .case_select {
   padding-bottom: 86px;
 }
-.swiper {
-  margin-top: 105px;
+.case_select_swiper {
+  margin-top: 33px;
 }
 
 .swiper-wrapper {
-  height: 1070px;
-  margin-left: 218px;
+  height: 80vh;
+  margin-left: 107px;
   width: 100%;
 }
 
 .case_container {
-  align-items: center;
-  background-color: $dark_blue;
-  color: $pure_white;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 740px;
-  padding: 34px 59px 57px 49px;
+  @include case_container($dark_indigo);
+}
+
+.reference_container {
+  @include case_container($deep_violet);
 }
 
 .case_number {
-  font-size: 37px;
+  font-size: 27px;
   font-weight: normal;
   position: relative;
 }
 
 .case_number::after {
   background-color: $pure_white;
-  bottom: -11px;
+  bottom: -10px;
   content: "";
   height: 4px;
-  left: 0;
+  left: 50%;
   position: absolute;
-  transform: translateX(-5%);
-  width: 110%;
+  transform: translateX(-50%);
+  width: 60px;
 }
 
 .case_title {
-  font-size: 43px;
+  font-size: 30px;
   font-weight: normal;
   line-height: 54px;
-  margin-top: 41px;
 }
 
 .case3_title {
@@ -66,21 +63,22 @@ case_select
 }
 
 .case_image {
-  margin-top: 26px;
   max-width: 441px;
 }
 
 .description {
-  font-size: 22px;
-  margin-top: 35px;
+  font-size: 18px;
+}
+
+.case_link_container {
+  gap: 14px;
+  justify-content: center;
 }
 
 .simulation_link {
-  @include link_button(35px, 27px 40px 30px 88px);
+  @include link_button(21px, 15px 9px);
   background: transparent linear-gradient(251deg, #6b4bf7 0%, #3d4bf8eb 100%) 0%
     0% no-repeat padding-box;
-  margin-top: 35px;
-  width: 468px;
 }
 
 .example_link {
@@ -98,9 +96,9 @@ case_select
 }
 
 .scheme_link {
-  @include link_button(35px, 27px 40px 30px 88px);
-  margin-top: 29px;
-  width: 468px;
+  @include link_button(21px, 27px 26px);
+  background: transparent linear-gradient(224deg, #3ca4fd 0%, #2478ffeb 100%) 0%
+    0% no-repeat padding-box;
 }
 
 @media screen and (max-width: 1024px) {

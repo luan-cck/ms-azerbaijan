@@ -17,48 +17,61 @@
 	padding-bottom: 86px;
 }
 
-.swiper {
-	margin-top: 105px;
+.case_select_swiper {
+	margin-top: 33px;
 }
 
 .swiper-wrapper {
-	height: 1070px;
-	margin-left: 218px;
+	height: 80vh;
+	margin-left: 107px;
 	width: 100%;
 }
 
 .case_container {
 	align-items: center;
-	background-color: #232739;
+	background-color: #161a2e;
+	border-radius: 10px;
 	color: #fff;
 	flex-direction: column;
+	gap: 15px;
 	justify-content: space-between;
 	max-width: 740px;
-	padding: 34px 59px 57px 49px;
+	padding: 34px 50px 57px 50px;
+}
+
+.reference_container {
+	align-items: center;
+	background-color: #261e8d;
+	border-radius: 10px;
+	color: #fff;
+	flex-direction: column;
+	gap: 15px;
+	justify-content: space-between;
+	max-width: 740px;
+	padding: 34px 50px 57px 50px;
 }
 
 .case_number {
-	font-size: 37px;
+	font-size: 27px;
 	font-weight: normal;
 	position: relative;
 }
 
 .case_number::after {
 	background-color: #fff;
-	bottom: -11px;
+	bottom: -10px;
 	content: "";
 	height: 4px;
-	left: 0;
+	left: 50%;
 	position: absolute;
-	transform: translateX(-5%);
-	width: 110%;
+	transform: translateX(-50%);
+	width: 60px;
 }
 
 .case_title {
-	font-size: 43px;
+	font-size: 30px;
 	font-weight: normal;
 	line-height: 54px;
-	margin-top: 41px;
 }
 
 .case3_title {
@@ -70,26 +83,28 @@
 }
 
 .case_image {
-	margin-top: 26px;
 	max-width: 441px;
 }
 
 .description {
-	font-size: 22px;
-	margin-top: 35px;
+	font-size: 18px;
+}
+
+.case_link_container {
+	gap: 14px;
+	justify-content: center;
 }
 
 .simulation_link {
 	align-items: center;
 	background: rgba(0,0,0,0) linear-gradient(251deg, #6b4bf7 0%, rgba(61, 75, 248, 0.9215686275) 100%) 0% 0% no-repeat padding-box;
 	border: 2px solid #fff;
-	border-radius: 55px;
+	border-radius: 8px;
 	color: #fff;
-	font-size: 35px;
-	justify-content: space-between;
-	margin-top: 35px;
-	padding: 27px 40px 30px 88px;
-	width: 468px;
+	display: block;
+	font-size: 21px;
+	padding: 15px 9px;
+	width: 200px;
 }
 
 .example_link {
@@ -108,14 +123,14 @@
 
 .scheme_link {
 	align-items: center;
+	background: rgba(0,0,0,0) linear-gradient(224deg, #3ca4fd 0%, rgba(36, 120, 255, 0.9215686275) 100%) 0% 0% no-repeat padding-box;
 	border: 2px solid #fff;
-	border-radius: 55px;
+	border-radius: 8px;
 	color: #fff;
-	font-size: 35px;
-	justify-content: space-between;
-	margin-top: 29px;
-	padding: 27px 40px 30px 88px;
-	width: 468px;
+	display: block;
+	font-size: 21px;
+	padding: 27px 26px;
+	width: 200px;
 }
 
 @media screen and (max-width: 1024px) {
