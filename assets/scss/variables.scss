@@ -3,9 +3,11 @@
 // 変数定義
 $blue: #328ffc;
 $dark_blue: #232739;
+$dark_indigo: #161a2e;
 $deep_black: #000000;
 $deep_purple: #313648;
-$light_gray: #7f7f7f;
+$deep_violet: #261e8d;
+$light_gray: #abadb5;
 $pink: #f552c3;
 $pure_white: #ffffff;
 
@@ -33,21 +35,36 @@ $pure_white: #ffffff;
   width: 57px;
 }
 
+@mixin case_container($background_color) {
+  align-items: center;
+  background-color: $background_color;
+  border-radius: 10px;
+  color: $pure_white;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: 740px;
+  padding: 34px 50px 57px 50px;
+}
+
 @mixin link_button($font_size, $padding...) {
   align-items: center;
   border: 2px solid $pure_white;
-  border-radius: 55px;
+  border-radius: 8px;
   color: $pure_white;
+  display: block;
   font-size: $font_size;
-  justify-content: space-between;
+  width: 200px;
   padding: $padding;
 }
 
-@mixin consortium_content($border_color, $max_width: 916px) {
-  border: 4px solid $border_color;
-  border-radius: 14px 10px 10px 10px;
-  font-size: 25px;
-  margin-bottom: 30px;
+@mixin fv_button_bottom($max_width) {
+  align-items: flex-start;
+  color: $dark_blue;
+  font-size: 30px;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 65px;
   max-width: $max_width;
   width: 100%;
 }

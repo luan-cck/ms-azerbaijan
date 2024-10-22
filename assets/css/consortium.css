@@ -47,13 +47,21 @@
 	width: 68px !important;
 }
 
+.section_title_container {
+	justify-content: center;
+}
+
 .section_title {
-	background-color: #313648;
+	background-color: #abadb5;
+	border: 1px solid #fff;
 	color: #fff;
 	font-size: 24px;
-	margin: 47px 105px 0 105px;
-	padding-bottom: 5px;
-	padding-top: 5px;
+	margin-top: 43px;
+	padding: 13px 94px;
+}
+
+.section_title.active {
+	background-color: #232739;
 }
 
 .description_container {
