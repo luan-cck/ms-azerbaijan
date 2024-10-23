@@ -54,7 +54,7 @@ case_select
   line-height: 54px;
 }
 
-.case3_title {
+.case2_title {
   line-height: 108px;
 }
 
@@ -76,7 +76,7 @@ case_select
 }
 
 .simulation_link {
-  @include link_button(21px, 15px 9px);
+  @include link_button(21px, 85px, 180px);
   background: transparent linear-gradient(251deg, #6b4bf7 0%, #3d4bf8eb 100%) 0%
     0% no-repeat padding-box;
 }
@@ -96,9 +96,19 @@ case_select
 }
 
 .scheme_link {
-  @include link_button(21px, 27px 26px);
+  @include link_button(21px, 85px, 180px);
   background: transparent linear-gradient(224deg, #3ca4fd 0%, #2478ffeb 100%) 0%
     0% no-repeat padding-box;
+}
+
+@media screen and (max-width: 1400px) {
+  .swiper-wrapper {
+    height: 60vh;
+  }
+
+  .case_image {
+    max-width: 320px;
+  }
 }
 
 @media screen and (max-width: 1024px) {

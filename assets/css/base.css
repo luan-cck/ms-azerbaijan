@@ -136,6 +136,10 @@ textarea {
 	background-size: 175%;
 }
 
+.bg_black {
+	background-color: #000;
+}
+
 .bg_blue {
 	background-color: #232739;
 }
@@ -155,6 +159,7 @@ textarea {
 	height: 130px;
 	position: fixed;
 	width: 100%;
+	z-index: 10;
 }
 
 .header_layout {

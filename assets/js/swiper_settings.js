@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // 初期スライドのスタイル設定
     const firstSlide = document.querySelector(
       ".consortium_swiper .swiper-slide:first-child"
     );
@@ -47,18 +46,42 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /*--------------------
-case_select_swiper
---------------------*/
+  case_select_swiper
+  --------------------*/
 
   const caseSelectSwiperElement = document.querySelector(".case_select_swiper");
   if (caseSelectSwiperElement) {
     const caseSelectSwiper = new Swiper(".case_select_swiper", {
+      loop: false,
       centeredSlides: false,
       slidesPerView: 3,
       breakpoints: {
         0: {
           slidesPerView: 1.5,
           spaceBetween: 30,
+        },
+      },
+      on: {
+        slideChange: function () {
+          const totalSlides = caseSelectSwiper.slides.length;
+          const lastSlideIndex = totalSlides - 1;
+
+          // Adjust the stopping position of the last slide based on the current slidesPerView.
+          let stopIndex;
+
+          if (window.innerWidth < 1025) {
+            stopIndex = lastSlideIndex;
+          } else if (window.innerWidth < 1400) {
+            stopIndex = lastSlideIndex - 1;
+          } else {
+            stopIndex = lastSlideIndex - 2;
+          }
+
+          if (caseSelectSwiper.activeIndex >= stopIndex) {
+            caseSelectSwiper.allowSlideNext = false;
+          } else {
+            caseSelectSwiper.allowSlideNext = true;
+          }
         },
       },
     });

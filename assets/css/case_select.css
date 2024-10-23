@@ -74,7 +74,7 @@
 	line-height: 54px;
 }
 
-.case3_title {
+.case2_title {
 	line-height: 108px;
 }
 
@@ -101,10 +101,10 @@
 	border: 2px solid #fff;
 	border-radius: 8px;
 	color: #fff;
-	display: block;
 	font-size: 21px;
-	padding: 15px 9px;
-	width: 200px;
+	height: 85px;
+	justify-content: center;
+	width: 180px;
 }
 
 .example_link {
@@ -127,10 +127,22 @@
 	border: 2px solid #fff;
 	border-radius: 8px;
 	color: #fff;
-	display: block;
 	font-size: 21px;
-	padding: 27px 26px;
-	width: 200px;
+	height: 85px;
+	justify-content: center;
+	width: 180px;
+}
+
+@media screen and (max-width: 1400px) {
+
+.swiper-wrapper {
+	height: 60vh;
+}
+
+.case_image {
+	max-width: 320px;
+}
+
 }
 
 @media screen and (max-width: 1024px) {
