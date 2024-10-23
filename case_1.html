@@ -1,57 +1,131 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/ress.min.css">
-  <link rel="stylesheet" href="./assets/css/base.css">
-  <link rel="stylesheet" href="./assets/css/case.css">
-  <title>Document</title>
-</head>
-<body class="bg_blue">
-  <header class="header">
-    <div class="header_layout flex">
-      <div class="header_left_contents flex zen_B">
-        <a href="" class="language_button">日本語</a>
-        <a href="" class="language_button">English</a>
-      </div>
-      <div class="header_right_contents flex">
-        <a href="./index.html" class="header_button top_page_button flex">
-          <img src="./assets/img/eye-solid.svg" alt="home" class="header_button_image">
-        </a>
-        <a href="./index.html" class="header_button top_page_button flex">
-          <img src="./assets/img/layout.svg" alt="home" class="header_button_image">
-        </a>
-        <a href="./index.html" class="header_button top_page_button flex">
-          <img src="./assets/img/home_white.svg" alt="home" class="header_button_image">
-        </a>
-      </div>
-    </div>
-  </header>
-
-    <main class="case_main zen_M">
-      <section class="consortium">
-        <div class="wrapper w_1910">
-          <h2 class="page_heading zen_M txt_center">Case１：グリーンインフラによる洪水の抑制</h2>
-        </div>
-
-        <div class="case_contents">
-          <div class="map_image">
-            <img src="./assets/img/case1_image1.png" alt="city" class="case_content_image">
-            <img src="./assets/img/magnifier.png" alt="magnifier" class="magnifier_icon" data-x="0.13" data-y="0.25">
-            <img src="./assets/img/magnifier.png" alt="magnifier" class="magnifier_icon" data-x="0.65" data-y="0.25">
-            <img src="./assets/img/magnifier.png" alt="magnifier" class="magnifier_icon" data-x="0.45" data-y="0.7">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/ress.min.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/case.css" />
+    <title>Document</title>
+  </head>
+  <body class="layout flex">
+    <div class="aspect_ratio_container" id="aspectContainer">
+      <header class="header">
+        <div class="header_layout flex">
+          <div class="header_right_contents flex">
+            <a href="./case_select.html" class="case_select_link flex zen_B">
+              <span>
+                <img
+                  src="./assets/img/list-ul-solid.svg"
+                  alt="ケース選択"
+                  class="image"
+                />
+              </span>
+              <span>ケース選択</span>
+            </a>
+            <a href="./index.html" class="header_button top_page_button flex">
+              <img
+                src="./assets/img/home_white.svg"
+                alt="home"
+                class="header_button_image"
+              />
+            </a>
           </div>
-          <div class="case_bottom">
-            <div class="case_bottom_layout flex">
-                <button id="button1" class="btn">浸水深</button>
-                <button id="button2" class="btn active">被害額</button>
-                <button id="button3" class="btn">適応策OFF</button>
-                <button id="button4" class="btn active">適応策ON</button>
+          <div class="select_wrap">
+            <select id="language_select" class="language_select zen_B">
+              <option value="japanese" selected>Japanese</option>
+              <option value="english">English</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <main class="case_main zen_M">
+        <section class="case">
+          <div class="wrapper w_1910">
+            <h2 class="page_heading zen_B">
+              Case１：グリーンインフラによる洪水の抑制
+            </h2>
+          </div>
+          <div class="case_top">
+            <div class="case_top_layout flex zen_B">
+              <div class="top_button_container flex">
+                <button id="button1" class="btn left_btn active">浸水深</button>
+                <button id="button2" class="btn right_btn">被害額</button>
+              </div>
+              <div class="top_button_container flex">
+                <button id="button3" class="btn left_btn">適応策OFF</button>
+                <button id="button4" class="btn right_btn active">
+                  適応策ON
+                </button>
+              </div>
             </div>
           </div>
+
+          <div class="case_contents">
+            <div class="map_image">
+              <img
+                src="./assets/img/case1_image1.png"
+                alt="city"
+                class="case_content_image"
+              />
+              <img
+                src="./assets/img/magnifier.png"
+                alt="magnifier"
+                class="magnifier_icon"
+                data-x="0.13"
+                data-y="0.25"
+              />
+              <img
+                src="./assets/img/magnifier.png"
+                alt="magnifier"
+                class="magnifier_icon"
+                data-x="0.65"
+                data-y="0.25"
+              />
+              <img
+                src="./assets/img/magnifier.png"
+                alt="magnifier"
+                class="magnifier_icon"
+                data-x="0.45"
+                data-y="0.5"
+              />
+            </div>
+          </div>
+
+          <div class="menu">
+            <button id="menu_close" class="menu_close flex">
+              <img src="./assets/img/close-outline.svg" alt="close" />
+            </button>
+            <h4 class="menu_title txt_center">メニュー</h4>
+            <ul class="menu_container active">
+              <li class="menu_list">
+                <button class="menu_button">適応策</button>
+              </li>
+              <li class="menu_list">
+                <button class="menu_button">金融スキーム</button>
+              </li>
+              <li class="menu_list">
+                <button class="menu_button">フィールド詳細</button>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="case_bottom">
+          <p class="case_bottom_text">
+            This work was supported by Cross-ministerial Strategic Innovation
+            Promotion Program(JPJ012187).<br />
+            Simulator　development：University of Yamanashi Kazuaki Ohtsuki
+          </p>
         </div>
 
-  <script src="./assets/js/script.js"></script>
-</body>
+        <div class="modal"></div>
+      </main>
+    </div>
+
+    <script src="./assets/js/swiper_settings.js"></script>
+    <script src="./assets/js/case_settings.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
