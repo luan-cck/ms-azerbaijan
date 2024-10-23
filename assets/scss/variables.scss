@@ -47,15 +47,15 @@ $pure_white: #ffffff;
   padding: 34px 50px 57px 50px;
 }
 
-@mixin link_button($font_size, $padding...) {
+@mixin link_button($font_size, $height, $width) {
   align-items: center;
   border: 2px solid $pure_white;
   border-radius: 8px;
   color: $pure_white;
-  display: block;
   font-size: $font_size;
-  width: 200px;
-  padding: $padding;
+  height: $height;
+  justify-content: center;
+  width: $width;
 }
 
 @mixin fv_button_bottom($max_width) {
@@ -67,4 +67,12 @@ $pure_white: #ffffff;
   margin-top: 65px;
   max-width: $max_width;
   width: 100%;
+}
+
+@mixin close {
+  align-items: center;
+  border-radius: 50%;
+  height: 27px;
+  justify-content: center;
+  width: 27px;
 }
