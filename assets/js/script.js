@@ -29,9 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const empty = document.querySelector(".empty");
     const linkContainer = document.querySelector(".description_link_container");
 
-    const containerHeight = linkContainer.offsetHeight;
-
-    empty.style.height = `${containerHeight}px`;
+    if (empty) {
+      const containerHeight = linkContainer.offsetHeight;
+      empty.style.height = `${containerHeight}px`;
+    }
   }
 
   setHeight();

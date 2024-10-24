@@ -69,10 +69,10 @@ $pure_white: #ffffff;
   width: 100%;
 }
 
-@mixin close {
+@mixin close($height, $width) {
   align-items: center;
   border-radius: 50%;
-  height: 27px;
+  height: $height;
   justify-content: center;
-  width: 27px;
+  width: $width;
 }

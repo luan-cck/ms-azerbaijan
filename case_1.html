@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/ress.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/case.css" />
     <title>Document</title>
@@ -100,13 +101,17 @@
             <h4 class="menu_title txt_center">メニュー</h4>
             <ul class="menu_container active">
               <li class="menu_list">
-                <button class="menu_button">適応策</button>
+                <button id="menu_button1" class="menu_button">適応策</button>
               </li>
               <li class="menu_list">
-                <button class="menu_button">金融スキーム</button>
+                <button id="menu_button2" class="menu_button">
+                  金融スキーム
+                </button>
               </li>
               <li class="menu_list">
-                <button class="menu_button">フィールド詳細</button>
+                <button id="menu_button3" class="menu_button">
+                  フィールド詳細
+                </button>
               </li>
             </ul>
           </div>
@@ -120,10 +125,153 @@
           </p>
         </div>
 
-        <div class="modal"></div>
+        <div class="modal flex">
+          <div class="swiper modal_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <button class="modal_close flex">
+                  <img src="./assets/img/close-outline.svg" alt="close" />
+                </button>
+                <div class="wrapper w_1910">
+                  <div class="section_title_container flex">
+                    <h2 class="section_title txt_center active zen_B">
+                      適応策
+                    </h2>
+                    <h2 class="section_title txt_center zen_B">金融スキーム</h2>
+                    <h2 class="section_title txt_center zen_B">
+                      フィールド詳細
+                    </h2>
+                  </div>
+                  <div class="slide_layout flex">
+                    <div class="description_container">
+                      <p class="description">
+                        谷津とは丘陵地の辺縁部に入り込むように出来た急激な浸食谷である。
+                        台地に降った雨は地下に浸み込み、地下水になる。台地の地下水は谷津の
+                        斜面と平野が接するところ（谷津の谷底の縁）で湧き水として地上に現れる。
+                        この湧き水が集まって河川が形成され、さらにその河川が集まり、印旛沼や手賀沼に流れ込む。すなわち谷津は沼・湖の水源ともいえる。印旛沼の流域には、
+                        約600箇所の谷津があることが知られている。
+                      </p>
+                      <p class="description">
+                        谷津の谷底面は湧水を利用して古くから水田として利用されてきた（右図）。近年では水田の狭さや高い地下水位のため、大型の機会を用いた農業に不向きであり耕作放棄が進んでいる。印旛沼周辺の約50%の谷津が埋め立て等の地形改変が行われている。
+                      </p>
+                      <p class="description">
+                        本シミュレーションは、以下のような「グリーンインフラ」を構築・保全することで得られる効果を実証する。
+                      </p>
+                      <ul>
+                        <li class="description_list">
+                          台地上の草原や樹林を計画的に配置することによる、雨水流出抑制や地下水涵養の効果を持つインフラ
+                        </li>
+                        <li class="description_list">
+                          谷津の休講田を湧水・雨水がゆっくりと流出する構造とすることによる、治水・水質浄化、生物多様性保全等に寄与するインフラ
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="image_contaier">
+                      <div class="image_layout image_layout_top flex">
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="modal_image"
+                        />
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="modal_image"
+                        />
+                      </div>
+                      <div class="image_layout image_layout_middle flex">
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="modal_image"
+                        />
+                      </div>
+                      <div class="image_layout flex">
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="modal_image"
+                        />
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="modal_image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <button class="modal_close flex">
+                  <img src="./assets/img/close-outline.svg" alt="close" />
+                </button>
+                <div class="wrapper w_1910">
+                  <div class="section_title_container flex">
+                    <h2 class="section_title txt_center zen_B">適応策</h2>
+                    <h2 class="section_title txt_center active zen_B">
+                      金融スキーム
+                    </h2>
+                    <h2 class="section_title txt_center zen_B">
+                      フィールド詳細
+                    </h2>
+                  </div>
+                  <div class="slide_layout flex">
+                    <div class="description_container">
+                      <p class="description">
+                        グリーンインフラの最大の特徴は、<br />
+                        「Multi-benefit」「Multi-stakeholder」「Multi-○○（もう一つあった）」<br />
+                        　・整備維持管理コストを軽減しやすい<br />
+                        　・生物多様性保全と両立しやすい<br />
+                        　・市民を含む多様な主体の関与により、社会関係の強化
+                      </p>
+                    </div>
+                    <div class="image_contaier">
+                      <img
+                        src="./assets/img/no_image.png"
+                        alt=""
+                        class="modal_image"
+                      />
+                    </div>
+                  </div>
+                  <div class="slide_layout flex">
+                    <p class="description">
+                      今回のシミュレーション事例の金額面での効果は以下の通り。
+                    </p>
+                    <div class="simulation_result">
+                      定量面のシミュレーション結果
+                    </div>
+                  </div>
+                  <div class="slide_layout flex">
+                    <div class="description_container">
+                      <p class="description">
+                        ただし、グリーンインフラの効果には注意が必要な点がある。
+                        人口構造物によるインフラ（グレーインフラ）と異なり、グリーンインフラの効果は個々の地形や土地利用分布など流域の特徴により大きく異なる。その為、こうしたスキームを広げていくためには、グリーンインフラの効果策定のコンサルティングが出来る団体がビジネスとして積極関与する必要がある
+                      </p>
+                      <p class="description">
+                        ※イギリス
+                        ワイヤ川の事例では、こうしたグリーンインフラの様々な効果を享受するステークホルダー（含む民間企業）がプロジェクト費用を支払う、ブレンデッド・ファイナンスのパイロットプロジェクトが実行されている（××年～）
+                      </p>
+                    </div>
+                    <div class="image_contaier">
+                      <img
+                        src="./assets/img/no_image.png"
+                        alt=""
+                        class="modal_image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
       </main>
     </div>
 
+    <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/swiper_settings.js"></script>
     <script src="./assets/js/case_settings.js"></script>
     <script src="./assets/js/script.js"></script>

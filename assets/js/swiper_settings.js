@@ -87,3 +87,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+/*--------------------
+  case_1_swiper
+  --------------------*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modalSwiperElement = document.querySelector(".modal_swiper");
+  if (modalSwiperElement) {
+    const windowWidth = window.innerWidth;
+    const space = Math.max((windowWidth - 1250) / 2, 0);
+
+    // Globalize for calling in case_settings.js
+    window.modalSwiper = new Swiper(".modal_swiper", {
+      centeredSlides: false,
+      slidesPerView: 1,
+      spaceBetween: space,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        slideChange: updateFirstSlideMargin,
+        init: updateFirstSlideMargin,
+      },
+    });
+
+    function updateFirstSlideMargin() {
+      const firstSlide = document.querySelector(
+        ".modal_swiper .swiper-slide:first-child"
+      );
+      if (firstSlide) {
+        firstSlide.style.marginLeft = "0px";
+      }
+    }
+  }
+});
