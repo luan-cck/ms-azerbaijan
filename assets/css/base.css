@@ -90,7 +90,7 @@ textarea {
 
 .layout {
 	align-items: center;
-	background-color: #000;
+	background: rgba(0,0,0,0) linear-gradient(250deg, #ffffff 0%, rgba(19, 109, 255, 0.92) 100%) 0% 0% no-repeat padding-box;
 }
 
 .aspect_ratio_container {
