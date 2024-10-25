@@ -19,39 +19,17 @@
 
 .case {
 	height: 100%;
-	position: relative;
 }
 
 .case_main .page_heading {
 	margin-top: 0;
 	padding-top: 57px;
-}
-
-.case_contents {
-	height: 100%;
-}
-
-.map_image {
-	position: absolute;
-	top: 0;
-	z-index: -10;
-}
-
-.case_content_image {
-	display: block;
-	-o-object-fit: contain;
-	object-fit: contain;
-	width: 100%;
-}
-
-.magnifier_icon {
-	position: absolute;
-	transform: translate(-50%, -50%);
-	width: 61px;
+	position: relative;
 }
 
 .case_top {
 	height: 160px;
+	position: relative;
 }
 
 .case_top_layout {
@@ -86,6 +64,74 @@
 .btn.active {
 	background-color: #f552c3;
 	color: #fff;
+}
+
+.map {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.map_container {
+	position: relative;
+	top: 0;
+	z-index: -10;
+}
+
+.map_image {
+	display: block;
+	-o-object-fit: contain;
+	object-fit: contain;
+	width: 100%;
+}
+
+.magnifier_icon {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 61px;
+	z-index: 10;
+}
+
+.image_modal {
+	align-items: center;
+	background: rgba(0,0,0,.4);
+	display: none;
+	height: 100%;
+	justify-content: center;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	z-index: 100;
+}
+
+.image_modal.active {
+	display: flex;
+}
+
+.larger_image {
+	width: 1080px;
+}
+
+.image_modal_container {
+	max-width: 100%;
+	position: relative;
+	z-index: 101;
+}
+
+.image_modal_close {
+	align-items: center;
+	background-color: #ed4d5a;
+	border-radius: 50%;
+	height: 60px;
+	justify-content: center;
+	position: absolute;
+	right: 26px;
+	top: 23px;
+	width: 60px;
 }
 
 .menu {
@@ -168,7 +214,7 @@
 	display: none;
 	justify-content: center;
 	left: 50%;
-	max-width: 1800px;
+	max-width: 95%;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -176,19 +222,7 @@
 }
 
 .modal.active {
-	display: block;
-}
-
-.modal_close {
-	align-items: center;
-	background-color: #ed4d5a;
-	border-radius: 50%;
-	height: 60px;
-	justify-content: center;
-	position: absolute;
-	right: 26px;
-	top: 23px;
-	width: 60px;
+	display: flex;
 }
 
 .modal_swiper {
@@ -216,6 +250,18 @@
 	background-color: #fff;
 	border-radius: 3px;
 	padding-bottom: 32px;
+}
+
+.modal_close {
+	align-items: center;
+	background-color: #ed4d5a;
+	border-radius: 50%;
+	height: 60px;
+	justify-content: center;
+	position: absolute;
+	right: 26px;
+	top: 23px;
+	width: 60px;
 }
 
 .slide_layout {

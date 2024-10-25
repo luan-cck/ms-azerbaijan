@@ -1,7 +1,26 @@
 /*--------------------
+store image data(add as needed)
+--------------------*/
+
+const data = [
+  {
+    id: "case1_map1",
+    src: "./assets/img/no_image.png",
+  },
+  {
+    id: "case1_map2",
+    src: "./assets/img/no_image.png",
+  },
+  {
+    id: "case1_map3",
+    src: "./assets/img/no_image.png",
+  },
+];
+
+/*--------------------
 set magnifier
 --------------------*/
-const mapContainer = document.querySelector(".map_image");
+const mapContainer = document.querySelector(".map_container");
 const magnifierIcons = document.querySelectorAll(".magnifier_icon");
 
 function setIconPositions() {
@@ -67,6 +86,54 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*--------------------
+zoom modal image
+--------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".modal_image");
+
+  images.forEach((image) => {
+    image.addEventListener("click", () => {
+      openModal(image.src);
+    });
+  });
+
+  function openModal(imgSrc) {
+    const modal = document.getElementById("image_modal");
+
+    let modalImageContainer = modal.querySelector(".image_modal_container");
+    if (!modalImageContainer) {
+      modalImageContainer = document.createElement("div");
+      modalImageContainer.classList.add("image_modal_container");
+      modal.appendChild(modalImageContainer);
+    }
+
+    modalImageContainer.innerHTML = "";
+
+    let modalCloseButton = modal.querySelector(".image_modal_close");
+    if (!modalCloseButton) {
+      modalCloseButton = document.createElement("button");
+      modalCloseButton.classList.add("image_modal_close", "flex");
+      const closeIcon = document.createElement("img");
+      closeIcon.src = "./assets/img/close-outline.svg";
+      closeIcon.alt = "close";
+      modalCloseButton.appendChild(closeIcon);
+    }
+    modalImageContainer.appendChild(modalCloseButton);
+
+    const modalImage = document.createElement("img");
+    modalImage.src = imgSrc;
+    modalImage.classList.add("larger_image");
+    modalImageContainer.appendChild(modalImage);
+
+    modal.classList.add("active");
+
+    modalCloseButton.addEventListener("click", () => {
+      modal.classList.remove("active");
+    });
+  }
+});
+
+/*--------------------
 modal close button
 --------------------*/
 document.addEventListener("DOMContentLoaded", () => {
@@ -102,4 +169,54 @@ document.addEventListener("DOMContentLoaded", () => {
       window.modalSwiper.slideTo(1);
     }
   });
+});
+
+/*--------------------
+Map Zooming
+--------------------*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  data.forEach((item) => {
+    const magnifierButton = document.querySelector(`[data-id="${item.id}"]`);
+    if (magnifierButton) {
+      magnifierButton.addEventListener("click", () => {
+        openModal(item.src);
+      });
+    }
+  });
+
+  function openModal(imgSrc) {
+    const modal = document.getElementById("image_modal");
+
+    let modalImageContainer = modal.querySelector(".image_modal_container");
+    if (!modalImageContainer) {
+      modalImageContainer = document.createElement("div");
+      modalImageContainer.classList.add("image_modal_container");
+      modal.appendChild(modalImageContainer);
+    }
+
+    modalImageContainer.innerHTML = "";
+
+    let modalCloseButton = modal.querySelector(".image_modal_close");
+    if (!modalCloseButton) {
+      modalCloseButton = document.createElement("button");
+      modalCloseButton.classList.add("image_modal_close", "flex");
+      const closeIcon = document.createElement("img");
+      closeIcon.src = "./assets/img/close-outline.svg";
+      closeIcon.alt = "close";
+      modalCloseButton.appendChild(closeIcon);
+    }
+    modalImageContainer.appendChild(modalCloseButton);
+
+    const modalImage = document.createElement("img");
+    modalImage.src = imgSrc;
+    modalImage.classList.add("larger_image");
+    modalImageContainer.appendChild(modalImage);
+
+    modal.classList.add("active");
+
+    modalCloseButton.addEventListener("click", () => {
+      modal.classList.remove("active");
+    });
+  }
 });
