@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "Zen Kaku Gothic New, Medium";
+	src: url("../fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Zen Kaku Gothic New, Bold";
+	src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Avenir, Book";
+	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
+}
+
+.outline_contents {
+	background-color: #fff;
+	height: 55vh;
+	margin: 60px auto 0 auto;
+	max-width: 1500px;
+}
+
+.outline_contents_container {
+	height: 100%;
+	padding: 72px 66px 0 66px;
+}
+
+.outline_text {
+	font-size: 26px;
+	line-height: 40px;
+}
+
+@media screen and (max-width: 1400px) {
+
+.outline_contents {
+	max-width: 1250px;
+}
+
+}
+
