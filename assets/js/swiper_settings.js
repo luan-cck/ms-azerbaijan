@@ -122,4 +122,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
+
+  // URL setting for case_select.js
+  const urlParams = new URLSearchParams(window.location.search);
+  const openModal = urlParams.get("openModal");
+
+  if (openModal) {
+    const modal = document.querySelector(".modal");
+    if (modal) {
+      modal.classList.add("active");
+
+      if (window.modalSwiper) {
+        window.modalSwiper.slideTo(Number(openModal));
+      }
+    }
+  }
 });
