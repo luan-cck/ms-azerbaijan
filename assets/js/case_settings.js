@@ -77,10 +77,18 @@ document.addEventListener("DOMContentLoaded", () => {
     menuContainer.classList.toggle("active");
     close.classList.toggle("close");
 
-    if (close.classList.contains("close")) {
-      menu.style.top = "75%";
-    } else {
-      menu.style.top = "53%";
+    if (screen.width > 1400) {
+      if (close.classList.contains("close")) {
+        menu.style.top = "75%";
+      } else {
+        menu.style.top = "53%";
+      }
+    } else if (screen.width <= 1400) {
+      if (close.classList.contains("close")) {
+        menu.style.top = "70%";
+      } else {
+        menu.style.top = "40%";
+      }
     }
   });
 });
@@ -167,6 +175,13 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("active");
     if (window.modalSwiper) {
       window.modalSwiper.slideTo(1);
+    }
+  });
+
+  button3.addEventListener("click", () => {
+    modal.classList.add("active");
+    if (window.modalSwiper) {
+      window.modalSwiper.slideTo(2);
     }
   });
 });
