@@ -121,13 +121,13 @@ fv
 }
 
 .outline_link {
-  @include fv_button_bottom(480px);
+  @include fv_button_bottom(300px);
 }
 
 .outline_link .image {
-  display: block;
-  height: 49px;
-  width: 49px;
+  align-items: center;
+  height: 88px;
+  width: 88px;
 }
 
 .outline_link .text {
@@ -145,13 +145,13 @@ fv
 }
 
 .consortium_link {
-  @include fv_button_bottom(718px);
+  @include fv_button_bottom(470px);
 }
 
 .consortium_link .image {
-  display: block;
-  height: 49px;
-  width: 49px;
+  align-items: center;
+  height: 88px;
+  width: 88px;
 }
 
 .consortium_link .text {
@@ -172,5 +172,13 @@ fv
   .outline_link,
   .consortium_link {
     font-size: 24px;
+  }
+
+  .outline_link {
+    @include fv_button_bottom(480px);
+  }
+
+  .consortium_link {
+    @include fv_button_bottom(718px);
   }
 }

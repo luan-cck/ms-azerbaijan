@@ -1,0 +1,154 @@
+@font-face {
+	font-family: "Zen Kaku Gothic New, Medium";
+	src: url("../fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Zen Kaku Gothic New, Bold";
+	src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Avenir, Book";
+	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
+}
+
+.consortium_contents {
+	margin-top: 59px;
+}
+
+.consortium_swiper {
+	height: 75vh;
+}
+
+.swiper-slide {
+	aspect-ratio: 3/1;
+	background-color: #fff;
+	height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	height: initial;
+	width: initial;
+}
+
+.swiper-button-next:after {
+	content: url("../img/chevron-forward-outline.svg");
+	height: 80px !important;
+	margin-right: 30px;
+	width: 68px !important;
+}
+
+.swiper-button-prev:after {
+	content: url("../img/chevron-back-outline.svg");
+	height: 80px !important;
+	margin-left: 30px;
+	width: 68px !important;
+}
+
+.section_title {
+	background-color: #abadb5;
+	color: #fff;
+	font-size: 24px;
+	padding: 13px 94px;
+}
+
+.section_title.active {
+	background-color: #232739;
+}
+
+.description_container {
+	background-color: #ddd;
+	margin: 50px auto 0;
+	padding: 30px 26px;
+	width: 80%;
+}
+
+.description {
+	color: #313648;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 40px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.activities_layout {
+	justify-content: space-evenly;
+}
+
+.section_subtitle {
+	font-size: 36px;
+	margin-left: 36px;
+}
+
+.text_container {
+	margin-top: 50px;
+}
+
+.description_list_container {
+	flex-direction: column;
+	justify-content: center;
+}
+
+.description_list {
+	color: #313648;
+	font-size: 26px;
+	line-height: 42px;
+	list-style: disc;
+	margin: 14px auto 0 auto;
+	max-width: 668px;
+	width: 100%;
+}
+
+.description_list::marker {
+	color: #328ffc;
+}
+
+.activities_image {
+	-o-object-fit: contain;
+	object-fit: contain;
+	width: 560px;
+}
+
+.organization_layout {
+	color: #161a2e;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 24px;
+}
+
+.organization_layout dt {
+	font-size: 24px;
+	font-weight: bold;
+	width: 15%;
+}
+
+.organization_layout dd {
+	font-size: 20px;
+	line-height: 36px;
+	width: 75%;
+}
+
+.company_container {
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.company_container img {
+	width: 40%;
+}
+
+@media screen and (max-width: 1400px) {
+
+.consortium_swiper {
+	height: 55vh;
+}
+
+.organization_container {
+	max-width: 940px;
+}
+
+}
+

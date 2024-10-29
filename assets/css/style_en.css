@@ -131,14 +131,14 @@
 	gap: 24px;
 	justify-content: center;
 	margin-top: 65px;
-	max-width: 480px;
+	max-width: 300px;
 	width: 100%;
 }
 
 .outline_link .image {
-	display: block;
-	height: 49px;
-	width: 49px;
+	align-items: center;
+	height: 88px;
+	width: 88px;
 }
 
 .outline_link .text {
@@ -162,14 +162,14 @@
 	gap: 24px;
 	justify-content: center;
 	margin-top: 65px;
-	max-width: 718px;
+	max-width: 470px;
 	width: 100%;
 }
 
 .consortium_link .image {
-	display: block;
-	height: 49px;
-	width: 49px;
+	align-items: center;
+	height: 88px;
+	width: 88px;
 }
 
 .consortium_link .text {
@@ -191,6 +191,28 @@
 .outline_link,
 .consortium_link {
 	font-size: 24px;
+}
+
+.outline_link {
+	align-items: flex-start;
+	color: #232739;
+	font-size: 30px;
+	gap: 24px;
+	justify-content: center;
+	margin-top: 65px;
+	max-width: 480px;
+	width: 100%;
+}
+
+.consortium_link {
+	align-items: flex-start;
+	color: #232739;
+	font-size: 30px;
+	gap: 24px;
+	justify-content: center;
+	margin-top: 65px;
+	max-width: 718px;
+	width: 100%;
 }
 
 }

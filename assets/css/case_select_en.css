@@ -1,0 +1,151 @@
+@font-face {
+	font-family: "Zen Kaku Gothic New, Medium";
+	src: url("../fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Zen Kaku Gothic New, Bold";
+	src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Avenir, Book";
+	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
+}
+
+.case_select {
+	padding-bottom: 86px;
+}
+
+.case_select_swiper {
+	margin-top: 33px;
+}
+
+.swiper-wrapper {
+	height: 80vh;
+	margin-left: 107px;
+	width: 100%;
+}
+
+.case_container {
+	align-items: center;
+	background-color: #161a2e;
+	border-radius: 10px;
+	color: #fff;
+	flex-direction: column;
+	gap: 15px;
+	justify-content: space-between;
+	max-width: 740px;
+	padding: 34px 50px 57px 50px;
+}
+
+.reference_container {
+	align-items: center;
+	background-color: #261e8d;
+	border-radius: 10px;
+	color: #fff;
+	flex-direction: column;
+	gap: 15px;
+	justify-content: space-between;
+	max-width: 740px;
+	padding: 34px 50px 57px 50px;
+}
+
+.case_number {
+	font-size: 27px;
+	font-weight: normal;
+	position: relative;
+}
+
+.case_number::after {
+	background-color: #fff;
+	bottom: -10px;
+	content: "";
+	height: 4px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 60px;
+}
+
+.case_title {
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 54px;
+}
+
+.example_title {
+	margin-top: 168px;
+}
+
+.case_image {
+	max-width: 441px;
+}
+
+.description {
+	font-size: 18px;
+}
+
+.case_link_container {
+	gap: 14px;
+	justify-content: center;
+}
+
+.simulation_link {
+	align-items: center;
+	background: rgba(0,0,0,0) linear-gradient(251deg, #6b4bf7 0%, rgba(61, 75, 248, 0.9215686275) 100%) 0% 0% no-repeat padding-box;
+	border: 2px solid #fff;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 21px;
+	height: 85px;
+	justify-content: center;
+	width: 180px;
+}
+
+.example_link {
+	margin-top: 60px;
+}
+
+.image {
+	display: block;
+	width: 15px;
+}
+
+.link_image {
+	vertical-align: middle;
+	width: 100%;
+}
+
+.scheme_link {
+	align-items: center;
+	background: rgba(0,0,0,0) linear-gradient(224deg, #3ca4fd 0%, rgba(36, 120, 255, 0.9215686275) 100%) 0% 0% no-repeat padding-box;
+	border: 2px solid #fff;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 21px;
+	height: 85px;
+	justify-content: center;
+	width: 180px;
+}
+
+@media screen and (max-width: 1400px) {
+
+.swiper-wrapper {
+	height: 60vh;
+}
+
+.case_image {
+	max-width: 320px;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+.swiper-wrapper {
+	margin-left: 0;
+}
+
+}
+

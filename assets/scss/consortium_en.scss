@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+@import "./variables.scss";
+
+/*--------------------
+consortium
+--------------------*/
+
+.consortium_contents {
+  margin-top: 59px;
+}
+
+.consortium_swiper {
+  height: 75vh;
+}
+
+.swiper-slide {
+  aspect-ratio: 3 / 1;
+  background-color: $pure_white;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  height: initial;
+  width: initial;
+}
+
+.swiper-button-next:after {
+  content: url("../img/chevron-forward-outline.svg");
+  height: 80px !important;
+  margin-right: 30px;
+  width: 68px !important;
+}
+
+.swiper-button-prev:after {
+  content: url("../img/chevron-back-outline.svg");
+  height: 80px !important;
+  margin-left: 30px;
+  width: 68px !important;
+}
+
+.section_title {
+  background-color: $light_gray;
+  color: $pure_white;
+  font-size: 24px;
+  padding: 13px 94px;
+}
+
+.section_title.active {
+  background-color: $dark_blue;
+}
+
+.description_container {
+  background-color: #dddddd;
+  margin: 50px auto 0;
+  padding: 30px 26px;
+  width: 80%;
+}
+
+.description {
+  color: $deep_purple;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.activities_layout {
+  justify-content: space-evenly;
+}
+
+.section_subtitle {
+  font-size: 36px;
+  margin-left: 36px;
+}
+
+.text_container {
+  margin-top: 50px;
+}
+
+.description_list_container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description_list {
+  color: $deep_purple;
+  font-size: 26px;
+  line-height: 42px;
+  list-style: disc;
+  margin: 14px auto 0 auto;
+  max-width: 668px;
+  width: 100%;
+}
+
+.description_list::marker {
+  color: $blue;
+}
+
+.activities_image {
+  object-fit: contain;
+  width: 560px;
+}
+
+.organization_layout {
+  color: $dark_indigo;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.organization_layout dt {
+  font-size: 24px;
+  font-weight: bold;
+  width: 15%;
+}
+
+.organization_layout dd {
+  font-size: 20px;
+  line-height: 36px;
+  width: 75%;
+}
+
+.company_container {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.company_container img {
+  width: 40%;
+}
+
+@media screen and (max-width: 1400px) {
+  .consortium_swiper {
+    height: 55vh;
+  }
+
+  .organization_container {
+    max-width: 940px;
+  }
+}
