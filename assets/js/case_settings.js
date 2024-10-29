@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 zoom modal image
 --------------------*/
 document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".modal_image");
+  const images = document.querySelectorAll(".clickable_image");
 
   images.forEach((image) => {
     image.addEventListener("click", () => {
