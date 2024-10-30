@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const windowWidth = window.innerWidth;
     const space = Math.max((windowWidth - 1250) / 2, 0);
 
-    const consortiumSwiper = new Swiper(".consortium_swiper", {
+    // Globalize for calling in consortium.js
+    window.consortiumSwiper = new Swiper(".consortium_swiper", {
       centeredSlides: false,
       slidesPerView: 1,
       spaceBetween: space,

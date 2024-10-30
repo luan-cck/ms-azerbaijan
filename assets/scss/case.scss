@@ -215,6 +215,8 @@ modal
 
 .modal {
   align-items: center;
+  background-color: $pure_white;
+  border-radius: 3px;
   display: none;
   justify-content: center;
   left: 50%;
@@ -247,8 +249,6 @@ modal
 }
 
 .swiper-slide {
-  background-color: $pure_white;
-  border-radius: 3px;
   height: 95vh;
   padding-bottom: 32px;
 }
@@ -268,6 +268,7 @@ modal
 }
 
 .slide_layout {
+  align-items: center;
   justify-content: center;
   gap: 40px;
   margin-top: 40px;
@@ -284,8 +285,20 @@ modal
   margin-top: 24px;
 }
 
+.image_container {
+  justify-content: center;
+  position: relative;
+}
+
 .basin_image {
-  width: 40%;
+  width: 100%;
+}
+
+.zoom_image {
+  bottom: 10px;
+  position: absolute;
+  right: 12px;
+  width: 40px;
 }
 
 .arrow {
@@ -295,6 +308,198 @@ modal
 
 .rice_field_image {
   width: 30%;
+}
+
+.supplement_container {
+  gap: 20px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.supplement_content {
+  align-items: center;
+  gap: 4px;
+}
+
+.supplement_content .text {
+  color: $dark_indigo;
+  font-size: 15px;
+}
+
+.color_red {
+  @include supplement_color(#fe0500);
+}
+
+.color_green {
+  @include supplement_color(#03ff4b);
+}
+
+.color_aqua {
+  @include supplement_color(#00fef3);
+}
+
+.color_pink {
+  @include supplement_color(#ff04fb);
+}
+
+.effective_container {
+  align-items: center;
+  background-color: #328ffc35;
+  border-radius: 10px;
+  font-size: 18px;
+  gap: 31px;
+  height: 71px;
+  justify-content: center;
+  margin: 32px auto 0;
+  width: 510px;
+}
+
+.effective_container .text {
+  align-items: center;
+}
+
+.effective_container .big {
+  @include effective_span($blue, $pure_white);
+}
+
+.effective_container .small {
+  @include effective_span($pure_white, $blue);
+}
+
+.option_list_container {
+  margin-top: 8px;
+}
+
+.option_list {
+  padding-left: 20px;
+  position: relative;
+}
+
+.option_list::before {
+  content: "•";
+  color: $blue;
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.option_image_container {
+  border: 1px solid #848484;
+  border-radius: 3px;
+  height: 180px;
+  gap: 84px;
+  justify-content: center;
+  margin: 15px 0 0;
+  position: relative;
+  width: 85%;
+}
+
+.option_image_container .text {
+  color: $blue;
+  font-size: 18px;
+  left: 12px;
+  position: absolute;
+  top: 10px;
+}
+
+.option_image {
+  width: 100%;
+}
+
+.result_container {
+  align-items: center;
+  gap: 26px;
+  margin-top: 12px;
+}
+
+.maintenance_image_container {
+  width: 40%;
+}
+
+.maintenance_image {
+  margin-bottom: 11px;
+  width: 100%;
+}
+
+.text_container .text {
+  color: $deep_purple;
+  margin-top: 11px;
+}
+
+.result_list_container {
+  margin-top: 6px;
+}
+
+.result_list {
+  color: $deep_purple;
+  font-size: 18px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.result_list::before {
+  content: "•";
+  color: $blue;
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scheme_left_image,
+.scheme_right_image {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.slide_right_title {
+  color: $blue;
+  font-size: 20px;
+}
+
+.contents_wrapper {
+  border: 2px solid $blue;
+  border-radius: 3px;
+  height: 433px;
+  margin-top: 4px;
+  padding: 12px 15px;
+}
+
+.slide_right_heading {
+  color: $dark_indigo;
+  font-size: 15px;
+  margin-top: 14px;
+}
+
+.slide_right_image_container {
+  height: 45%;
+}
+
+.slide_right_contents .title {
+  color: $dark_indigo;
+  font-size: 14px;
+}
+
+.profit_list {
+  color: $deep_purple;
+  font-size: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.profit_list::before {
+  content: "•";
+  color: $blue;
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .description_container {
@@ -354,5 +559,9 @@ modal
 
   .slide_layout {
     margin-top: 28px;
+  }
+
+  .profit_list:last-of-type::before {
+    top: 25%;
   }
 }

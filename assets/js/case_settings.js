@@ -1,7 +1,7 @@
 /*--------------------
-store image data(add as needed)
+store image data(zoomed image when map is clicked)
 --------------------*/
-
+//These data are used for the "Map Zooming".
 const data = [
   {
     id: "case1_map1",
@@ -234,4 +234,23 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("active");
     });
   }
+});
+
+/*--------------------
+  click title to switch slide
+--------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+  const titles = document.querySelectorAll(".section_title");
+
+  titles.forEach((title) => {
+    title.addEventListener("click", () => {
+      if (window.modalSwiper) {
+        const slideIndex = title.dataset.slide;
+
+        if (slideIndex != undefined) {
+          window.modalSwiper.slideTo(Number(slideIndex));
+        }
+      }
+    });
+  });
 });
