@@ -63,10 +63,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("language_select")
     .addEventListener("change", function (event) {
+      const currentPath = window.location.pathname;
+
+      const targetDir = "ms-azerbaijan";
+      const indexOfTargetDir = currentPath.indexOf(targetDir);
+
+      const basePath =
+        indexOfTargetDir !== -1
+          ? currentPath.slice(0, indexOfTargetDir + targetDir.length) + "/"
+          : "./";
+
       if (event.target.value === "japanese") {
-        window.location.href = "../index.html";
+        window.location.href = basePath + "index.html";
       } else if (event.target.value === "english") {
-        window.location.href = "../index_en.html";
+        window.location.href = basePath + "index_en.html";
       }
     });
 });
