@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/ress.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/case.css" />
+    <title>Document</title>
+  </head>
+  <body class="layout flex">
+    <div class="aspect_ratio_container" id="aspectContainer">
+      <header class="header">
+        <div class="header_layout flex">
+          <div class="header_right_contents flex">
+            <a href="./case_select.html" class="case_select_link flex zen_B">
+              <span>
+                <img
+                  src="./assets/img/list-ul-solid.svg"
+                  alt="ケース選択"
+                  class="image"
+                />
+              </span>
+              <span>ケース選択</span>
+            </a>
+            <a href="./index.html" class="header_button top_page_button flex">
+              <img
+                src="./assets/img/home_white.svg"
+                alt="home"
+                class="header_button_image"
+              />
+            </a>
+          </div>
+          <div class="select_wrap">
+            <select id="language_select" class="language_select zen_B">
+              <option value="japanese" selected>Japanese</option>
+              <option value="english">English</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <main class="case_main zen_M">
+        <div class="map">
+          <div class="map_container">
+            <img
+              src="./assets/img/case1_image1.png"
+              alt="city"
+              class="map_image"
+            />
+            <img
+              src="./assets/img/magnifier.png"
+              alt="magnifier"
+              class="magnifier_icon"
+              data-x="0.13"
+              data-y="0.4"
+              data-id="case1_map1"
+            />
+            <img
+              src="./assets/img/magnifier.png"
+              alt="magnifier"
+              class="magnifier_icon"
+              data-x="0.65"
+              data-y="0.4"
+              data-id="case1_map2"
+            />
+            <img
+              src="./assets/img/magnifier.png"
+              alt="magnifier"
+              class="magnifier_icon"
+              data-x="0.45"
+              data-y="0.5"
+              data-id="case1_map3"
+            />
+          </div>
+        </div>
+        <section class="case">
+          <div class="wrapper w_1910">
+            <h2 class="page_heading zen_B">Case２：雨庭による洪水の抑制</h2>
+          </div>
+          <div class="case_top">
+            <div class="case_top_layout flex zen_B">
+              <div class="top_button_container flex">
+                <button id="button1" class="btn left_btn active">浸水深</button>
+                <button id="button2" class="btn right_btn">被害額</button>
+              </div>
+              <div class="top_button_container flex">
+                <button id="button3" class="btn left_btn">適応策OFF</button>
+                <button id="button4" class="btn right_btn active">
+                  適応策ON
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="image_modal" class="image_modal">
+            <div class="image_modal_container">
+              <button class="image_modal_close flex">
+                <img src="./assets/img/close-outline.svg" alt="close" />
+              </button>
+            </div>
+          </div>
+
+          <div class="menu">
+            <button id="menu_close" class="menu_close flex">
+              <img src="./assets/img/close-outline.svg" alt="close" />
+            </button>
+            <h4 class="menu_title txt_center">メニュー</h4>
+            <ul class="menu_container active">
+              <li class="menu_list">
+                <button id="menu_button1" class="menu_button">適応策</button>
+              </li>
+              <li class="menu_list">
+                <button id="menu_button2" class="menu_button">
+                  金融スキーム
+                </button>
+              </li>
+              <li class="menu_list">
+                <button id="menu_button3" class="menu_button">
+                  フィールド詳細
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="case_bottom">
+          <p class="case_bottom_text">
+            This work was supported by Cross-ministerial Strategic Innovation
+            Promotion Program(JPJ012187).<br />
+            Simulator　development：University of Yamanashi Kazuaki Ohtsuki
+          </p>
+        </div>
+
+        <div class="modal">
+          <div class="swiper modal_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <button class="modal_close flex">
+                  <img src="./assets/img/close-outline.svg" alt="close" />
+                </button>
+                <div class="section_title_container flex">
+                  <h2
+                    class="section_title txt_center active zen_B"
+                    data-slide="0"
+                  >
+                    適応策
+                  </h2>
+                  <h2 class="section_title txt_center zen_B" data-slide="1">
+                    金融スキーム
+                  </h2>
+                </div>
+                <div class="wrapper w_1910">
+                  <h3 class="slide_section_title zen_B">
+                    雨庭と止水板を使用した洪水防止のシミュレーション
+                  </h3>
+                  <p class="description">
+                    本シミュレーションは、個々の住宅・建物で洪水防止の対策を行うことで、地域全体で水害を抑えることを目指した仮想実験である
+                  </p>
+                  <div class="slide_layout flex">
+                    <div class="transition">
+                      <h3 class="slide_section_title zen_B">
+                        流域の土地利用の変遷
+                      </h3>
+                      <div class="transition_image_container flex">
+                        <div class="image_container">
+                          <img
+                            src="./assets/img/no_image.png"
+                            alt="1947"
+                            class="basin_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
+                        <img
+                          src="./assets/img/double_triangle.svg"
+                          alt="arrow"
+                          class="arrow"
+                        />
+                        <div class="image_container">
+                          <img
+                            src="./assets/img/no_image.png"
+                            alt="2019"
+                            class="basin_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
+                      </div>
+                      <div class="supplement_container flex zen_B">
+                        <div class="supplement_content flex">
+                          <div class="color_red"></div>
+                          <p class="text">市街地</p>
+                        </div>
+                        <div class="supplement_content flex">
+                          <div class="color_green"></div>
+                          <p class="text">伝統的水田</p>
+                        </div>
+                        <div class="supplement_content flex">
+                          <div class="color_aqua"></div>
+                          <p class="text">圃場整備</p>
+                        </div>
+                        <div class="supplement_content flex">
+                          <div class="color_pink"></div>
+                          <p class="text">放棄地</p>
+                        </div>
+                      </div>
+                      <div class="transition_image_container flex">
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="rice_field_image"
+                        />
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="rice_field_image"
+                        />
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="rice_field_image"
+                        />
+                      </div>
+                      <div class="effective_container flex zen_B">
+                        <p class="text flex">
+                          貯留・浸透効果
+                          <span class="big">大</span>
+                        </p>
+                        <img
+                          src="./assets/img/double_triangle.svg"
+                          alt="arrow"
+                          class="arrow"
+                        />
+                        <p class="text">
+                          貯留・浸透効果
+                          <span class="small">小</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="option">
+                      <h3 class="slide_section_title zen_B">
+                        グリーンインフラの実現オプション：谷津
+                      </h3>
+                      <ul class="option_list_container">
+                        <li class="option_list">
+                          現在の土地利用形態を考慮せず流域全体を湿地化することは困難であるが、様々な介入策が検討出来る
+                        </li>
+                        <li class="option_list">
+                          具体的に実現しているオプションとして”谷津”の整備がある
+                        </li>
+                      </ul>
+                      <div class="option_image_container flex">
+                        <p class="text zen_B">谷津</p>
+                        <div class="image_container flex">
+                          <img
+                            src="./assets/img/no_image.png"
+                            alt=""
+                            class="option_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
+                      </div>
+                      <div class="result_container flex">
+                        <div class="maintenance_image_container">
+                          <div class="image_container">
+                            <img
+                              src="./assets/img/no_image.png"
+                              alt=""
+                              class="maintenance_image clickable_image"
+                            />
+                            <img
+                              src="./assets/img/magnifier.png"
+                              alt="magnifier"
+                              class="zoom_image"
+                            />
+                          </div>
+                          <p class="txt_center zen_B">谷津の整備</p>
+                        </div>
+
+                        <img
+                          src="./assets/img/double_triangle_reverse.svg"
+                          alt="arrow"
+                          class="arrow"
+                        />
+                        <div class="text_container">
+                          <p class="text zen_M">湿地化により、</p>
+                          <ul class="result_list_container zen_B">
+                            <li class="result_list">湿地の貯留・浸透</li>
+                            <li class="result_list">生物多様性の保全</li>
+                            <li class="result_list">水質浄化</li>
+                          </ul>
+                          <p class="text zen_M">の効果が回復</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <button class="modal_close flex">
+                  <img src="./assets/img/close-outline.svg" alt="close" />
+                </button>
+                <div class="section_title_container flex">
+                  <h2 class="section_title txt_center zen_B" data-slide="0">
+                    適応策
+                  </h2>
+                  <h2
+                    class="section_title txt_center active zen_B"
+                    data-slide="1"
+                  >
+                    金融スキーム
+                  </h2>
+                </div>
+                <div class="wrapper w_1910">
+                  <h3 class="slide_section_title zen_B">
+                    投融資を利用した金融スキーム(地域の特定の受益者が適応策実施費用を負担する)
+                  </h3>
+                  <p class="description">
+                    対象流域において、1947年当時の貯水・浸透能力に匹敵するグリーンインフラを整備した場合の洪水害抑制効果を予測する仮想実験である
+                  </p>
+                  <div class="slide_layout scheme_slide flex">
+                    <div class="image_container">
+                      <img
+                        src="./assets/img/no_image.png"
+                        alt=""
+                        class="scheme_left_image"
+                      />
+                    </div>
+                    <div class="slide_right_contents">
+                      <h3 class="slide_right_title zen_B txt_center">
+                        地域における洪水リスク低下の定量効果
+                      </h3>
+                      <div class="contents_wrapper">
+                        <div
+                          class="image_container slide_right_image_container"
+                        >
+                          <img
+                            src="./assets/img/no_image.png"
+                            alt=""
+                            class="scheme_right_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
+                        <h4 class="slide_right_heading txt_center zen_B">
+                          受益者の受ける経済的利益の内容
+                        </h4>
+                        <p class="title zen_B">《行政機関》</p>
+                        <ul>
+                          <li class="profit_list">
+                            インフラ設備が破壊された場合の復旧費用の削減
+                          </li>
+                          <li class="profit_list">
+                            洪水被害による地域経済停滞の回避
+                          </li>
+                        </ul>
+                        <p class="title zen_B">《水道会社》</p>
+                        <ul>
+                          <li class="profit_list">
+                            洪水による上下水道管設備の破壊の回避
+                          </li>
+                          <li class="profit_list">水質の改善</li>
+                        </ul>
+                        <p class="title zen_B">《保険会社》</p>
+                        <ul>
+                          <li class="profit_list">
+                            洪水の発生により被害を受けた被保険者(地域住民・企業)に支払う保険金の削減
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper_settings.js"></script>
+    <script src="./assets/js/case_settings.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
