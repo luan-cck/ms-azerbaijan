@@ -48,16 +48,11 @@
 	width: 68px !important;
 }
 
-.section_title_container {
-	justify-content: center;
-}
-
 .section_title {
 	background-color: #abadb5;
-	border: 1px solid #fff;
+	border-right: 1px solid #fff;
 	color: #fff;
 	font-size: 24px;
-	margin-top: 43px;
 	padding: 13px 94px;
 }
 

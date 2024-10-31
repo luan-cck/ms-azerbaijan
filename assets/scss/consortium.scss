@@ -41,16 +41,11 @@ consortium
   width: 68px !important;
 }
 
-.section_title_container {
-  justify-content: center;
-}
-
 .section_title {
   background-color: $light_gray;
-  border: 1px solid $pure_white;
+  border-right: 1px solid $pure_white;
   color: $pure_white;
   font-size: 24px;
-  margin-top: 43px;
   padding: 13px 94px;
 }
 

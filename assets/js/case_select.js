@@ -68,10 +68,20 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateCaseNumber(activeIndex) {
     const caseNumberIndex = Math.floor(activeIndex / 3) + 1;
     const caseNumberElements = document.querySelectorAll(".reference_title");
+    const numberHeadings = document.querySelectorAll(".number_heading");
+    const lastHeading = numberHeadings[numberHeadings.length - 1];
 
     caseNumberElements.forEach((element) => {
-      if (caseNumberIndex <= 3) {
+      if (caseNumberIndex === 3) {
         element.textContent = `Reference case ${caseNumberIndex}`;
+        if (lastHeading) {
+          lastHeading.style.display = "none";
+        }
+      } else if (caseNumberIndex < 3) {
+        element.textContent = `Reference case ${caseNumberIndex}`;
+        if (lastHeading) {
+          lastHeading.style.display = "";
+        }
       } else {
         element.textContent = "Reference case 3";
       }

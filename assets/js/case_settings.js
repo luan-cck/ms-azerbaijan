@@ -15,6 +15,14 @@ const data = [
     id: "case1_map3",
     src: "./assets/img/no_image.png",
   },
+  {
+    id: "case2_modal_map1",
+    src: "./assets/img/no_image.png",
+  },
+  {
+    id: "case2_modal_map2",
+    src: "./assets/img/no_image.png",
+  },
 ];
 
 /*--------------------
@@ -181,16 +189,17 @@ document.addEventListener("DOMContentLoaded", () => {
   button3.addEventListener("click", () => {
     modal.classList.add("active");
     if (window.modalSwiper) {
-      window.modalSwiper.slideTo(2);
+      window.modalSwiper.slideTo(3);
     }
   });
 });
 
 /*--------------------
-    case_1_swiper
-    --------------------*/
+  swiper
+--------------------*/
 document.addEventListener("DOMContentLoaded", () => {
   const modalSwiperElement = document.querySelector(".modal_swiper");
+
   if (modalSwiperElement) {
     const windowWidth = window.innerWidth;
     const space = Math.max((windowWidth - 1250) / 2, 0);
@@ -205,8 +214,18 @@ document.addEventListener("DOMContentLoaded", () => {
         prevEl: ".swiper-button-prev",
       },
       on: {
-        slideChange: updateFirstSlideMargin,
-        init: updateFirstSlideMargin,
+        slideChange: function (swiper) {
+          updateFirstSlideMargin();
+          if (swiper && swiper.activeIndex !== undefined) {
+            updateActiveTitle(swiper.activeIndex);
+          }
+        },
+        init: function (swiper) {
+          updateFirstSlideMargin();
+          if (swiper && swiper.activeIndex !== undefined) {
+            updateActiveTitle(swiper.activeIndex);
+          }
+        },
       },
     });
 
@@ -304,3 +323,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/*--------------------
+  switch active title
+--------------------*/
+function updateActiveTitle(activeIndex) {
+  const titles = document.querySelectorAll(".section_title");
+  titles.forEach((title, index) => {
+    if (index === activeIndex) {
+      title.classList.add("active");
+    } else {
+      title.classList.remove("active");
+    }
+  });
+}

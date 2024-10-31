@@ -1,33 +1,13 @@
 /*--------------------
-  click title to switch slide
+  consortium_swiper
 --------------------*/
-document.addEventListener("DOMContentLoaded", () => {
-  const titles = document.querySelectorAll(".section_title");
-
-  titles.forEach((title) => {
-    title.addEventListener("click", () => {
-      if (window.consortiumSwiper) {
-        const slideIndex = title.dataset.slide;
-
-        if (slideIndex != undefined) {
-          window.consortiumSwiper.slideTo(Number(slideIndex));
-        }
-      }
-    });
-  });
-});
-
-/*--------------------
-consortium_swiper
---------------------*/
-
 document.addEventListener("DOMContentLoaded", () => {
   const consortiumSwiperElement = document.querySelector(".consortium_swiper");
+
   if (consortiumSwiperElement) {
     const windowWidth = window.innerWidth;
     const space = Math.max((windowWidth - 1250) / 2, 0);
 
-    // Globalize for calling in consortium.js
     window.consortiumSwiper = new Swiper(".consortium_swiper", {
       centeredSlides: false,
       slidesPerView: 1,
@@ -37,18 +17,27 @@ document.addEventListener("DOMContentLoaded", () => {
         prevEl: ".swiper-button-prev",
       },
       on: {
-        init: function () {
+        init: function (swiper) {
           const swiperWrapper = document.querySelector(
             ".consortium_swiper .swiper-wrapper"
           );
           if (swiperWrapper) {
             swiperWrapper.style.transform = "translate3d(0, 0, 0)";
           }
+
+          if (swiper && swiper.activeIndex !== undefined) {
+            updateActiveTitle(swiper.activeIndex);
+          }
+        },
+        slideChange: function (swiper) {
+          if (swiper && swiper.activeIndex !== undefined) {
+            updateActiveTitle(swiper.activeIndex);
+          }
         },
       },
     });
 
-    consortiumSwiper.on("slideChange", function () {
+    window.consortiumSwiper.on("slideChange", function () {
       const firstSlide = document.querySelector(
         ".consortium_swiper .swiper-slide:first-child"
       );
@@ -65,3 +54,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+/*--------------------
+  click title to switch slide
+--------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+  const titles = document.querySelectorAll(".section_title");
+
+  titles.forEach((title) => {
+    title.addEventListener("click", () => {
+      if (window.consortiumSwiper) {
+        const slideIndex = title.dataset.slide;
+
+        if (slideIndex !== undefined) {
+          window.consortiumSwiper.slideTo(Number(slideIndex));
+        }
+      }
+    });
+  });
+});
+
+/*--------------------
+  switch active title
+--------------------*/
+function updateActiveTitle(activeIndex) {
+  const titles = document.querySelectorAll(".section_title");
+  titles.forEach((title, index) => {
+    if (index === activeIndex) {
+      title.classList.add("active");
+    } else {
+      title.classList.remove("active");
+    }
+  });
+}
