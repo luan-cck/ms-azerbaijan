@@ -16,7 +16,7 @@
             <div class="select_wrap">
               <select id="language_select" class="language_select zen_B">
                 <option value="japanese">Japanese</option>
-                <option value="english" selected>English</option>
+                <option value="english">English</option>
               </select>
             </div>
           </div>
@@ -75,5 +75,25 @@
     </div>
 
     <script src="./assets/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const languageSelect = document.getElementById("language_select");
+
+        const currentLang = localStorage.getItem("selectedLanguage") || "japanese";
+        languageSelect.value = currentLang;
+
+        languageSelect.addEventListener("change", function (event) {
+          const selectedLanguage = event.target.value;
+
+          localStorage.setItem("selectedLanguage", selectedLanguage);
+
+          if (selectedLanguage === "japanese") {
+            window.location.href = "./index.html";
+          } else if (selectedLanguage === "english") {
+            window.location.href = "./index_en.html";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
