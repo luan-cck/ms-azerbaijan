@@ -39,6 +39,12 @@
 
 @media screen and (max-width: 1400px) {
   .outline_contents {
+    margin: 30px auto 0 auto;
     max-width: 1250px;
+  }
+
+  .outline_text {
+    font-size: 24px;
+    line-height: 30px;
   }
 }
