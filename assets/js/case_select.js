@@ -166,24 +166,22 @@ document.addEventListener("DOMContentLoaded", () => {
   open reference modal
   --------------------*/
   const referenceButtons = document.querySelectorAll(".reference_button");
-  const referenceModal = document.querySelector(".reference"); // モーダルは一つだけ取得
+  const referenceModal = document.querySelector(".reference");
 
   referenceButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
       initializeReferenceSwiper();
 
-      // モーダルをアクティブにして表示する
       if (referenceModal) {
         referenceModal.classList.add("active");
 
-        // 各ボタンのインデックスに応じたスライド番号に移動
         let slideIndex;
         if (index === 0) {
-          slideIndex = 0; // Reference case1はスライド0に移動
+          slideIndex = 0;
         } else if (index === 1) {
-          slideIndex = 3; // Reference case2はスライド3に移動
+          slideIndex = 3;
         } else if (index === 2) {
-          slideIndex = 6; // Reference case3はスライド6に移動
+          slideIndex = 6;
         }
 
         if (referenceSwiper && referenceSwiper.slideTo) {
