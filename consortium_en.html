@@ -134,8 +134,180 @@
     </div>
 
     <script src="./assets/js/swiper-bundle.min.js"></script>
-    <script src="./assets/js/consortium.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script>
+      /*--------------------
+        consortium_swiper
+      --------------------*/
+      document.addEventListener("DOMContentLoaded", () => {
+        const consortiumSwiperElement =
+          document.querySelector(".consortium_swiper");
+
+        if (consortiumSwiperElement) {
+          const windowWidth = window.innerWidth;
+          const space = Math.max((windowWidth - 1250) / 2, 0);
+
+          window.consortiumSwiper = new Swiper(".consortium_swiper", {
+            centeredSlides: false,
+            slidesPerView: 1,
+            spaceBetween: space,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            on: {
+              init: function (swiper) {
+                const swiperWrapper = document.querySelector(
+                  ".consortium_swiper .swiper-wrapper"
+                );
+                if (swiperWrapper) {
+                  swiperWrapper.style.transform = "translate3d(0, 0, 0)";
+                }
+
+                if (swiper && swiper.activeIndex !== undefined) {
+                  updateActiveTitle(swiper.activeIndex);
+                }
+              },
+              slideChange: function (swiper) {
+                if (swiper && swiper.activeIndex !== undefined) {
+                  updateActiveTitle(swiper.activeIndex);
+                }
+              },
+            },
+          });
+
+          window.consortiumSwiper.on("slideChange", function () {
+            const firstSlide = document.querySelector(
+              ".consortium_swiper .swiper-slide:first-child"
+            );
+            if (firstSlide) {
+              firstSlide.style.marginLeft = "0px";
+            }
+          });
+
+          const firstSlide = document.querySelector(
+            ".consortium_swiper .swiper-slide:first-child"
+          );
+          if (firstSlide) {
+            firstSlide.style.marginLeft = "0px";
+          }
+        }
+      });
+
+      /*--------------------
+        click title to switch slide
+      --------------------*/
+      document.addEventListener("DOMContentLoaded", () => {
+        const titles = document.querySelectorAll(".section_title");
+
+        titles.forEach((title) => {
+          title.addEventListener("click", () => {
+            if (window.consortiumSwiper) {
+              const slideIndex = title.dataset.slide;
+
+              if (slideIndex !== undefined) {
+                window.consortiumSwiper.slideTo(Number(slideIndex));
+              }
+            }
+          });
+        });
+      });
+
+      /*--------------------
+        switch active title
+      --------------------*/
+      function updateActiveTitle(activeIndex) {
+        const titles = document.querySelectorAll(".section_title");
+        titles.forEach((title, index) => {
+          if (index === activeIndex) {
+            title.classList.add("active");
+          } else {
+            title.classList.remove("active");
+          }
+        });
+      }
+    </script>
+    <script>
+      /*--------------------
+      aspect_setting
+      --------------------*/
+
+      function setAspectRatio() {
+        const container = document.getElementById("aspectContainer");
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        const aspectRatio = 16 / 9;
+
+        if (windowWidth / windowHeight > aspectRatio) {
+          container.style.width = `${windowHeight * aspectRatio}px`;
+          container.style.height = `${windowHeight}px`;
+        } else {
+          container.style.width = `${windowWidth}px`;
+          container.style.height = `${windowWidth / aspectRatio}px`;
+        }
+      }
+
+      window.addEventListener("resize", setAspectRatio);
+      document.addEventListener("DOMContentLoaded", setAspectRatio);
+
+      /*--------------------
+      top_page_right_adjusting
+      --------------------*/
+
+      document.addEventListener("DOMContentLoaded", () => {
+        function setHeight() {
+          const empty = document.querySelector(".empty");
+          const linkContainer = document.querySelector(
+            ".description_link_container"
+          );
+
+          if (empty) {
+            const containerHeight = linkContainer.offsetHeight;
+            empty.style.height = `${containerHeight}px`;
+          }
+        }
+
+        setHeight();
+      });
+
+      /*--------------------
+      Set_organization_container_margintop
+      --------------------*/
+      function setMarginTop() {
+        const organization = document.querySelector(".organization_container");
+        const slide = document.querySelector(".organization_slide");
+
+        // 332 is the sum of the height of the organization_container and the height of the section_title (including margin).
+        // Since this height is fixed, a variable is not used.
+        if (slide) {
+          const organizationMt = (slide.offsetHeight - 332) / 2;
+          organization.style.marginTop = `${organizationMt}px`;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", setMarginTop);
+      window.addEventListener("resize", setMarginTop);
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const languageSelect = document.getElementById("language_select");
+
+        const currentLang =
+          localStorage.getItem("selectedLanguage") || "japanese";
+        languageSelect.value = currentLang;
+
+        languageSelect.addEventListener("change", function (event) {
+          const selectedLanguage = event.target.value;
+
+          localStorage.setItem("selectedLanguage", selectedLanguage);
+
+          if (selectedLanguage === "japanese") {
+            window.location.href = "./consortium.html";
+          } else if (selectedLanguage === "english") {
+            window.location.href = "./consortium_en.html";
+          }
+        });
+      });
+    </script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const languageSelect = document.getElementById("language_select");

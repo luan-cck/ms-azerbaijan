@@ -250,6 +250,12 @@ header
   padding: 11px 30px;
 }
 
+@media screen and (max-width: 1400px) {
+  .w_1910 {
+    padding: 0 40px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   /*--------------------
     common_settings

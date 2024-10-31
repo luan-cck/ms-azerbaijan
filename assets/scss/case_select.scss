@@ -211,7 +211,7 @@ reference_modal_1
 
 .slide_left_contents,
 .slide_right_contents {
-  width: 45%;
+  width: 47%;
 }
 
 .station_top_image {
@@ -222,6 +222,7 @@ reference_modal_1
 }
 
 .top_image_container {
+  gap: 16px;
   height: 30%;
   justify-content: center;
 }
@@ -250,7 +251,6 @@ reference_modal_1
 }
 
 .station_image_container {
-  height: 45%;
   width: 45%;
 }
 
@@ -292,6 +292,25 @@ reference_modal_1
   transform: translateY(-50%);
 }
 
+.merit_container {
+  background-color: #328ffc1a;
+  color: $deep_purple;
+  height: 140px;
+  width: 100%;
+}
+
+.merit_list {
+  margin-top: 11px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.merit_container .space {
+  display: inline-block;
+  height: 1px;
+  width: 20px;
+}
+
 @media screen and (max-width: 1400px) {
   .swiper-wrapper {
     height: 60vh;
@@ -315,6 +334,10 @@ reference_modal_1
 
   .top_image_container {
     height: 25%;
+  }
+
+  .slide_section_title {
+    margin-top: 20px;
   }
 }
 
