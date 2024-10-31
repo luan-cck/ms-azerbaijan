@@ -1,5 +1,3 @@
-let referenceSwiper;
-
 document.addEventListener("DOMContentLoaded", () => {
   /*--------------------
   case_select_swiper
@@ -46,16 +44,55 @@ document.addEventListener("DOMContentLoaded", () => {
   /*--------------------
   case_select_modal_swiper(reference)
   --------------------*/
+  let referenceSwiper;
   const referenceSwiperElement = document.querySelector(".reference_swiper");
-  if (referenceSwiperElement) {
-    referenceSwiper = new Swiper(".reference_swiper", {
-      slidesPerView: 1,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+
+  function initializeReferenceSwiper() {
+    if (!referenceSwiper && referenceSwiperElement) {
+      referenceSwiper = new Swiper(".reference_swiper", {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          slideChange: function () {
+            updateCaseNumber(referenceSwiper.activeIndex);
+            updateActiveNumberHeading(referenceSwiper.activeIndex);
+          },
+        },
+      });
+    }
+  }
+
+  function updateCaseNumber(activeIndex) {
+    const caseNumberIndex = Math.floor(activeIndex / 3) + 1;
+    const caseNumberElements = document.querySelectorAll(".reference_title");
+
+    caseNumberElements.forEach((element) => {
+      if (caseNumberIndex <= 3) {
+        element.textContent = `Reference case ${caseNumberIndex}`;
+      } else {
+        element.textContent = "Reference case 3";
+      }
     });
   }
+
+  function updateActiveNumberHeading(activeIndex) {
+    const numberHeadings = document.querySelectorAll(".number_heading");
+
+    numberHeadings.forEach((heading, index) => {
+      if (index === activeIndex % 3) {
+        heading.classList.add("active");
+      } else {
+        heading.classList.remove("active");
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initializeReferenceSwiper();
+  });
 
   /*--------------------
   set scheme link
@@ -129,22 +166,34 @@ document.addEventListener("DOMContentLoaded", () => {
   open reference modal
   --------------------*/
   const referenceButtons = document.querySelectorAll(".reference_button");
-  const referenceModal = document.getElementById("reference");
+  const referenceModal = document.querySelector(".reference"); // モーダルは一つだけ取得
 
   referenceButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
+      initializeReferenceSwiper();
+
+      // モーダルをアクティブにして表示する
       if (referenceModal) {
         referenceModal.classList.add("active");
-      }
 
-      if (referenceSwiper && referenceSwiper.slideTo) {
-        referenceSwiper.slideTo(index);
-      } else {
-        console.error("Swiper is not initialized correctly");
+        // 各ボタンのインデックスに応じたスライド番号に移動
+        let slideIndex;
+        if (index === 0) {
+          slideIndex = 0; // Reference case1はスライド0に移動
+        } else if (index === 1) {
+          slideIndex = 3; // Reference case2はスライド3に移動
+        } else if (index === 2) {
+          slideIndex = 6; // Reference case3はスライド6に移動
+        }
+
+        if (referenceSwiper && referenceSwiper.slideTo) {
+          referenceSwiper.slideTo(slideIndex);
+        } else {
+          console.error("Swiperが正しく初期化されていません");
+        }
       }
     });
   });
-
   /*--------------------
   modal close button
   --------------------*/
@@ -152,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   closeButtons.forEach((close) => {
     close.addEventListener("click", () => {
+      const referenceModal = close.closest(".reference");
       if (referenceModal) {
         referenceModal.classList.remove("active");
       }

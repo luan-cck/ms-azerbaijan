@@ -191,6 +191,10 @@ reference_modal_1
   right: 26px;
 }
 
+.reference_swiper .swiper-wrapper {
+  margin-left: 0;
+}
+
 .referenece .description {
   color: $deep_purple;
 }
@@ -202,7 +206,7 @@ reference_modal_1
 .slide_section_title {
   color: #328ffc;
   font-size: 22px;
-  margin-top: 33px;
+  margin-top: 32px;
 }
 
 .slide_left_contents,
@@ -238,7 +242,7 @@ reference_modal_1
   border: 2px solid $blue;
   border-radius: 6px;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 10px 32px;
   justify-content: center;
   margin: 16px auto 0;
   padding: 30px 42px;
@@ -295,6 +299,22 @@ reference_modal_1
 
   .case_image {
     max-width: 320px;
+  }
+
+  .larger_image {
+    width: 960px;
+  }
+
+  /*--------------------
+  reference_modal_1
+  --------------------*/
+
+  .reference_modal {
+    height: 71vh;
+  }
+
+  .top_image_container {
+    height: 25%;
   }
 }
 
