@@ -34,7 +34,7 @@
           </div>
           <div class="select_wrap">
             <select id="language_select" class="language_select zen_B">
-              <option value="japanese" selected>Japanese</option>
+              <option value="japanese" selected>日本語</option>
               <option value="english">English</option>
             </select>
           </div>
@@ -53,7 +53,7 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.13"
+              data-x="0.23"
               data-y="0.4"
               data-id="case1_map1"
             />
@@ -61,7 +61,7 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.65"
+              data-x="0.61"
               data-y="0.4"
               data-id="case1_map2"
             />
@@ -69,9 +69,17 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.45"
-              data-y="0.5"
+              data-x="0.65"
+              data-y="0.4"
               data-id="case1_map3"
+            />
+            <img
+              src="./assets/img/magnifier.png"
+              alt="magnifier"
+              class="magnifier_icon"
+              data-x="0.45"
+              data-y="0.6"
+              data-id="case1_map4"
             />
           </div>
         </div>
@@ -118,11 +126,11 @@
                   金融スキーム
                 </button>
               </li>
-              <li class="menu_list">
+              <!-- <li class="menu_list">
                 <button id="menu_button3" class="menu_button">
                   フィールド詳細
                 </button>
-              </li>
+              </li> -->
             </ul>
           </div>
         </section>
@@ -155,44 +163,13 @@
                     流域全体の貯留・浸透効果を高めた仮想実験
                   </h3>
                   <p class="description">
-                    対象流域において、1947年当時の貯水・浸透能力に匹敵するグリーンインフラを整備した場合の洪水害抑制効果を予測する仮想実験である
+                    本シミュレーションは、対象流域において、1947年当時の貯水・浸透効果に匹敵するグリーンインフラを整備した場合の洪水害抑制効果を予測する
                   </p>
                   <div class="slide_layout flex">
                     <div class="transition">
                       <h3 class="slide_section_title zen_B">
                         流域の土地利用の変遷
                       </h3>
-                      <div class="transition_image_container flex">
-                        <div class="image_container">
-                          <img
-                            src="./assets/img/no_image.png"
-                            alt="1947"
-                            class="basin_image clickable_image"
-                          />
-                          <img
-                            src="./assets/img/magnifier.png"
-                            alt="magnifier"
-                            class="zoom_image"
-                          />
-                        </div>
-                        <img
-                          src="./assets/img/double_triangle.svg"
-                          alt="arrow"
-                          class="arrow"
-                        />
-                        <div class="image_container">
-                          <img
-                            src="./assets/img/no_image.png"
-                            alt="2019"
-                            class="basin_image clickable_image"
-                          />
-                          <img
-                            src="./assets/img/magnifier.png"
-                            alt="magnifier"
-                            class="zoom_image"
-                          />
-                        </div>
-                      </div>
                       <div class="supplement_container flex zen_B">
                         <div class="supplement_content flex">
                           <div class="color_red"></div>
@@ -211,24 +188,57 @@
                           <p class="text">放棄地</p>
                         </div>
                       </div>
+                      <!-- <div class="transition_image_container flex">
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="rice_field_image"
+                        />
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="rice_field_image"
+                        />
+                        <img
+                          src="./assets/img/no_image.png"
+                          alt=""
+                          class="rice_field_image"
+                        />
+                      </div> -->
                       <div class="transition_image_container flex">
-                        <img
-                          src="./assets/img/no_image.png"
-                          alt=""
-                          class="rice_field_image"
-                        />
-                        <img
-                          src="./assets/img/no_image.png"
-                          alt=""
-                          class="rice_field_image"
-                        />
-                        <img
-                          src="./assets/img/no_image.png"
-                          alt=""
-                          class="rice_field_image"
-                        />
+                        <div class="image_container">
+                          <img
+                            src="./assets/img/map-casepop11.jpg"
+                            alt="1947"
+                            class="basin_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
+                        <!-- <img
+                          src="./assets/img/double_triangle.svg"
+                          alt="arrow"
+                          class="arrow"
+                        /> -->
+                        <div class="image_container">
+                          <img
+                            src="./assets/img/map-casepop12.jpg"
+                            alt="2019"
+                            class="basin_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
                       </div>
-                      <div class="effective_container flex zen_B">
+                      
+                      
+                      <!-- <div class="effective_container flex zen_B">
                         <p class="text flex">
                           貯留・浸透効果
                           <span class="big">大</span>
@@ -242,7 +252,7 @@
                           貯留・浸透効果
                           <span class="small">小</span>
                         </p>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="option">
                       <h3 class="slide_section_title zen_B">
@@ -257,10 +267,23 @@
                         </li>
                       </ul>
                       <div class="option_image_container flex">
-                        <p class="text zen_B">谷津</p>
-                        <div class="image_container flex">
+                        
+                        <div class=" flex">
                           <img
-                            src="./assets/img/no_image.png"
+                            src="./assets/img/casemapfield1.jpg"
+                            alt=""
+                            class="option_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
+
+                        <div class=" flex">
+                          <img
+                            src="./assets/img/casemapfield2.jpg"
                             alt=""
                             class="option_image clickable_image"
                           />
@@ -275,7 +298,7 @@
                         <div class="maintenance_image_container">
                           <div class="image_container">
                             <img
-                              src="./assets/img/no_image.png"
+                              src="./assets/img/casemapfieldworkers.jpg"
                               alt=""
                               class="maintenance_image clickable_image"
                             />
@@ -395,23 +418,27 @@
       const data = [
         {
           id: "case1_map1",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case1_map2",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case1_map3",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
+        },
+        {
+          id: "case1_map4",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case2_modal_map1",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case2_modal_map2",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
       ];
 
@@ -444,6 +471,24 @@
 
       window.addEventListener("resize", debounce(setIconPositions, 200));
       window.addEventListener("load", setIconPositions);
+
+      /*--------------------
+      case top button
+      --------------------*/
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = {
+          offButton: document.getElementById("button1"),
+          onButton: document.getElementById("button2"),
+        };
+
+        function toggleButton() {
+          buttons.offButton.classList.toggle("active");
+          buttons.onButton.classList.toggle("active");
+        }
+
+        buttons.offButton.addEventListener("click", toggleButton);
+        buttons.onButton.addEventListener("click", toggleButton);
+      });
 
       /*--------------------
       case top button
@@ -578,12 +623,7 @@
           }
         });
 
-        button3.addEventListener("click", () => {
-          modal.classList.add("active");
-          if (window.modalSwiper) {
-            window.modalSwiper.slideTo(3);
-          }
-        });
+        
       });
 
       /*--------------------
