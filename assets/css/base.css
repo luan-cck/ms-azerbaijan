@@ -105,6 +105,36 @@ textarea {
 	display: flex;
 }
 
+.space-between{
+	justify-content: space-between;
+}
+
+.items-center{
+	align-items: center;
+}
+.items-start{
+	align-items: start;
+}
+
+.items-end{
+    align-items: end;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-1{
+	flex: 1;
+}
+
+
+
+
 .grid {
 	display: grid;
 }
