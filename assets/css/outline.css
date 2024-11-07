@@ -12,29 +12,77 @@
 	font-family: "Avenir, Book";
 	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
 }
+ 
+
 
 .outline_contents {
 	background-color: #fff;
-	height: 55vh;
+	/* height: 65vh; */
 	margin: 60px auto 0 auto;
+	padding-bottom: 40px;
 	max-width: 1500px;
 }
 
 .outline_contents_container {
 	height: 100%;
 	padding: 72px 66px 0 66px;
+	
+}
+
+ 
+
+.graph-section {
+	flex: 1;
+	padding: 72px 66px 0 66px;
+  }
+  
+.graph-title {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 0.9em;
+	color: #328FFC;
+	font-size: 22px;
+	font-weight: bold;
+}
+  
+.graph-image {
+	width: 100%;
+	max-width: 550px;
+	height: auto;
 }
 
 .outline_text {
-	font-size: 26px;
-	line-height: 40px;
+	font-size: 22px;
+	line-height: 35px;
+	list-style-type: disc;
 }
+
+.outline_text .bold {
+	font-weight: bold;
+}
+
+.outline_text:last-of-type {
+	margin-top: 24px;
+}
+
+.outline_text::marker {
+	color: #328ffc;
+	width: 12px;
+	height: 12px;
+}
+
+ 
 
 @media screen and (max-width: 1400px) {
 
 .outline_contents {
+	margin: 30px auto 0 auto;
 	max-width: 1250px;
 }
 
+.outline_text {
+	font-size: 24px;
+	line-height: 30px;
 }
 
+}
