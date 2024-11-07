@@ -345,6 +345,10 @@
   background-color: white;
 }
 
+.reference_modal_wrap_station_images {
+  margin-top: 15px;
+}
+
 .reference_modal_relative {
   position: relative;
 }
