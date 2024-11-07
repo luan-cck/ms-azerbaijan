@@ -17,6 +17,8 @@
 	background-color: #fff;
 	margin: 59px auto 0;
 	width: 95%;
+	 
+	
 }
 
 .consortium_swiper {
@@ -32,19 +34,21 @@
 .swiper-button-prev {
 	height: initial;
 	width: initial;
+	 
+	z-index: 1;
 }
 
 .swiper-button-next:after {
 	content: url("../img/chevron-forward-outline.svg");
 	height: 80px !important;
-	margin-right: 30px;
+	margin-right: 0px;
 	width: 68px !important;
 }
 
 .swiper-button-prev:after {
 	content: url("../img/chevron-back-outline.svg");
 	height: 80px !important;
-	margin-left: 30px;
+	margin-left: 0px;
 	width: 68px !important;
 }
 
@@ -52,7 +56,7 @@
 	background-color: #abadb5;
 	border-right: 1px solid #fff;
 	color: #fff;
-	font-size: 24px;
+	font-size: 22px;
 	padding: 13px 94px;
 }
 
@@ -62,16 +66,58 @@
 
 .description_container {
 	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	height: calc(100% - 160px);
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+
 }
+
 
 .description {
 	color: #313648;
 	font-size: 30px;
-	line-height: 54px;
+	line-height: 34px;
 	margin: 0 auto;
-	max-width: 916px;
+	color: #328FFC;
 	width: 100%;
+	background-color: #E6F1FF;
+	font-size: 22px;
+	border-radius: 5px;
+	padding: 20px 30px;
+	margin-bottom: 50px;
+}
+.description  h2{
+	font-size: 22px;
+	color: #328FFC;
+	font-weight: 400;
+}
+.description  h3{
+	font-size: 22px;
+	color: #328FFC;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+.description  p{
+	font-size: 22px;
+	color: #000;
+	font-weight: 400;
+}
+ 
+.description_container .list-title{
+	display: flex;
+	width: 100%;
+	color: #328FFC;
+	
+}
+.list-wrapper{
+	justify-content: space-between;
+	align-items: start;
+	gap: 10px;
+	 
 }
 
 .description_list_container {
@@ -79,12 +125,25 @@
 	flex-direction: column;
 	height: calc(100% - 160px);
 	justify-content: center;
+	flex: 1;
+	font-size: 20px;
+}
+
+.image-wrapper{
+	flex:1;
+ 
+}
+
+.image-wrapper img{
+	width: 100%;
+	object-fit: contain;
+	
 }
 
 .description_list {
 	color: #313648;
 	font-size: 30px;
-	line-height: 42px;
+	line-height: 38px;
 	list-style: disc;
 	margin: 14px auto 0 auto;
 	max-width: 916px;

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Selection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0033cc 0%, #6600cc 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 1910px;
+            padding: 20px;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
+
+        .page_heading {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        .case_container {
+            background: #1a1a2e;
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .case_number {
+            font-size: 18px;
+            color: #0066ff;
+        }
+
+        .case_title {
+            font-size: 20px;
+            line-height: 1.4;
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .case_image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            flex: 1;
+            margin: 0;
+        }
+
+        .case_link_container {
+            margin-top: auto;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .simulation_link, 
+        .scheme_link {
+            background: #0066ff;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            white-space: nowrap;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .simulation_link:hover,
+        .scheme_link:hover {
+            background: #0052cc;
+        }
+
+        @media (max-width: 1024px) {
+            .swiper {
+                padding: 10px;
+            }
+            
+            .case_container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="page_heading">Please select a simulation to view</h2>
+        
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="case_container">
+                        <h4 class="case_number">Simulation 1</h4>
+                        <h3 class="case_title">
+                            グリーンインフラの整備による洪水抑制
+                        </h3>
+                        <img src="/api/placeholder/400/200" alt="Green Infrastructure" class="case_image">
+                        <p class="description">
+                            200年に1度の降雨イベントにおいて都市近郊の河川流域にグリーンインフラを整備することによる水害抑制効果を見積もったシミュレーション
+                        </p>
+                        <div class="case_link_container">
+                            <a href="#" class="simulation_link">シミュレーション画面</a>
+                            <a href="#" class="scheme_link">金融スキーム</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="case_container">
+                        <h4 class="case_number">Simulation 2</h4>
+                        <h3 class="case_title">
+                            雨庭による洪水の抑制
+                        </h3>
+                        <img src="/api/placeholder/400/200" alt="Rain Garden" class="case_image">
+                        <p class="description">
+                            RCP2.6シナリオ, 2080-2100年時点での30年に1度の降水イベントにおいて、雨庭を整備することによる都市の内水氾濫に対する効果を見積もったシミュレーション
+                        </p>
+                        <div class="case_link_container">
+                            <a href="#" class="simulation_link">シミュレーション画面</a>
+                            <a href="#" class="scheme_link">金融スキーム</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="case_container">
+                        <h4 class="case_number">Reference case 1</h4>
+                        <h3 class="case_title">
+                            東急電鉄株式会社における止水扉による浸水被害対策
+                        </h3>
+                        <img src="/api/placeholder/400/200" alt="Flood Prevention" class="case_image">
+                        <p class="description">
+                            首都圏に路線を持つ日本の大手鉄道企業の一つである東急電鉄による、浸水被害対策としての止水扉・止水版の設置とその効果を見積もった事例の紹介。
+                        </p>
+                        <div class="case_link_container">
+                            <a href="#" class="simulation_link">説明画面</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            },
+            on: {
+                slideChange: function () {
+                    const totalSlides = swiper.slides.length;
+                    const lastSlideIndex = totalSlides - 1;
+                    let stopIndex;
+
+                    if (window.innerWidth < 1025) {
+                        stopIndex = lastSlideIndex;
+                    } else {
+                        stopIndex = lastSlideIndex - 2;
+                    }
+
+                    if (swiper.activeIndex >= stopIndex) {
+                        swiper.allowSlideNext = false;
+                    } else {
+                        swiper.allowSlideNext = true;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

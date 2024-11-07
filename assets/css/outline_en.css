@@ -15,14 +15,16 @@
 
 .outline_contents {
 	background-color: #fff;
-	height: 65vh;
+	/* height: 65vh; */
 	margin: 60px auto 0 auto;
 	max-width: 1500px;
+	padding-bottom: 40px;
 }
 
 .outline_contents_container {
 	height: 100%;
 	padding: 72px 66px 0 66px;
+	 
 }
 
 .outline_text {
