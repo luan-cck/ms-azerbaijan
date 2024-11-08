@@ -296,7 +296,7 @@
   font-family: var(--second-font);
   padding-bottom: 8px;
   border-bottom: 2px solid var(--blue-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 15px;
 }
 
@@ -376,6 +376,17 @@
   transform: rotate(9.5deg);
   left: 38%;
   top: 72%;
+}
+
+.reference_modal_wrap_image {
+  margin-top: 20px;
+}
+
+.reference_modal_subtext {
+  font-size: 12px;
+  font-family: var(--second-font);
+  color: #161a2e;
+  text-align: end;
 }
 
 .item-baseline {

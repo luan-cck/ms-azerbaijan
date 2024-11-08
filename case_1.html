@@ -45,7 +45,8 @@
         <div class="map">
           <div class="map_container">
             <img
-              src="./assets/img/case1_image1.png"
+              id="simulation-1"
+              src="./assets/img/simulation1-1.png"
               alt="city"
               class="map_image"
             />
@@ -53,8 +54,8 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.23"
-              data-y="0.4"
+              data-x="0.69"
+              data-y="0.68"
               data-id="case1_map1"
             />
 
@@ -62,25 +63,17 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.61"
-              data-y="0.4"
+              data-x="0.73"
+              data-y="0.64"
               data-id="case1_map2"
             />
             <img
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.65"
-              data-y="0.4"
+              data-x="0.77"
+              data-y="0.60"
               data-id="case1_map3"
-            />
-            <img
-              src="./assets/img/magnifier.png"
-              alt="magnifier"
-              class="magnifier_icon"
-              data-x="0.45"
-              data-y="0.6"
-              data-id="case1_map4"
             />
           </div>
         </div>
@@ -97,10 +90,10 @@
                 <button id="button2" class="btn right_btn">被害額</button>
               </div>
               <div class="top_button_container flex">
-                <button id="button3" class="btn left_btn">適応策OFF</button>
-                <button id="button4" class="btn right_btn active">
-                  適応策ON
+                <button id="button3" class="btn left_btn active">
+                  適応策OFF
                 </button>
+                <button id="button4" class="btn right_btn">適応策ON</button>
               </div>
             </div>
           </div>
@@ -8331,27 +8324,15 @@
       const data = [
         {
           id: 'case1_map1',
-          src: './assets/img/casemapzoom.jpg',
+          src: './assets/img/simulation1-1-1.png',
         },
         {
           id: 'case1_map2',
-          src: './assets/img/casemapzoom.jpg',
+          src: './assets/img/simulation1-1-2.png',
         },
         {
           id: 'case1_map3',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case1_map4',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case2_modal_map1',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case2_modal_map2',
-          src: './assets/img/casemapzoom.jpg',
+          src: './assets/img/simulation1-1-3.png',
         },
       ];
 
@@ -8389,37 +8370,91 @@
       case top button
       --------------------*/
       document.addEventListener('DOMContentLoaded', () => {
+        const simulation1 = document.getElementById('simulation-1');
         const buttons = {
-          offButton: document.getElementById('button1'),
-          onButton: document.getElementById('button2'),
+          offButton1: document.getElementById('button1'),
+          onButton1: document.getElementById('button2'),
+          offButton2: document.getElementById('button3'),
+          onButton2: document.getElementById('button4'),
         };
 
-        function toggleButton() {
-          buttons.offButton.classList.toggle('active');
-          buttons.onButton.classList.toggle('active');
+        function toggleButton1() {
+          buttons.offButton1.classList.toggle('active');
+          buttons.onButton1.classList.remove('active');
+
+          if (buttons.offButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-1.png';
+            data[0].src = './assets/img/simulation1-1-1.png';
+            data[1].src = './assets/img/simulation1-1-2.png';
+            data[2].src = './assets/img/simulation1-1-3.png';
+          } else if (buttons.onButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-3.png';
+            data[0].src = './assets/img/simulation1-3-1.png';
+            data[1].src = './assets/img/simulation1-3-2.png';
+            data[2].src = './assets/img/simulation1-3-3.png';
+          }
         }
 
-        buttons.offButton.addEventListener('click', toggleButton);
-        buttons.onButton.addEventListener('click', toggleButton);
+        function toggleButton2() {
+          buttons.offButton1.classList.toggle('active');
+          buttons.onButton1.classList.toggle('active');
+
+          if (buttons.offButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-2.png';
+            data[0].src = './assets/img/simulation1-2-1.png';
+            data[1].src = './assets/img/simulation1-2-2.png';
+            data[2].src = './assets/img/simulation1-2-3.png';
+          } else if (buttons.onButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-4.png';
+            data[0].src = './assets/img/simulation1-4-1.png';
+            data[1].src = './assets/img/simulation1-4-2.png';
+            data[2].src = './assets/img/simulation1-4-3.png';
+          }
+        }
+
+        function toggleButton3() {
+          buttons.offButton2.classList.toggle('active');
+          buttons.onButton2.classList.remove('active');
+
+          if (buttons.offButton1.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-1.png';
+            data[0].src = './assets/img/simulation1-1-1.png';
+            data[1].src = './assets/img/simulation1-1-2.png';
+            data[2].src = './assets/img/simulation1-1-3.png';
+          } else if (buttons.offButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-2.png';
+            data[0].src = './assets/img/simulation1-2-1.png';
+            data[1].src = './assets/img/simulation1-2-2.png';
+            data[2].src = './assets/img/simulation1-2-3.png';
+          }
+        }
+
+        function toggleButton4() {
+          buttons.offButton2.classList.remove('active');
+          buttons.onButton2.classList.toggle('active');
+
+          if (buttons.offButton1.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-3.png';
+            data[0].src = './assets/img/simulation1-3-1.png';
+            data[1].src = './assets/img/simulation1-3-2.png';
+            data[2].src = './assets/img/simulation1-3-3.png';
+          } else {
+            simulation1.src = './assets/img/simulation1-4.png';
+            data[0].src = './assets/img/simulation1-4-1.png';
+            data[1].src = './assets/img/simulation1-4-2.png';
+            data[2].src = './assets/img/simulation1-4-3.png';
+          }
+        }
+
+        buttons.offButton1.addEventListener('click', toggleButton1);
+        buttons.onButton1.addEventListener('click', toggleButton2);
+        buttons.offButton2.addEventListener('click', toggleButton3);
+        buttons.onButton2.addEventListener('click', toggleButton4);
       });
 
       /*--------------------
       case top button
       --------------------*/
-      document.addEventListener('DOMContentLoaded', () => {
-        const buttons = {
-          offButton: document.getElementById('button3'),
-          onButton: document.getElementById('button4'),
-        };
-
-        function toggleButton() {
-          buttons.offButton.classList.toggle('active');
-          buttons.onButton.classList.toggle('active');
-        }
-
-        buttons.offButton.addEventListener('click', toggleButton);
-        buttons.onButton.addEventListener('click', toggleButton);
-      });
 
       /*--------------------
         menu close button
