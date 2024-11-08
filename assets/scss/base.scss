@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "./variables.scss";
+@import './variables.scss';
 
 /*--------------------
 common_settings
@@ -111,15 +111,15 @@ textarea {
 }
 
 .zen_M {
-  font-family: "Zen Kaku Gothic New, Medium", serif;
+  font-family: 'Zen Kaku Gothic New, Medium', serif;
 }
 
 .zen_B {
-  font-family: "Zen Kaku Gothic New, Bold", serif;
+  font-family: 'Zen Kaku Gothic New, Bold', serif;
 }
 
 .avenir {
-  font-family: "Avenir, Book", serif;
+  font-family: 'Avenir, Book', serif;
 }
 
 .bg_setting {
@@ -212,7 +212,7 @@ header
 
 .select_wrap::after {
   color: $dark_blue;
-  content: "▼";
+  content: '▼';
   display: block;
   pointer-events: none;
   position: absolute;
