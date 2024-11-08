@@ -138,7 +138,7 @@
         </div>
         <!-- model here -->
         <div id="image_modal1" class="detailed_modal">
-          <div class="image_modal_container">
+          <div class="content_modal_container">
             <button class="detail_modal_close flex">
               <img src="./assets/img/close-outline.svg" alt="close" />
             </button>
@@ -154,7 +154,7 @@
 
         <!-- model here -->
         <div id="image_modal2" class="detailed_modal">
-          <div class="image_modal_container">
+          <div class="content_modal_container">
             <button class="detail_modal_close flex">
               <img src="./assets/img/close-outline.svg" alt="close" />
             </button>
@@ -190,9 +190,6 @@
               <h2 class="section_title txt_center zen_B" data-slide="2">
                 金融スキーム②
               </h2>
-              <h2 class="section_title txt_center zen_B" data-slide="3">
-                フィールド詳細
-              </h2>
             </div>
             <button class="modal_close flex">
               <img src="./assets/img/close-outline.svg" alt="close" />
@@ -208,9 +205,6 @@
                   </p>
                   <div class="slide_layout flex">
                     <div class="slide_left_contents">
-                      <!-- <h3 class="slide_section_title zen_B">
-                        流域の土地利用の変遷
-                      </h3> -->
                       <div class="slide_layout scheme_slide">
                         <div class="image_container modal_map_container">
                           <img
@@ -219,6 +213,11 @@
                             class="scheme_left_image map_image"
                           />
                           <div>
+                            <img
+                              src="./assets/img/case2-roundpin1.png"
+                              alt="loca one"
+                              class="img-loc-1 clickable_localation_image"
+                            />
                             <img
                               src="./assets/img/case2-roundpin1.png"
                               alt="loca one"
@@ -238,13 +237,14 @@
                               src="./assets/img/right-arrow-blue.png"
                               alt=""
                             />
+                            <div class="line"></div>
                           </div>
 
                           <div>
                             <img
                               src="./assets/img/case2-roundpin2.png"
                               alt="loca one"
-                              class="img-loc-2 clickable_image"
+                              class="img-loc-2 clickable_localation_image"
                             />
                             <img
                               src="./assets/img/magnifier.png"
@@ -346,128 +346,119 @@
               <div class="swiper-slide">
                 <div class="wrapper w_1910">
                   <h3 class="slide_section_title zen_B">
-                    投融資を利用した金融スキーム(地域の特定の受益者が適応策実施費用を負担する)
+                    地域単位の災害コストを抑えるための適応ファイナンス：
+                    community-based catastrophe insurance (CBCI)
                   </h3>
-                  <p class="description">
-                    対象流域において、1947年当時の貯水・浸透能力に匹敵するグリーンインフラを整備した場合の洪水害抑制効果を予測する仮想実験である
-                  </p>
+
                   <div class="slide_layout scheme_slide flex">
-                    <div class="image_container">
-                      <img
-                        src="./assets/img/no_image.png"
-                        alt=""
-                        class="scheme_left_image"
-                      />
-                    </div>
-                    <div class="slide_right_contents">
-                      <h3 class="slide_right_title zen_B txt_center">
-                        地域における洪水リスク低下の定量効果
-                      </h3>
-                      <div class="contents_wrapper">
-                        <div
-                          class="image_container slide_right_image_container"
-                        >
-                          <img
-                            src="./assets/img/no_image.png"
-                            alt=""
-                            class="scheme_right_image clickable_image"
-                          />
-                          <img
-                            src="./assets/img/magnifier.png"
-                            alt="magnifier"
-                            class="zoom_image"
-                          />
+                    <div class="community-base-wrapper">
+                      <section class="content-wrapper">
+                        <div class="section">
+                          <h2>
+                            実際の堤防後退プロジェクトをモデルとしたCBC(米国)*
+                          </h2>
+                          <div class="content">
+                            <div class="bullet-point">
+                              <span class="bullet">●</span>
+                              <div>
+                                米国ミズーリ川のプロジェクトでは、堤防後退工事より洪水リスクが減少
+                              </div>
+                            </div>
+                            <div class="bullet-point">
+                              <span class="bullet">●</span>
+                              <div>
+                                このプロジェクトにCBCIモデルの適用を検討したところ、地域の住民が支払う洪水保険の保険料が73%下がると試算された
+                              </div>
+                            </div>
+                            <div class="bullet-point">
+                              <span class="bullet">●</span>
+                              <div>
+                                米国では個人洪水保険の加入率が元々高くないため、保険料の低下要因のうち23%は洪水リスクの減少によるもの、残りの77%は対象範囲の住宅全てが保険に加入することによる効果であった
+                              </div>
+                            </div>
+
+                            <div class="chart-container">
+                              <div class="map-section">
+                                <div class="map-image-cover">
+                                  <img
+                                    src="./assets/img/original-levee-footproint.JPG"
+                                    alt="Map"
+                                    class="map-image clickable_image"
+                                  />
+                                  <img
+                                    src="./assets/img/magnifier.png"
+                                    alt="magnifier"
+                                    class="zoom_image"
+                                  />
+                                </div>
+
+                                <div
+                                  style="
+                                    font-size: 12px;
+                                    color: #666;
+                                    margin-top: 5px;
+                                  "
+                                >
+                                  Source: TNC, Large-Scale Levee Setback
+                                  Playbook
+                                </div>
+                              </div>
+                              <div class="graph-section">
+                                <span>地域住民が支払う保険料</span>
+                                <div class="graph-picture">
+                                  <img
+                                    src="./assets/img/Premiums-paid-chart.JPG"
+                                    alt=""
+                                    class="graph clickable_image"
+                                  />
+                                  <img
+                                    src="./assets/img/magnifier.png"
+                                    alt="magnifier"
+                                    class="zoom_image"
+                                  />
+                                </div>
+                                <div class="bar-footer">
+                                  <span> 堤防後退前の 個人保険 （NFIP） </span>
+                                  <span>
+                                    堤防後退後の コミュニティ保険 (CFRI)
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <h4 class="slide_right_heading txt_center zen_B">
-                          受益者の受ける経済的利益の内容
-                        </h4>
-                        <p class="title zen_B">《行政機関》</p>
-                        <ul>
-                          <li class="profit_list">
-                            インフラ設備が破壊された場合の復旧費用の削減
-                          </li>
-                          <li class="profit_list">
-                            洪水被害による地域経済停滞の回避
-                          </li>
-                        </ul>
-                        <p class="title zen_B">《水道会社》</p>
-                        <ul>
-                          <li class="profit_list">
-                            洪水による上下水道管設備の破壊の回避
-                          </li>
-                          <li class="profit_list">水質の改善</li>
-                        </ul>
-                        <p class="title zen_B">《保険会社》</p>
-                        <ul>
-                          <li class="profit_list">
-                            洪水の発生により被害を受けた被保険者(地域住民・企業)に支払う保険金の削減
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="wrapper w_1910">
-                  <h3 class="slide_section_title zen_B">
-                    投融資を利用した金融スキーム(地域の特定の受益者が適応策実施費用を負担する)
-                  </h3>
-                  <p class="description">
-                    対象流域において、1947年当時の貯水・浸透能力に匹敵するグリーンインフラを整備した場合の洪水害抑制効果を予測する仮想実験である
-                  </p>
-                  <div class="slide_layout scheme_slide flex">
-                    <div class="image_container">
-                      <img
-                        src="./assets/img/no_image.png"
-                        alt=""
-                        class="scheme_left_image"
-                      />
-                    </div>
-                    <div class="slide_right_contents">
-                      <h3 class="slide_right_title zen_B txt_center">
-                        地域における洪水リスク低下の定量効果
-                      </h3>
-                      <div class="contents_wrapper">
-                        <div
-                          class="image_container slide_right_image_container"
-                        >
-                          <img
-                            src="./assets/img/no_image.png"
-                            alt=""
-                            class="scheme_right_image clickable_image"
-                          />
-                          <img
-                            src="./assets/img/magnifier.png"
-                            alt="magnifier"
-                            class="zoom_image"
-                          />
+
+                        <div class="section">
+                          <h2>日本におけるCBC導入検討</h2>
+                          <div class="right-content">
+                            <p>
+                              日本においてもCBCIを導入することは有効な試みであると考えるが、今後日本での導入を進めるためには、以下の課題を解決する必要がある
+                            </p>
+
+                            <div class="circle-bullter-wrapper">
+                              <div class="circles-container">
+                                <div class="circle">保険加入率<br />の違い</div>
+                                <span
+                                  >日本では、洪水保険の加入率が高いため、CBCI導入による保険料の引き下げ効果は低い可能性がある</span
+                                >
+                              </div>
+                              <div class="circles-container">
+                                <div class="circle">
+                                  水害リスクを<br />大幅に下げる<br />適応策の有無
+                                </div>
+                                <span
+                                  >CBCI導入前後で十分な保険料ギャップが発生する適応策が日本において存在するか</span
+                                >
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <h4 class="slide_right_heading txt_center zen_B">
-                          受益者の受ける経済的利益の内容
-                        </h4>
-                        <p class="title zen_B">《行政機関》</p>
-                        <ul>
-                          <li class="profit_list">
-                            インフラ設備が破壊された場合の復旧費用の削減
-                          </li>
-                          <li class="profit_list">
-                            洪水被害による地域経済停滞の回避
-                          </li>
-                        </ul>
-                        <p class="title zen_B">《水道会社》</p>
-                        <ul>
-                          <li class="profit_list">
-                            洪水による上下水道管設備の破壊の回避
-                          </li>
-                          <li class="profit_list">水質の改善</li>
-                        </ul>
-                        <p class="title zen_B">《保険会社》</p>
-                        <ul>
-                          <li class="profit_list">
-                            洪水の発生により被害を受けた被保険者(地域住民・企業)に支払う保険金の削減
-                          </li>
-                        </ul>
+                      </section>
+
+                      <div class="note">
+                        *米国の過去の洪水プロジェクト「L536: The Missouri River
+                        Valley large-scale levee setback
+                        project」をモデルとした検討であり、実際に当該金融スキームが実行されたわけではない
                       </div>
                     </div>
                   </div>
@@ -481,7 +472,6 @@
       </main>
     </div>
 
-    <!-- <script src="./assets/js/swiper-bundle.min.js"></script> -->
     <script>
       /*--------------------
          swiper_main
@@ -8416,6 +8406,54 @@
       })();
     </script>
     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.clickable_image');
+
+        images.forEach((image) => {
+          image.addEventListener('click', () => {
+            openModal(image.src);
+          });
+        });
+
+        function openModal(imgSrc) {
+          const modal = document.getElementById('image_modal');
+
+          let modalImageContainer = modal.querySelector(
+            '.image_modal_container'
+          );
+          if (!modalImageContainer) {
+            modalImageContainer = document.createElement('div');
+            modalImageContainer.classList.add('image_modal_container');
+            modal.appendChild(modalImageContainer);
+          }
+
+          modalImageContainer.innerHTML = '';
+
+          let modalCloseButton = modal.querySelector('.image_modal_close');
+          if (!modalCloseButton) {
+            modalCloseButton = document.createElement('button');
+            modalCloseButton.classList.add('image_modal_close', 'flex');
+            const closeIcon = document.createElement('img');
+            closeIcon.src = './assets/img/close-outline.svg';
+            closeIcon.alt = 'close';
+            modalCloseButton.appendChild(closeIcon);
+          }
+          modalImageContainer.appendChild(modalCloseButton);
+
+          const modalImage = document.createElement('img');
+          modalImage.src = imgSrc;
+          modalImage.classList.add('larger_image');
+          modalImageContainer.appendChild(modalImage);
+
+          modal.classList.add('active');
+
+          modalCloseButton.addEventListener('click', () => {
+            modal.classList.remove('active');
+          });
+        }
+      });
+    </script>
+    <script>
       /*--------------------
       store image data(zoomed image when map is clicked)
       --------------------*/
@@ -8545,7 +8583,7 @@
       zoom modal image
       --------------------*/
       document.addEventListener('DOMContentLoaded', () => {
-        const images = document.querySelectorAll('.clickable_image');
+        const images = document.querySelectorAll('.clickable_localation_image');
         const modals = document.querySelectorAll('.detailed_modal');
         const closeButtons = document.querySelectorAll('.detail_modal_close');
 
