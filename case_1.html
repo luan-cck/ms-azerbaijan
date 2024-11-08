@@ -45,7 +45,8 @@
         <div class="map">
           <div class="map_container">
             <img
-              src="./assets/img/case1_image1.png"
+              id="simulation-1"
+              src="./assets/img/simulation1-1.png"
               alt="city"
               class="map_image"
             />
@@ -97,10 +98,10 @@
                 <button id="button2" class="btn right_btn">被害額</button>
               </div>
               <div class="top_button_container flex">
-                <button id="button3" class="btn left_btn">適応策OFF</button>
-                <button id="button4" class="btn right_btn active">
-                  適応策ON
+                <button id="button3" class="btn left_btn active">
+                  適応策OFF
                 </button>
+                <button id="button4" class="btn right_btn">適応策ON</button>
               </div>
             </div>
           </div>
@@ -8389,37 +8390,67 @@
       case top button
       --------------------*/
       document.addEventListener('DOMContentLoaded', () => {
+        const simulation1 = document.getElementById('simulation-1');
         const buttons = {
-          offButton: document.getElementById('button1'),
-          onButton: document.getElementById('button2'),
+          offButton1: document.getElementById('button1'),
+          onButton1: document.getElementById('button2'),
+          offButton2: document.getElementById('button3'),
+          onButton2: document.getElementById('button4'),
         };
 
-        function toggleButton() {
-          buttons.offButton.classList.toggle('active');
-          buttons.onButton.classList.toggle('active');
+        function toggleButton1() {
+          buttons.offButton1.classList.toggle('active');
+          buttons.onButton1.classList.remove('active');
+
+          if (buttons.offButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-1.png';
+          } else if (buttons.onButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-3.png';
+          }
         }
 
-        buttons.offButton.addEventListener('click', toggleButton);
-        buttons.onButton.addEventListener('click', toggleButton);
+        function toggleButton2() {
+          buttons.offButton1.classList.toggle('active');
+          buttons.onButton1.classList.toggle('active');
+
+          if (buttons.offButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-2.png';
+          } else if (buttons.onButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-4.png';
+          }
+        }
+
+        function toggleButton3() {
+          buttons.offButton2.classList.toggle('active');
+          buttons.onButton2.classList.remove('active');
+
+          if (buttons.offButton1.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-1.png';
+          } else if (buttons.offButton2.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-2.png';
+          }
+        }
+
+        function toggleButton4() {
+          buttons.offButton2.classList.remove('active');
+          buttons.onButton2.classList.toggle('active');
+
+          if (buttons.offButton1.classList.contains('active')) {
+            simulation1.src = './assets/img/simulation1-3.png';
+          } else {
+            simulation1.src = './assets/img/simulation1-4.png';
+          }
+        }
+
+        buttons.offButton1.addEventListener('click', toggleButton1);
+        buttons.onButton1.addEventListener('click', toggleButton2);
+        buttons.offButton2.addEventListener('click', toggleButton3);
+        buttons.onButton2.addEventListener('click', toggleButton4);
       });
 
       /*--------------------
       case top button
       --------------------*/
-      document.addEventListener('DOMContentLoaded', () => {
-        const buttons = {
-          offButton: document.getElementById('button3'),
-          onButton: document.getElementById('button4'),
-        };
-
-        function toggleButton() {
-          buttons.offButton.classList.toggle('active');
-          buttons.onButton.classList.toggle('active');
-        }
-
-        buttons.offButton.addEventListener('click', toggleButton);
-        buttons.onButton.addEventListener('click', toggleButton);
-      });
 
       /*--------------------
         menu close button
