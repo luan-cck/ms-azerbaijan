@@ -53,7 +53,7 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.13"
+              data-x="0.23"
               data-y="0.4"
               data-id="case1_map1"
             />
@@ -65,30 +65,39 @@
               data-y="0.4"
               data-id="case1_map2"
             />
+
+            <img
+              src="./assets/img/magnifier.png"
+              alt="magnifier"
+              class="magnifier_icon"
+              data-x="0.60"
+              data-y="0.4"
+              data-id="case1_map3"
+            />
             <img
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
               data-x="0.45"
-              data-y="0.5"
-              data-id="case1_map3"
+              data-y="0.6"
+              data-id="case1_map4"
             />
           </div>
         </div>
         <section class="case">
           <div class="wrapper w_1910">
-            <h2 class="page_heading zen_B">Case２：雨庭による洪水の抑制</h2>
+            <h2 class="page_heading zen_B">Case 2: Flood Control with Rain Gardens</h2>
           </div>
           <div class="case_top">
             <div class="case_top_layout flex zen_B">
               <div class="top_button_container flex">
-                <button id="button1" class="btn left_btn active">浸水深</button>
-                <button id="button2" class="btn right_btn">被害額</button>
+                <button id="button1" class="btn left_btn active">Flood Depth</button>
+                <button id="button2" class="btn right_btn">Damage Amount</button>
               </div>
               <div class="top_button_container flex">
-                <button id="button3" class="btn left_btn">適応策OFF</button>
+                <button id="button3" class="btn left_btn">Adaptation OFF</button>
                 <button id="button4" class="btn right_btn active">
-                  適応策ON
+                  Adaptation ON
                 </button>
               </div>
             </div>
@@ -106,19 +115,14 @@
             <button id="menu_close" class="menu_close flex">
               <img src="./assets/img/close-outline.svg" alt="close" />
             </button>
-            <h4 class="menu_title txt_center">メニュー</h4>
+            <h4 class="menu_title txt_center">Menu</h4>
             <ul class="menu_container active">
               <li class="menu_list">
-                <button id="menu_button1" class="menu_button">適応策</button>
+                <button id="menu_button1" class="menu_button">Adaptation Measures</button>
               </li>
               <li class="menu_list">
                 <button id="menu_button2" class="menu_button">
-                  金融スキーム
-                </button>
-              </li>
-              <li class="menu_list">
-                <button id="menu_button3" class="menu_button">
-                  フィールド詳細
+                  Financial Scheme
                 </button>
               </li>
             </ul>
@@ -242,6 +246,7 @@
                         <p class="text">
                           貯留・浸透効果
                           <span class="small">小</span>
+                          
                         </p>
                       </div>
                     </div>
@@ -408,25 +413,29 @@
       --------------------*/
       //These data are used for the "Map Zooming".
       const data = [
-        {
+      {
           id: "case1_map1",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case1_map2",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case1_map3",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
+        },
+        {
+          id: "case1_map4",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case2_modal_map1",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case2_modal_map2",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
       ];
 

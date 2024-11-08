@@ -135,38 +135,127 @@
 
         <div class="modal">
           <div class="swiper modal_swiper">
+            <div class="section_title_container flex">
+              <h2 class="section_title txt_center active zen_B" data-slide="0">
+                Adaptation Measures
+              </h2>
+              <h2 class="section_title txt_center zen_B" data-slide="1">
+                Financial Schemes
+              </h2>
+            </div>
+            <button class="modal_close flex">
+              <img src="./assets/img/close-outline.svg" alt="close" />
+            </button>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <button class="modal_close flex">
-                  <img src="./assets/img/close-outline.svg" alt="close" />
-                </button>
-                <div class="section_title_container flex">
-                  <h2
-                    class="section_title txt_center active zen_B"
-                    data-slide="0"
-                  >
-                    適応策
-                  </h2>
-                  <h2 class="section_title txt_center zen_B" data-slide="1">
-                    金融スキーム
-                  </h2>
-                </div>
                 <div class="wrapper w_1910">
                   <h3 class="slide_section_title zen_B">
-                    流域全体の貯留・浸透効果を高めた仮想実験
+                    Virtual Experiment to Enhance Retention and Infiltration Effect of the Entire Basin
                   </h3>
                   <p class="description">
-                    対象流域において、1947年当時の貯水・浸透能力に匹敵するグリーンインフラを整備した場合の洪水害抑制効果を予測する仮想実験である
+                    This simulation predicts the flood damage mitigation effect when green infrastructure is developed in the target basin, achieving a retention and infiltration effect comparable to 1947.
                   </p>
                   <div class="slide_layout flex">
                     <div class="transition">
                       <h3 class="slide_section_title zen_B">
-                        流域の土地利用の変遷
+                        Land Use Changes in the Basin
                       </h3>
-                      <div class="transition_image_container flex">
+                      <div class="supplement_container flex zen_B">
+                        <div class="supplement_content flex">
+                          <div class="color_red"></div>
+                          <p class="text">Urban Area</p>
+                        </div>
+                        <div class="supplement_content flex">
+                          <div class="color_green"></div>
+                          <p class="text">Traditional Rice Fields</p>
+                        </div>
+                        <div class="supplement_content flex">
+                          <div class="color_aqua"></div>
+                          <p class="text">Farmland Development</p>
+                        </div>
+                        <div class="supplement_content flex">
+                          <div class="color_pink"></div>
+                          <p class="text">Abandoned Land</p>
+                        </div>
+                      </div>
+                      
+                      <div class="transition_image_container">
                         <div class="image_container">
                           <img
-                            src="./assets/img/no_image.png"
+                            src="./assets/img/mapcase1sat.JPG"
+                            alt="1947"
+                            class="basin_image clickable_image"
+                          />
+                          <div class="box-green"></div>
+                          <div class="dashed-line-green"></div>
+                        </div>
+                        <div class="image_container">
+                          
+                          <img
+                            src="./assets/img/mapcase2sat.jpg"
+                            alt="1947"
+                            class="basin_image clickable_image"
+                          />
+                          <div class="box-blue"></div>
+                          <div class="dashed-line-blue"></div>
+                          <div class="box-pink"></div>
+                          <div class="dashed-line-pink"></div>
+                        </div>
+        
+                        <div class="image_container green-border">
+                          <span>High Storage and Infiltration Effect</span>
+                          <img
+                            src="./assets/img/mapcase1field1.jpg"
+                            alt="2019"
+                            class="basin_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/mapcase1field11.JPG"
+                            alt="smallmap"
+                            class="small_map"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
+                        <div class="image_container blue-border">
+                          <span>Low Storage and Infiltration Effect</span>
+                          <img
+                            src="./assets/img/mapcase1field2.jpg"
+                            alt="1947"
+                            class="basin_image clickable_image"
+                          />
+                          <img
+                            src="./assets/img/mapcase1field22.JPG"
+                            alt="smallmap"
+                            class="small_map"
+                          />
+                          <img
+                            src="./assets/img/magnifier.png"
+                            alt="magnifier"
+                            class="zoom_image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="option">
+                      <h3 class="slide_section_title zen_B">
+                        Options for Realizing Green Infrastructure: Yatsu
+                      </h3>
+                      <ul class="option_list_container">
+                        <li class="option_list">
+                          Although it is difficult to wetland the entire basin without considering current land use, various interventions can be explored.
+                        </li>
+                        <li class="option_list">
+                          An example of a specific, achievable option is the establishment of "Yatsu."
+                        </li>
+                      </ul>
+                      <div class="option_image_container">
+                        <div class="image_container">
+                          <img
+                            src="./assets/img/casemapfield1.jpg"
                             alt="1947"
                             class="basin_image clickable_image"
                           />
@@ -176,15 +265,16 @@
                             class="zoom_image"
                           />
                         </div>
+        
                         <img
-                          src="./assets/img/double_triangle.svg"
-                          alt="arrow"
-                          class="arrow"
+                          src="./assets/img/blue-arrow.jpg"
+                          alt="blue-arrow"
+                          class="blue-arrow"
                         />
                         <div class="image_container">
                           <img
-                            src="./assets/img/no_image.png"
-                            alt="2019"
+                            src="./assets/img/casemapfield2.jpg"
+                            alt="1947"
                             class="basin_image clickable_image"
                           />
                           <img
@@ -194,89 +284,11 @@
                           />
                         </div>
                       </div>
-                      <div class="supplement_container flex zen_B">
-                        <div class="supplement_content flex">
-                          <div class="color_red"></div>
-                          <p class="text">市街地</p>
-                        </div>
-                        <div class="supplement_content flex">
-                          <div class="color_green"></div>
-                          <p class="text">伝統的水田</p>
-                        </div>
-                        <div class="supplement_content flex">
-                          <div class="color_aqua"></div>
-                          <p class="text">圃場整備</p>
-                        </div>
-                        <div class="supplement_content flex">
-                          <div class="color_pink"></div>
-                          <p class="text">放棄地</p>
-                        </div>
-                      </div>
-                      <div class="transition_image_container flex">
-                        <img
-                          src="./assets/img/no_image.png"
-                          alt=""
-                          class="rice_field_image"
-                        />
-                        <img
-                          src="./assets/img/no_image.png"
-                          alt=""
-                          class="rice_field_image"
-                        />
-                        <img
-                          src="./assets/img/no_image.png"
-                          alt=""
-                          class="rice_field_image"
-                        />
-                      </div>
-                      <div class="effective_container flex zen_B">
-                        <p class="text flex">
-                          貯留・浸透効果
-                          <span class="big">大</span>
-                        </p>
-                        <img
-                          src="./assets/img/double_triangle.svg"
-                          alt="arrow"
-                          class="arrow"
-                        />
-                        <p class="text">
-                          貯留・浸透効果
-                          <span class="small">小</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="option">
-                      <h3 class="slide_section_title zen_B">
-                        グリーンインフラの実現オプション：谷津
-                      </h3>
-                      <ul class="option_list_container">
-                        <li class="option_list">
-                          現在の土地利用形態を考慮せず流域全体を湿地化することは困難であるが、様々な介入策が検討出来る
-                        </li>
-                        <li class="option_list">
-                          具体的に実現しているオプションとして”谷津”の整備がある
-                        </li>
-                      </ul>
-                      <div class="option_image_container flex">
-                        <p class="text zen_B">谷津</p>
-                        <div class="image_container flex">
-                          <img
-                            src="./assets/img/no_image.png"
-                            alt=""
-                            class="option_image clickable_image"
-                          />
-                          <img
-                            src="./assets/img/magnifier.png"
-                            alt="magnifier"
-                            class="zoom_image"
-                          />
-                        </div>
-                      </div>
-                      <div class="result_container flex">
+                      <div class="result_container">
                         <div class="maintenance_image_container">
                           <div class="image_container">
                             <img
-                              src="./assets/img/no_image.png"
+                              src="./assets/img/casemapfieldworkers.jpg"
                               alt=""
                               class="maintenance_image clickable_image"
                             />
@@ -286,22 +298,15 @@
                               class="zoom_image"
                             />
                           </div>
-                          <p class="txt_center zen_B">谷津の整備</p>
                         </div>
-
-                        <img
-                          src="./assets/img/double_triangle_reverse.svg"
-                          alt="arrow"
-                          class="arrow"
-                        />
+                        
                         <div class="text_container">
-                          <p class="text zen_M">湿地化により、</p>
+                          <p class="text zen_M">Wetlandization of Abandoned Land</p>
                           <ul class="result_list_container zen_B">
-                            <li class="result_list">湿地の貯留・浸透</li>
-                            <li class="result_list">生物多様性の保全</li>
-                            <li class="result_list">水質浄化</li>
+                            <li class="result_list">Improved Retention and Infiltration</li>
+                            <li class="result_list">Biodiversity Conservation</li>
+                            <li class="result_list">Water Quality Improvement</li>
                           </ul>
-                          <p class="text zen_M">の効果が回復</p>
                         </div>
                       </div>
                     </div>
@@ -309,79 +314,48 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <button class="modal_close flex">
-                  <img src="./assets/img/close-outline.svg" alt="close" />
-                </button>
-                <div class="section_title_container flex">
-                  <h2 class="section_title txt_center zen_B" data-slide="0">
-                    適応策
-                  </h2>
-                  <h2
-                    class="section_title txt_center active zen_B"
-                    data-slide="1"
-                  >
-                    金融スキーム
-                  </h2>
-                </div>
                 <div class="wrapper w_1910">
                   <h3 class="slide_section_title zen_B">
-                    投融資を利用した金融スキーム(地域の特定の受益者が適応策実施費用を負担する)
+                    Financial Scheme Using Investment (Stakeholders Benefiting from Adaptation Measures Bear the Cost)
                   </h3>
-                  <p class="description">
-                    対象流域において、1947年当時の貯水・浸透能力に匹敵するグリーンインフラを整備した場合の洪水害抑制効果を予測する仮想実験である
-                  </p>
+                  
                   <div class="slide_layout scheme_slide flex">
-                    <div class="image_container">
-                      <img
-                        src="./assets/img/no_image.png"
-                        alt=""
-                        class="scheme_left_image"
-                      />
-                    </div>
-                    <div class="slide_right_contents">
-                      <h3 class="slide_right_title zen_B txt_center">
-                        地域における洪水リスク低下の定量効果
-                      </h3>
-                      <div class="contents_wrapper">
-                        <div
-                          class="image_container slide_right_image_container"
-                        >
-                          <img
-                            src="./assets/img/no_image.png"
-                            alt=""
-                            class="scheme_right_image clickable_image"
-                          />
-                          <img
-                            src="./assets/img/magnifier.png"
-                            alt="magnifier"
-                            class="zoom_image"
-                          />
+                    <div class="scheme">
+                      <div class="financialshceme-tooltip">
+                        <img src="./assets/img/finance-scheme.JPG" alt="">
+                      </div>
+                      <div class="scheme-description">
+                        <div class="left-description">
+                          <h3>Examples of Stakeholders (Specific Beneficiaries of Adaptation Value)</h3>
+                          <div class="options">
+                            <div class="option">
+                              <img src="./assets/img/house-ico.png" alt="">
+                              <h4>Government Agencies</h4>
+                              <ul>
+                                <li>Reduction in Infrastructure Restoration Costs</li>
+                                <li>Avoidance of Regional Economic Stagnation</li>
+                              </ul>
+                            </div>
+                            <div class="option">
+                              <img src="./assets/img/building-ico2.png" alt="">
+                              <h4>Insurance Companies</h4>
+                              <ul>
+                                <li>Reduction in Payouts to Insured (Local Residents and Businesses)</li>
+                              </ul>
+                            </div>
+                            <div class="option">
+                              <img src="./assets/img/building-ico2.png" alt="">
+                              <h4>Water Companies</h4>
+                              <ul>
+                                <li>Reduction in Water Facility Repair Costs</li>
+                                <li>Water Quality Improvement</li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
-                        <h4 class="slide_right_heading txt_center zen_B">
-                          受益者の受ける経済的利益の内容
-                        </h4>
-                        <p class="title zen_B">《行政機関》</p>
-                        <ul>
-                          <li class="profit_list">
-                            インフラ設備が破壊された場合の復旧費用の削減
-                          </li>
-                          <li class="profit_list">
-                            洪水被害による地域経済停滞の回避
-                          </li>
-                        </ul>
-                        <p class="title zen_B">《水道会社》</p>
-                        <ul>
-                          <li class="profit_list">
-                            洪水による上下水道管設備の破壊の回避
-                          </li>
-                          <li class="profit_list">水質の改善</li>
-                        </ul>
-                        <p class="title zen_B">《保険会社》</p>
-                        <ul>
-                          <li class="profit_list">
-                            洪水の発生により被害を受けた被保険者(地域住民・企業)に支払う保険金の削減
-                          </li>
-                        </ul>
+                        <div class="right-description">
+                          <img src="./assets/img/steps-illustration.JPG" alt="">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -392,6 +366,7 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
+        
       </main>
     </div>
 
