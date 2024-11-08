@@ -195,6 +195,7 @@
   color: #fff;
   font-size: 28px;
   padding: 13px 94px;
+  font-family: var(--first-font);
 }
 
 .number_heading {
@@ -204,6 +205,7 @@
   font-size: 28px;
   padding: 13px 26px;
   cursor: pointer;
+  font-family: var(--first-font);
 }
 
 .number_heading.active {
@@ -276,6 +278,7 @@
 
 .reference_modal_title {
   color: var(--blue-color);
+  font-family: var(--second-font);
   font-size: 22px;
   margin-top: 25px;
   margin-bottom: 10px;
