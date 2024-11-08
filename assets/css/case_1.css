@@ -38,6 +38,7 @@
 	height: 100%;
 	justify-content: flex-end;
 	margin-right: 70px;
+	 
 }
 
 .btn {
@@ -46,7 +47,7 @@
 	font-size: 20px;
 	padding-bottom: 12px;
 	padding-top: 12px;
-	width: 120px;
+	/* width: 120px; */
 }
 
 .right_btn {
@@ -311,15 +312,46 @@
 	justify-content: center;
 	position: relative;
 	 
+	 
 }
-
-
+.image_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the color and opacity */
+    z-index: 1; /* Ensure it appears above the image */
+    pointer-events: none; /* Allow clicks to pass through to the image */
+}
 
 .blue-border{
-	border: 2px solid #0042F5;
+	border: 3px solid #0042F5;
+}
+
+.blue-border span{
+	position: absolute;
+	top: 0;
+	right: 4px;
+	font-weight: bold;
+	color: #fff;
+	z-index: 2;
+	font-size: 20px;
 }
 .green-border{
-	border: 2px solid #125A26;
+	border: 3px solid #125A26;
+
+}
+
+.green-border span{
+	position: absolute;
+	top: 0;
+	right: 4px;
+	font-weight: bold;
+	color: #fff;
+	z-index: 2;
+	font-size: 20px;
 }
 .small_map{
 	/* content: ""; */
@@ -350,16 +382,18 @@
 	/* max-width: 80%;        */
 	margin-bottom: 15px;   
 	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .financialshceme-tooltip::after {
 	content: "";
 	position: absolute;
-	bottom: -24px;           /* Position arrow below box */
-	left: 50%;              /* Center horizontally */
-	transform: translateX(-50%);
-	transform: rotate(45deg);
-	border-width: 40px 12px 0;  /* Arrow size */
+    bottom: -41px;
+    left: 36%;
+    transform: translateX(-50%);
+    transform: rotate(42deg);
+    border-width: 58px 15px 0;
 	border-style: solid;
 	border-color: #E6F1FF transparent transparent;  /* Match background color */
 	width: 0;
@@ -368,10 +402,12 @@
 
 
   .scheme-description{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr); 
+	 
+	display: flex;
+	align-items: end;
+	justify-content: end;
 	gap:10px;
-	/* border: 1px solid red; */
+ 
   }
 
   .left-description{
@@ -419,37 +455,41 @@
   .left-description .options .option img{
 	 position: absolute;
 	 top: -30px;
-	 right: 0;
+	 right: 10px;
 
   }
 
   .left-description .options .option ul{
-	
 	background-color: #E6F1FF;
-	padding: 20px 8px;
+	padding: 20px 4px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
   }
   .options .option ul{
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	height: 100%;
+	 
 	
   }
-  .options .option ul li{
-	padding-left: 8px;
-	display: relative;
-  }
- .option ul li::before {
-	color: #328ffc;
-	content: "•";
-	font-size: 40px;
-	left: 0;
-	position: absolute;
-	/* top: 50%; */
-	/* transform: translateY(-50%); */
+  .options .option ul li {
+    padding-left: 20px;  
+    display: inline-block;   
+    line-height: 1.5;
+    position: relative;  
+	 
 }
 
-
+.option ul li::before {
+    position: absolute;
+    color: #328ffc;
+    content: "•";
+    font-size: 40px;
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);   
+}
 
 
 

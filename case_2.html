@@ -53,7 +53,7 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.13"
+              data-x="0.23"
               data-y="0.4"
               data-id="case1_map1"
             />
@@ -65,13 +65,22 @@
               data-y="0.4"
               data-id="case1_map2"
             />
+
+            <img
+              src="./assets/img/magnifier.png"
+              alt="magnifier"
+              class="magnifier_icon"
+              data-x="0.60"
+              data-y="0.4"
+              data-id="case1_map3"
+            />
             <img
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
               data-x="0.45"
-              data-y="0.5"
-              data-id="case1_map3"
+              data-y="0.6"
+              data-id="case1_map4"
             />
           </div>
         </div>
@@ -116,11 +125,7 @@
                   金融スキーム
                 </button>
               </li>
-              <li class="menu_list">
-                <button id="menu_button3" class="menu_button">
-                  フィールド詳細
-                </button>
-              </li>
+               
             </ul>
           </div>
         </section>
@@ -131,6 +136,40 @@
             Promotion Program(JPJ012187).<br />
             Simulator　development：University of Yamanashi Kazuaki Ohtsuki
           </p>
+        </div>
+        <!-- model here -->
+        <div id="image_modal1" class="detailed_modal">
+          <div class="image_modal_container">
+            <button class="detail_modal_close flex">
+              <img src="./assets/img/close-outline.svg" alt="close" />
+            </button>
+            <div class="detailed_model_content">
+              <h3>住宅における雨庭</h3>
+              <p>屋根やタイル等に溜まった雨水を貯留池やタンクに一時的に貯留し、近隣の河川への雨水の急激な流出を防ぐことで、洪水の発生を抑制する</p>
+              <img src="./assets/img/Rain-garden-in-a-house.JPG" alt="">
+            </div>
+          </div>
+        </div>
+
+         <!-- model here -->
+        <div id="image_modal2" class="detailed_modal">
+          <div class="image_modal_container">
+            <button class="detail_modal_close flex">
+              <img src="./assets/img/close-outline.svg" alt="close" />
+            </button>
+            <div class="detailed_model_content">
+              <h3>事業所における雨庭</h3>
+               <div class="content">
+                <img src="./assets/img/Rain-gardens-at-business-sites.JPG" alt="">
+                <ul>
+                  <li>地上に降った雨水をゆっくりと地中に浸透させたり貯留させたりすることで、急激な河川の増水を防ぎ、洪水の発生を抑制する </li>
+                  <li>雨庭は、生物多様性の保全、水質浄化、植栽等による景観形成の機能も果たす</li>
+                </ul>
+                
+               </div>
+              
+            </div>
+          </div>
         </div>
 
         <div class="modal">
@@ -156,63 +195,67 @@
               <div class="swiper-slide solution">
                 <div class="wrapper w_1910">
                   <h3 class="slide_section_title zen_B">
-                    雨庭と止水板を使用した洪水防止のシミュレーション
+                    雨庭の設置による洪水防止の仮想実験
                   </h3>
                   <p class="description">
-                    本シミュレーションは、個々の住宅・建物で洪水防止の対策を行うことで、地域全体で水害を抑えることを目指した仮想実験である
+                    本シミュレーションは、個々の建物に洪水防止の対策を行うことで、地域全体での水害を抑えることを目指した仮想実験である
                   </p>
                   <div class="slide_layout flex">
                     <div class="slide_left_contents">
-                      <h3 class="slide_section_title zen_B">
+                      <!-- <h3 class="slide_section_title zen_B">
                         流域の土地利用の変遷
-                      </h3>
-                      <div class="slide_layout scheme_slide flex">
+                      </h3> -->
+                      <div class="slide_layout scheme_slide">
                         <div class="image_container modal_map_container">
-                          <img
-                            src="./assets/img/no_image.png"
-                            alt=""
-                            class="scheme_left_image map_image"
-                          />
-                          <img
+                          <img src="./assets/img/case2mapmain.jpg" alt="" class="scheme_left_image map_image" />
+                          <div>
+                            <img src="./assets/img/case2-roundpin1.png" alt="loca one" class="img-loc-1 clickable_image" />
+                            <img
                             src="./assets/img/magnifier.png"
                             alt="magnifier"
                             class="magnifier_icon"
-                            data-x="0.13"
-                            data-y="0.18"
-                            data-id="case2_modal_map1"
+                            data-x="0.08"
+                            data-y="0.17"
+                             
                           />
-                          <img
-                            src="./assets/img/magnifier.png"
-                            alt="magnifier"
-                            class="magnifier_icon"
-                            data-x="0.05"
-                            data-y="0.2"
-                            data-id="case2_modal_map2"
-                          />
-                        </div>
-                        <div class="slide_right_contents">
-                          <h3 class="slide_right_title zen_B txt_center">
-                            地域における洪水リスク低下の定量効果
-                          </h3>
-                          <div class="contents_wrapper">
-                            <div
-                              class="image_container slide_right_image_container"
-                            >
-                              <img
-                                src="./assets/img/no_image.png"
-                                alt=""
-                                class="scheme_right_image clickable_image"
-                              />
-                              <img
-                                src="./assets/img/magnifier.png"
-                                alt="magnifier"
-                                class="zoom_image"
-                              />
-                            </div>
                           </div>
-                          <p class="result zen_B">
-                            個々の適応策の集積により 地域全体の洪水リスクが低下
-                          </p>
+                          <div class="exp-text">
+                              <p>雨水の河川への流出量低下</p>
+                              <img src="./assets/img/right-arrow-blue.png" alt="">
+
+                          </div>
+                         
+
+                          <div>
+                            <img src="./assets/img/case2-roundpin2.png" alt="loca one" class="img-loc-2 clickable_image" />
+                            <img
+                              src="./assets/img/magnifier.png"
+                              alt="magnifier"
+                              class="magnifier_icon"
+                              data-x="0.16"
+                              data-y="0.15"
+                              
+                            />
+                          </div>
+
+                          
+                          <div class="location-box">
+
+                          </div>
+                          
+                          
+                        </div>
+
+
+                        <div class="slide_right_contents">
+                          
+                          <div class="left-content">
+                              <img
+                                src="./assets/img/case2graph1.jpg"
+                                alt=""
+                                 
+                              />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -222,65 +265,65 @@
               <div class="swiper-slide">
                 <div class="wrapper w_1910">
                   <h3 class="slide_section_title zen_B">
-                    投融資を利用した金融スキーム(地域の特定の受益者が適応策実施費用を負担する)
+                    保険を利用した金融スキーム（地域の個人・企業全員が適応策実施費用を負担する）
                   </h3>
                   <p class="description">
-                    対象流域において、1947年当時の貯水・浸透能力に匹敵するグリーンインフラを整備した場合の洪水害抑制効果を予測する仮想実験である
+                    地域単位の災害コストを抑えるための適応ファイナンスであるcommunity-based catastrophe insurance (CBCI)のスキームを利用し、 対象地域の個人・企業全員を保険に加入させることで、従来の洪水保険より低廉な保険料を実現する
                   </p>
                   <div class="slide_layout scheme_slide flex">
-                    <div class="image_container">
-                      <img
-                        src="./assets/img/no_image.png"
-                        alt=""
-                        class="scheme_left_image"
-                      />
-                    </div>
-                    <div class="slide_right_contents">
-                      <h3 class="slide_right_title zen_B txt_center">
-                        地域における洪水リスク低下の定量効果
-                      </h3>
-                      <div class="contents_wrapper">
-                        <div
-                          class="image_container slide_right_image_container"
-                        >
-                          <img
-                            src="./assets/img/no_image.png"
-                            alt=""
-                            class="scheme_right_image clickable_image"
-                          />
-                          <img
-                            src="./assets/img/magnifier.png"
-                            alt="magnifier"
-                            class="zoom_image"
-                          />
+
+                    <div class="financial-scheme-wapper">
+                      <div class="financialshceme-tooltip">
+                        <div class="illustation-content">
+                          <div class="left-illustration">
+                             <img src="./assets/img/Reduced-flood-risk.JPG" alt="">
+                             <div class="tooltip">
+                               <div class="tooltip-text">
+                                   地域全体の洪水リスクの低下
+                               </div>
+                           </div>
+                          </div>
+                           <div class="right-illustration">
+                             <h4>CBCI(community-based catastrophe insurance)</h4>
+                             <div class="descriptions">
+                               <div class="illustration-list">
+                                 <ul>
+                                   <li>洪水リスク低下の適応価値を保険料に反映 </li>
+                                   <li>地域の個人・企業全員がCBCIに加入する</li>
+                                 </ul>
+ 
+                                 <p>PJ実施費用を含めた保険料の 減少を達成</p>
+                               </div>
+                               <img src="./assets/img/CBCI.JPG" alt="">
+                             </div>
+                          </div>
                         </div>
-                        <h4 class="slide_right_heading txt_center zen_B">
-                          受益者の受ける経済的利益の内容
-                        </h4>
-                        <p class="title zen_B">《行政機関》</p>
-                        <ul>
-                          <li class="profit_list">
-                            インフラ設備が破壊された場合の復旧費用の削減
-                          </li>
-                          <li class="profit_list">
-                            洪水被害による地域経済停滞の回避
-                          </li>
-                        </ul>
-                        <p class="title zen_B">《水道会社》</p>
-                        <ul>
-                          <li class="profit_list">
-                            洪水による上下水道管設備の破壊の回避
-                          </li>
-                          <li class="profit_list">水質の改善</li>
-                        </ul>
-                        <p class="title zen_B">《保険会社》</p>
-                        <ul>
-                          <li class="profit_list">
-                            洪水の発生により被害を受けた被保険者(地域住民・企業)に支払う保険金の削減
-                          </li>
-                        </ul>
                       </div>
+
+                      <div class="bottom-illustration">
+                        <div class="left-content">
+                          <h2>対象地域の住民・企業</h2>
+                          <div class="contents">
+                            <h3>地域の個人・企業全員がCBCIに加入</h3>
+                            <div class="box-wapper">
+                              <div class="box">
+                                <img src="./assets/img/house-img.JPG" alt="住民" />
+                                <p>住民</p>
+                              </div>
+                              <div class="box">
+                                <img src="./assets/img/building-img.JPG" alt="企業" />
+                                 <p>企業</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right-content">
+                        <img src="./assets/img/Courtesy-of-CBCI.JPG" alt="">
+                        </div>
+                      </div>
+
                     </div>
+                    
                   </div>
                 </div>
               </div>
@@ -437,24 +480,30 @@
       const data = [
         {
           id: "case1_map1",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case1_map2",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case1_map3",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
+        },
+        {
+          id: "case1_map4",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case2_modal_map1",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
         {
           id: "case2_modal_map2",
-          src: "./assets/img/no_image.png",
+          src: "./assets/img/casemapzoom.jpg",
         },
+
+        
       ];
 
       /*--------------------
@@ -486,6 +535,24 @@
 
       window.addEventListener("resize", debounce(setIconPositions, 200));
       window.addEventListener("load", setIconPositions);
+
+      /*--------------------
+      case top button
+      --------------------*/
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = {
+          offButton: document.getElementById("button1"),
+          onButton: document.getElementById("button2"),
+        };
+
+        function toggleButton() {
+          buttons.offButton.classList.toggle("active");
+          buttons.onButton.classList.toggle("active");
+        }
+
+        buttons.offButton.addEventListener("click", toggleButton);
+        buttons.onButton.addEventListener("click", toggleButton);
+      });
 
       /*--------------------
       case top button
@@ -538,50 +605,70 @@
       --------------------*/
       document.addEventListener("DOMContentLoaded", () => {
         const images = document.querySelectorAll(".clickable_image");
+        const modals = document.querySelectorAll(".detailed_modal");
+        const closeButtons = document.querySelectorAll(".detail_modal_close");
 
-        images.forEach((image) => {
+        // Show modal when an image is clicked
+        images.forEach((image, index) => {
           image.addEventListener("click", () => {
-            openModal(image.src);
+            modals[index].classList.add("active");
           });
         });
 
-        function openModal(imgSrc) {
-          const modal = document.getElementById("image_modal");
-
-          let modalImageContainer = modal.querySelector(
-            ".image_modal_container"
-          );
-          if (!modalImageContainer) {
-            modalImageContainer = document.createElement("div");
-            modalImageContainer.classList.add("image_modal_container");
-            modal.appendChild(modalImageContainer);
-          }
-
-          modalImageContainer.innerHTML = "";
-
-          let modalCloseButton = modal.querySelector(".image_modal_close");
-          if (!modalCloseButton) {
-            modalCloseButton = document.createElement("button");
-            modalCloseButton.classList.add("image_modal_close", "flex");
-            const closeIcon = document.createElement("img");
-            closeIcon.src = "./assets/img/close-outline.svg";
-            closeIcon.alt = "close";
-            modalCloseButton.appendChild(closeIcon);
-          }
-          modalImageContainer.appendChild(modalCloseButton);
-
-          const modalImage = document.createElement("img");
-          modalImage.src = imgSrc;
-          modalImage.classList.add("larger_image");
-          modalImageContainer.appendChild(modalImage);
-
-          modal.classList.add("active");
-
-          modalCloseButton.addEventListener("click", () => {
-            modal.classList.remove("active");
+        // Close the modal when the close button is clicked
+        closeButtons.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            modals[index].classList.remove("active");
           });
-        }
+        });
       });
+
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const images = document.querySelectorAll(".clickable_image");
+
+      //   images.forEach((image) => {
+      //     image.addEventListener("click", () => {
+      //       openModal(image.src);
+      //     });
+      //   });
+
+      //   function openModal(imgSrc) {
+      //     const modal = document.getElementById("image_modal");
+
+      //     let modalImageContainer = modal.querySelector(
+      //       ".image_modal_container"
+      //     );
+      //     if (!modalImageContainer) {
+      //       modalImageContainer = document.createElement("div");
+      //       modalImageContainer.classList.add("image_modal_container");
+      //       modal.appendChild(modalImageContainer);
+      //     }
+
+      //     modalImageContainer.innerHTML = "";
+
+      //     let modalCloseButton = modal.querySelector(".image_modal_close");
+      //     if (!modalCloseButton) {
+      //       modalCloseButton = document.createElement("button");
+      //       modalCloseButton.classList.add("image_modal_close", "flex");
+      //       const closeIcon = document.createElement("img");
+      //       closeIcon.src = "./assets/img/close-outline.svg";
+      //       closeIcon.alt = "close";
+      //       modalCloseButton.appendChild(closeIcon);
+      //     }
+      //     modalImageContainer.appendChild(modalCloseButton);
+
+      //     const modalImage = document.createElement("img");
+      //     modalImage.src = imgSrc;
+      //     modalImage.classList.add("larger_image");
+      //     modalImageContainer.appendChild(modalImage);
+
+      //     modal.classList.add("active");
+
+      //     modalCloseButton.addEventListener("click", () => {
+      //       modal.classList.remove("active");
+      //     });
+      //   }
+      // });
 
       /*--------------------
       modal close button
@@ -620,12 +707,7 @@
           }
         });
 
-        button3.addEventListener("click", () => {
-          modal.classList.add("active");
-          if (window.modalSwiper) {
-            window.modalSwiper.slideTo(3);
-          }
-        });
+         
       });
 
       /*--------------------
@@ -851,9 +933,9 @@
           localStorage.setItem("selectedLanguage", selectedLanguage);
 
           if (selectedLanguage === "japanese") {
-            window.location.href = "./case_1.html";
+            window.location.href = "./case_2.html";
           } else if (selectedLanguage === "english") {
-            window.location.href = "./case_1_en.html";
+            window.location.href = "./case_2_en.html";
           }
         });
       });
