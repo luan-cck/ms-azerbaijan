@@ -54,34 +54,17 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.23"
-              data-y="0.4"
+              data-x="0.32"
+              data-y="0.53"
               data-id="case1_map1"
             />
             <img
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.65"
-              data-y="0.4"
+              data-x="0.39"
+              data-y="0.51"
               data-id="case1_map2"
-            />
-
-            <img
-              src="./assets/img/magnifier.png"
-              alt="magnifier"
-              class="magnifier_icon"
-              data-x="0.60"
-              data-y="0.4"
-              data-id="case1_map3"
-            />
-            <img
-              src="./assets/img/magnifier.png"
-              alt="magnifier"
-              class="magnifier_icon"
-              data-x="0.45"
-              data-y="0.6"
-              data-id="case1_map4"
             />
           </div>
         </div>
@@ -8462,11 +8445,11 @@
       const data = [
         {
           id: 'case1_map1',
-          src: './assets/img/casemapzoom.jpg',
+          src: './assets/img/simulation2-1-1.png',
         },
         {
           id: 'case1_map2',
-          src: './assets/img/casemapzoom.jpg',
+          src: './assets/img/simulation2-1-2.png',
         },
         {
           id: 'case1_map3',
@@ -8534,8 +8517,12 @@
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-1.png';
+            data[0].src = './assets/img/simulation2-1-1.png';
+            data[1].src = './assets/img/simulation2-1-2.png';
           } else if (buttons.onButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-3.png';
+            data[0].src = './assets/img/simulation2-3-1.png';
+            data[1].src = './assets/img/simulation2-3-2.png';
           }
         }
 
@@ -8545,8 +8532,12 @@
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-2.png';
+            data[0].src = './assets/img/simulation2-2-1.png';
+            data[1].src = './assets/img/simulation2-2-2.png';
           } else if (buttons.onButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-4.png';
+            data[0].src = './assets/img/simulation2-4-1.png';
+            data[1].src = './assets/img/simulation2-4-2.png';
           }
         }
 
@@ -8556,8 +8547,12 @@
 
           if (buttons.offButton1.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-1.png';
+            data[0].src = './assets/img/simulation2-1-1.png';
+            data[1].src = './assets/img/simulation2-1-2.png';
           } else if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-2.png';
+            data[0].src = './assets/img/simulation2-2-1.png';
+            data[1].src = './assets/img/simulation2-2-2.png';
           }
         }
 
@@ -8567,8 +8562,12 @@
 
           if (buttons.offButton1.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-3.png';
+            data[0].src = './assets/img/simulation2-3-1.png';
+            data[1].src = './assets/img/simulation2-3-2.png';
           } else {
             simulation1.src = './assets/img/simulation2-4.png';
+            data[0].src = './assets/img/simulation2-4-1.png';
+            data[1].src = './assets/img/simulation2-4-2.png';
           }
         }
 

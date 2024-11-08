@@ -54,8 +54,8 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.23"
-              data-y="0.4"
+              data-x="0.69"
+              data-y="0.68"
               data-id="case1_map1"
             />
 
@@ -63,25 +63,17 @@
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.61"
-              data-y="0.4"
+              data-x="0.73"
+              data-y="0.64"
               data-id="case1_map2"
             />
             <img
               src="./assets/img/magnifier.png"
               alt="magnifier"
               class="magnifier_icon"
-              data-x="0.65"
-              data-y="0.4"
+              data-x="0.77"
+              data-y="0.60"
               data-id="case1_map3"
-            />
-            <img
-              src="./assets/img/magnifier.png"
-              alt="magnifier"
-              class="magnifier_icon"
-              data-x="0.45"
-              data-y="0.6"
-              data-id="case1_map4"
             />
           </div>
         </div>
@@ -8332,27 +8324,15 @@
       const data = [
         {
           id: 'case1_map1',
-          src: './assets/img/casemapzoom.jpg',
+          src: './assets/img/simulation1-1-1.png',
         },
         {
           id: 'case1_map2',
-          src: './assets/img/casemapzoom.jpg',
+          src: './assets/img/simulation1-1-2.png',
         },
         {
           id: 'case1_map3',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case1_map4',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case2_modal_map1',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case2_modal_map2',
-          src: './assets/img/casemapzoom.jpg',
+          src: './assets/img/simulation1-1-3.png',
         },
       ];
 
@@ -8404,8 +8384,14 @@
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-1.png';
+            data[0].src = './assets/img/simulation1-1-1.png';
+            data[1].src = './assets/img/simulation1-1-2.png';
+            data[2].src = './assets/img/simulation1-1-3.png';
           } else if (buttons.onButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-3.png';
+            data[0].src = './assets/img/simulation1-3-1.png';
+            data[1].src = './assets/img/simulation1-3-2.png';
+            data[2].src = './assets/img/simulation1-3-3.png';
           }
         }
 
@@ -8415,8 +8401,14 @@
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-2.png';
+            data[0].src = './assets/img/simulation1-2-1.png';
+            data[1].src = './assets/img/simulation1-2-2.png';
+            data[2].src = './assets/img/simulation1-2-3.png';
           } else if (buttons.onButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-4.png';
+            data[0].src = './assets/img/simulation1-4-1.png';
+            data[1].src = './assets/img/simulation1-4-2.png';
+            data[2].src = './assets/img/simulation1-4-3.png';
           }
         }
 
@@ -8426,8 +8418,14 @@
 
           if (buttons.offButton1.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-1.png';
+            data[0].src = './assets/img/simulation1-1-1.png';
+            data[1].src = './assets/img/simulation1-1-2.png';
+            data[2].src = './assets/img/simulation1-1-3.png';
           } else if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-2.png';
+            data[0].src = './assets/img/simulation1-2-1.png';
+            data[1].src = './assets/img/simulation1-2-2.png';
+            data[2].src = './assets/img/simulation1-2-3.png';
           }
         }
 
@@ -8437,8 +8435,14 @@
 
           if (buttons.offButton1.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-3.png';
+            data[0].src = './assets/img/simulation1-3-1.png';
+            data[1].src = './assets/img/simulation1-3-2.png';
+            data[2].src = './assets/img/simulation1-3-3.png';
           } else {
             simulation1.src = './assets/img/simulation1-4.png';
+            data[0].src = './assets/img/simulation1-4-1.png';
+            data[1].src = './assets/img/simulation1-4-2.png';
+            data[2].src = './assets/img/simulation1-4-3.png';
           }
         }
 
