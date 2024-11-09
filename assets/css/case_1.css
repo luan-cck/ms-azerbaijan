@@ -305,12 +305,16 @@
 	justify-content: center;
 	/* margin-top: 24px; */
 	
+	width: auto;
+	height: 20vh;
+	
 }
 
 
 .image_container {
 	justify-content: center;
 	position: relative;
+	height: 100%;
 	 
 	 
 }
@@ -700,6 +704,7 @@
 
 
 .blue-arrow{
+
 	position: absolute;
 	bottom: -36px;
 	left: 50%;
