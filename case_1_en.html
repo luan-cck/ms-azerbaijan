@@ -24,7 +24,10 @@
               </span>
               <span>Select a case</span>
             </a>
-            <a href="./index_en.html" class="header_button top_page_button flex">
+            <a
+              href="./index_en.html"
+              class="header_button top_page_button flex"
+            >
               <img
                 src="./assets/img/home_white.svg"
                 alt="home"
@@ -8413,11 +8416,19 @@
             data[0].src = './assets/img/simulation1-1-1.png';
             data[1].src = './assets/img/simulation1-1-2.png';
             data[2].src = './assets/img/simulation1-1-3.png';
+
+            magnifierIcons.forEach((icon) => {
+              icon.style.display = 'block';
+            });
           } else if (buttons.onButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-3.png';
             data[0].src = './assets/img/simulation1-3-1.png';
             data[1].src = './assets/img/simulation1-3-2.png';
             data[2].src = './assets/img/simulation1-3-3.png';
+
+            magnifierIcons.forEach((icon) => {
+              icon.style.display = 'block';
+            });
           }
         }
 
@@ -8427,14 +8438,16 @@
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-2.png';
-            data[0].src = './assets/img/simulation1-2-1.png';
-            data[1].src = './assets/img/simulation1-2-2.png';
-            data[2].src = './assets/img/simulation1-2-3.png';
+
+            magnifierIcons.forEach((icon) => {
+              icon.style.display = 'none';
+            });
           } else if (buttons.onButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-4.png';
-            data[0].src = './assets/img/simulation1-4-1.png';
-            data[1].src = './assets/img/simulation1-4-2.png';
-            data[2].src = './assets/img/simulation1-4-3.png';
+
+            magnifierIcons.forEach((icon) => {
+              icon.style.display = 'none';
+            });
           }
         }
 
