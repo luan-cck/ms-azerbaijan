@@ -8451,22 +8451,6 @@
           id: 'case1_map2',
           src: './assets/img/simulation2-1-2.png',
         },
-        {
-          id: 'case1_map3',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case1_map4',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case2_modal_map1',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case2_modal_map2',
-          src: './assets/img/casemapzoom.jpg',
-        },
       ];
 
       /*--------------------
@@ -8519,10 +8503,18 @@
             simulation1.src = './assets/img/simulation2-1.png';
             data[0].src = './assets/img/simulation2-1-1.png';
             data[1].src = './assets/img/simulation2-1-2.png';
+
+            magnifierIcons.forEach((icon) => {
+              icon.style.display = 'block';
+            });
           } else if (buttons.onButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-3.png';
             data[0].src = './assets/img/simulation2-3-1.png';
             data[1].src = './assets/img/simulation2-3-2.png';
+
+            magnifierIcons.forEach((icon) => {
+              icon.style.display = 'block';
+            });
           }
         }
 
@@ -8532,12 +8524,16 @@
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-2.png';
-            data[0].src = './assets/img/simulation2-2-1.png';
-            data[1].src = './assets/img/simulation2-2-2.png';
+
+            magnifierIcons.forEach((icon) => {
+              icon.style.display = 'none';
+            });
           } else if (buttons.onButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-4.png';
-            data[0].src = './assets/img/simulation2-4-1.png';
-            data[1].src = './assets/img/simulation2-4-2.png';
+
+            magnifierIcons.forEach((icon) => {
+              icon.style.display = 'none';
+            });
           }
         }
 
