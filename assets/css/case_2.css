@@ -89,6 +89,21 @@
   width: 100%;
 }
 
+.magnifier_icon_1 {
+  width: 120px;
+  position: absolute;
+  z-index: 10;
+  top: 260px;
+  left: 50px;
+}
+.magnifier_icon_2 {
+  width: 120px;
+  position: absolute;
+  z-index: 10;
+  top: 260px;
+  left: 225px;
+}
+
 .magnifier_icon {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -793,7 +808,7 @@
 
 .graph-picture .zoom_image {
   position: absolute;
-  bottom: 20%;
+  bottom: 25%;
   right: 5%;
 }
 
