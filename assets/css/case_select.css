@@ -114,6 +114,7 @@
 
 .case_image {
   max-width: 441px;
+  margin: 0 auto;
 }
 
 .description {
