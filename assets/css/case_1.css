@@ -236,6 +236,7 @@
 
 .modal_swiper {
 	width: 100%;
+	height: 100%;
 	 
 }
 
@@ -305,12 +306,16 @@
 	justify-content: center;
 	/* margin-top: 24px; */
 	
+	width: auto;
+	height: 20vh;
+	
 }
 
 
 .image_container {
 	justify-content: center;
 	position: relative;
+	height: 100%;
 	 
 	 
 }
@@ -371,35 +376,16 @@
 	display: flex;
 	flex-direction: column;
 }
-
+.title-tab2 {
+	margin-left: 10px;
+}
 
 .financialshceme-tooltip{
 	position: relative;
-	background-color: #E6F1FF;  /* Red background */
-	color: white;              /* White text */
-	padding: 15px;
-	border-radius: 8px;       /* Rounded corners */
-	/* max-width: 80%;        */
-	margin-bottom: 15px;   
-	width: 100%;
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
+	padding-top: 20px;
 }
-
-.financialshceme-tooltip::after {
-	content: "";
-	position: absolute;
-    bottom: -41px;
-    left: 36%;
-    transform: translateX(-50%);
-    transform: rotate(42deg);
-    border-width: 58px 15px 0;
-	border-style: solid;
-	border-color: #E6F1FF transparent transparent;  /* Match background color */
-	width: 0;
-	height: 0;
-  }
-
 
   .scheme-description{
 	 
@@ -700,6 +686,7 @@
 
 
 .blue-arrow{
+
 	position: absolute;
 	bottom: -36px;
 	left: 50%;
@@ -881,7 +868,7 @@
 }
 
 .swiper-slide {
-	height: 70vh;
+	height: 100%;
 	 
 }
 
