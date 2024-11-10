@@ -322,6 +322,17 @@
   /* padding: 1px; */
 }
 
+.image_container .img-loc-1-en {
+  position: absolute;
+  top: 55%;
+  left: 59px;
+  width: 135px;
+  height: 135px;
+  border: 1px solid #ff5ad9;
+  border-radius: 50%;
+  z-index: 1;
+}
+
 .image_container .img-loc-2 {
   position: absolute;
   top: 40%;
@@ -333,6 +344,17 @@
   border-radius: 50%;
   z-index: 1;
   /* padding: 1px; */
+}
+
+.image_container .img-loc-2-en {
+  position: absolute;
+  top: 55%;
+  left: 329px;
+  width: 135px;
+  height: 135px;
+  border: 2px solid #ff5ad9;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 /* detailed modal */
