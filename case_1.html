@@ -75,6 +75,13 @@
               data-y="0.60"
               data-id="case1_map3"
             />
+
+            <img
+              id="case1_map_note_1"
+              src="./assets/img/jp_water_case1.svg"
+              class="case1_map_note"
+              alt=""
+            />
           </div>
         </div>
         <section class="case">
@@ -193,7 +200,6 @@
                             class="basin_image clickable_image"
                           />
                           <div class="line-1"></div>
-                          
                         </div>
 
                         <div class="image_container green-border">
@@ -249,7 +255,8 @@
                           />
                         </div>
 
-                        <img style="width:125px;height:33px;"
+                        <img
+                          style="width: 125px; height: 33px"
                           src="./assets/img/arow.svg"
                           alt="blue-arrow"
                           class="blue-arrow"
@@ -305,7 +312,6 @@
                   <div class="financialshceme-tooltip">
                     <img src="./assets/img/all1.jpg" alt="" />
                   </div>
-
                 </div>
               </div>
             </div>
@@ -8305,6 +8311,7 @@
       --------------------*/
       document.addEventListener('DOMContentLoaded', () => {
         const simulation1 = document.getElementById('simulation-1');
+        const case1Note1 = document.getElementById('case1_map_note_1');
         const buttons = {
           offButton1: document.getElementById('button1'),
           onButton1: document.getElementById('button2'),
@@ -8315,6 +8322,8 @@
         function toggleButton1() {
           buttons.offButton1.classList.toggle('active');
           buttons.onButton1.classList.remove('active');
+
+          case1Note1.src = './assets/img/jp_water_case1.svg';
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-1.png';
@@ -8340,6 +8349,8 @@
         function toggleButton2() {
           buttons.offButton1.classList.toggle('active');
           buttons.onButton1.classList.toggle('active');
+
+          case1Note1.src = './assets/img/jp_money_case1.svg';
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-2.png';

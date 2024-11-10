@@ -69,6 +69,13 @@
               data-y="0.51"
               data-id="case1_map2"
             />
+
+            <img
+              id="case2_map_note_1"
+              src="./assets/img/en_water_case2.svg"
+              class="case2_map_note"
+              alt=""
+            />
           </div>
         </div>
         <section class="case">
@@ -126,14 +133,6 @@
           </div>
         </section>
 
-        <!-- <div class="case_bottom">
-          <p class="case_bottom_text">
-            This work was supported by Cross-ministerial Strategic Innovation
-            Promotion Program(JPJ012187).<br />
-            Simulator　development：University of Yamanashi Kazuaki Ohtsuki
-          </p>
-        </div> -->
-        <!-- model here -->
         <div id="image_modal1" class="detailed_modal">
           <div class="content_modal_container">
             <button class="detail_modal_close flex">
@@ -246,26 +245,6 @@
                               data-y="0.37"
                             />
                           </div>
-                          <!-- <img
-                            src="./assets/img/case2mapmain.jpg"
-                            alt=""
-                            class="scheme_left_image map_image"
-                          />
-                          <div class="exp-text">
-                            <p>
-                              Decrease in the amount of rainwater flowing into
-                              rivers
-                            </p>
-                            <img
-                              src="./assets/img/right-arrow-blue.png"
-                              alt=""
-                            />
-                            <div class="line"></div>
-                          </div>
-
-                          
-
-                          <div class="location-box"></div> -->
                         </div>
                       </div>
                     </div>
@@ -8434,22 +8413,6 @@
           id: 'case1_map2',
           src: './assets/img/simulation2-1-2.png',
         },
-        {
-          id: 'case1_map3',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case1_map4',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case2_modal_map1',
-          src: './assets/img/casemapzoom.jpg',
-        },
-        {
-          id: 'case2_modal_map2',
-          src: './assets/img/casemapzoom.jpg',
-        },
       ];
 
       /*--------------------
@@ -8487,6 +8450,7 @@
       --------------------*/
       document.addEventListener('DOMContentLoaded', () => {
         const simulation1 = document.getElementById('simulation-1');
+        const case2Note1 = document.getElementById('case2_map_note_1');
         const buttons = {
           offButton1: document.getElementById('button1'),
           onButton1: document.getElementById('button2'),
@@ -8497,6 +8461,8 @@
         function toggleButton1() {
           buttons.offButton1.classList.toggle('active');
           buttons.onButton1.classList.remove('active');
+
+          case2Note1.src = './assets/img/en_water_case2.svg';
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-1.png';
@@ -8520,6 +8486,8 @@
         function toggleButton2() {
           buttons.offButton1.classList.toggle('active');
           buttons.onButton1.classList.toggle('active');
+
+          case2Note1.src = './assets/img/en_money_case2.svg';
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-2.png';

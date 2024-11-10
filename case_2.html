@@ -66,6 +66,13 @@
               data-y="0.51"
               data-id="case1_map2"
             />
+
+            <img
+              id="case2_map_note_1"
+              src="./assets/img/jp_water_case2.svg"
+              class="case2_map_note"
+              alt=""
+            />
           </div>
         </div>
         <section class="case">
@@ -112,7 +119,7 @@
             </ul>
           </div>
         </section>
-         <!-- model here -->
+        <!-- model here -->
         <div id="image_modal1" class="detailed_modal">
           <div class="content_modal_container">
             <button class="detail_modal_close flex">
@@ -184,32 +191,31 @@
                       <div class="slide_layout scheme_slide">
                         <div class="image_container modal_map_container">
                           <img
-                          src="./assets/img/all2.jpg"
-                          alt=""
-                          class="scheme_left_image map_image"
-                        />
-                        <div>
-                          
-                          <img
-                            src="./assets/img/button1.png"
-                            alt="magnifier1"
-                            class="magnifier_icon_1"
-                            data-x="0.77"
-                            data-y="0.60"
-                            data-id="case1_map1"
+                            src="./assets/img/all2.jpg"
+                            alt=""
+                            class="scheme_left_image map_image"
                           />
+                          <div>
+                            <img
+                              src="./assets/img/button1.png"
+                              alt="magnifier1"
+                              class="magnifier_icon_1"
+                              data-x="0.77"
+                              data-y="0.60"
+                              data-id="case1_map1"
+                            />
+                          </div>
+                          <div>
+                            <img
+                              src="./assets/img/button2.png"
+                              alt="magnifier2"
+                              class="magnifier_icon_2"
+                              data-x="0.77"
+                              data-y="0.60"
+                              data-id="case1_map1"
+                            />
+                          </div>
                         </div>
-                        <div>
-                          <img
-                            src="./assets/img/button2.png"
-                            alt="magnifier2"
-                            class="magnifier_icon_2"
-                            data-x="0.77"
-                            data-y="0.60"
-                            data-id="case1_map1"
-                          />
-                        </div>
-                      </div>
                       </div>
                     </div>
                   </div>
@@ -225,11 +231,7 @@
                     catastrophe insurance (CBCI)のスキームを利用し、
                     対象地域の個人・企業全員を保険に加入させることで、従来の洪水保険より低廉な保険料を実現する
                   </p>
-                  <img
-                    src="./assets/img/all3.jpg"
-                    alt=""
-                    />
-                  
+                  <img src="./assets/img/all3.jpg" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
@@ -305,7 +307,6 @@
                                     class="zoom_image"
                                   />
                                 </div>
-                                
                               </div>
                             </div>
                           </div>
@@ -8387,6 +8388,7 @@
       --------------------*/
       document.addEventListener('DOMContentLoaded', () => {
         const simulation1 = document.getElementById('simulation-1');
+        const case2Note1 = document.getElementById('case2_map_note_1');
         const buttons = {
           offButton1: document.getElementById('button1'),
           onButton1: document.getElementById('button2'),
@@ -8397,6 +8399,8 @@
         function toggleButton1() {
           buttons.offButton1.classList.toggle('active');
           buttons.onButton1.classList.remove('active');
+
+          case2Note1.src = './assets/img/jp_water_case2.svg';
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-1.png';
@@ -8420,6 +8424,8 @@
         function toggleButton2() {
           buttons.offButton1.classList.toggle('active');
           buttons.onButton1.classList.toggle('active');
+
+          case2Note1.src = './assets/img/jp_money_case2.svg';
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation2-2.png';
