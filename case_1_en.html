@@ -8356,7 +8356,7 @@
         };
 
         function toggleButton1() {
-          buttons.offButton1.classList.toggle('active');
+          buttons.offButton1.classList.add('active');
           buttons.onButton1.classList.remove('active');
 
           case1Note1.src = './assets/img/en_water.svg';
@@ -8383,8 +8383,8 @@
         }
 
         function toggleButton2() {
-          buttons.offButton1.classList.toggle('active');
-          buttons.onButton1.classList.toggle('active');
+          buttons.offButton1.classList.remove('active');
+          buttons.onButton1.classList.add('active');
 
           case1Note1.src = './assets/img/en_money.svg';
 
@@ -8404,7 +8404,7 @@
         }
 
         function toggleButton3() {
-          buttons.offButton2.classList.toggle('active');
+          buttons.offButton2.classList.add('active');
           buttons.onButton2.classList.remove('active');
 
           if (buttons.offButton1.classList.contains('active')) {
@@ -8422,7 +8422,7 @@
 
         function toggleButton4() {
           buttons.offButton2.classList.remove('active');
-          buttons.onButton2.classList.toggle('active');
+          buttons.onButton2.classList.add('active');
 
           if (buttons.offButton1.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-3.png';
