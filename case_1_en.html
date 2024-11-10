@@ -78,6 +78,13 @@
               data-y="0.60"
               data-id="case1_map3"
             />
+
+            <img
+              id="case1_map_note_1"
+              src="./assets/img/en_water.svg"
+              class="case1_map_note"
+              alt=""
+            />
           </div>
         </div>
         <section class="case">
@@ -342,72 +349,6 @@
                     alt=""
                     style="margin-top: 20px"
                   />
-
-                  <!-- <div class="slide_layout scheme_slide flex">
-                    <div class="scheme">
-                      <div class="financialshceme-tooltip">
-                        <img src="./assets/img/finance-scheme.jpg" alt="" />
-                      </div>
-                      <div class="scheme-description">
-                        <div class="left-description">
-                          <h3>
-                            Stakeholders <br />(specific beneficiaries of the
-                            adaptation value)
-                          </h3>
-                          <div class="options">
-                            <div class="option">
-                              <img
-                                src="./assets/img/house-ico.png"
-                                alt=""
-                                style="width: 25%; top: -46px"
-                              />
-                              <h4>Government</h4>
-                              <ul>
-                                <li>
-                                  Reduction in infrastructure restoration costs
-                                </li>
-                                <li>Avoiding a stagnant regional economy</li>
-                              </ul>
-                            </div>
-                            <div class="option">
-                              <img
-                                src="./assets/img/building-ico2.png"
-                                alt=""
-                                style="width: 20%; top: -48px"
-                              />
-                              <h4>Insurance company</h4>
-                              <ul>
-                                <li>
-                                  Reduction of insurance payments to insured
-                                  persons (Local residents and businesses)
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="option">
-                              <img
-                                src="./assets/img/building-ico.png"
-                                alt=""
-                                style="width: 20%; top: -40px"
-                              />
-                              <h4>Water Company</h4>
-                              <ul>
-                                <li>
-                                  Reducing the cost of water system repairs
-                                </li>
-                                <li>Water quality improvement</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="right-description">
-                          <img
-                            src="./assets/img/steps-illustration.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -8406,6 +8347,7 @@
       --------------------*/
       document.addEventListener('DOMContentLoaded', () => {
         const simulation1 = document.getElementById('simulation-1');
+        const case1Note1 = document.getElementById('case1_map_note_1');
         const buttons = {
           offButton1: document.getElementById('button1'),
           onButton1: document.getElementById('button2'),
@@ -8416,6 +8358,8 @@
         function toggleButton1() {
           buttons.offButton1.classList.toggle('active');
           buttons.onButton1.classList.remove('active');
+
+          case1Note1.src = './assets/img/en_water.svg';
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-1.png';
@@ -8441,6 +8385,8 @@
         function toggleButton2() {
           buttons.offButton1.classList.toggle('active');
           buttons.onButton1.classList.toggle('active');
+
+          case1Note1.src = './assets/img/en_money.svg';
 
           if (buttons.offButton2.classList.contains('active')) {
             simulation1.src = './assets/img/simulation1-2.png';

@@ -89,6 +89,14 @@
   width: 100%;
 }
 
+.case2_map_note {
+  position: absolute;
+  width: 250px;
+  background-color: white;
+  left: 20px;
+  bottom: 20px;
+}
+
 .magnifier_icon_1 {
   width: 120px;
   position: absolute;
