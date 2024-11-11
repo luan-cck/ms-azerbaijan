@@ -107,11 +107,10 @@ textarea {
 
 .aspect_ratio_container {
   left: 50%;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-
   width: 100% !important;
 }
 
