@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/ress.min.css" />
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/style_en.css" />
+    <link rel="stylesheet" href="./ress.min.css" />
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./style_en.css" />
     <title>Document</title>
   </head>
   <body class="layout flex">
@@ -27,47 +27,35 @@
         <section class="fv">
           <div class="wrapper w_1910">
             <h1 class="page_title txt_center zen_M">
-              Visualization and quantification of
-              adaptation value DX and finance model
+              Visualization and quantification of adaptation value DX and
+              finance model
             </h1>
 
-              <a href="./case_select_en.html" class="top_button flex zen_B">
-                <span class="text">Start Simulation</span>
-                <span class="image">
-                  <img
-                    src="./assets/img/triangle.svg"
-                    alt="triangle"
-                    class="top_button_image"
-                  />
+            <a href="./case_select_en.html" class="top_button flex zen_B">
+              <span class="text">Start Simulation</span>
+              <span class="image">
+                <img
+                  src="./triangle.svg"
+                  alt="triangle"
+                  class="top_button_image"
+                />
+              </span>
+            </a>
+            <div class="top_button_container flex">
+              <a href="./outline_en.html" class="outline_link flex zen_B">
+                <span class="image flex">
+                  <img src="./question.svg" alt="question" />
+                </span>
+                <span class="text"> Brief description of this exhibition </span>
+              </a>
+              <a href="./consortium_en.html" class="consortium_link flex zen_B">
+                <span class="image flex">
+                  <img src="./question.svg" alt="question" />
+                </span>
+                <span class="text">
+                  About Us : Japan Consortium for Adaptation Finance
                 </span>
               </a>
-              <div class="top_button_container flex">
-                <a
-                  href="./outline_en.html"
-                  class="outline_link flex zen_B"
-                >
-                  <span class="image flex">
-                    <img src="./assets/img/question.svg" alt="question" />
-                  </span>
-                  <span class="text">
-                    Brief
-                    description of
-                    this exhibition
-                  </span>
-                </a>
-                <a
-                  href="./consortium_en.html"
-                  class="consortium_link flex zen_B"
-                >
-                  <span class="image flex">
-                    <img src="./assets/img/question.svg" alt="question" />
-                  </span>
-                  <span class="text">
-                    About Us : Japan Consortium
-                    for Adaptation Finance
-                  </span>
-                </a>
-              </div>
             </div>
           </div>
         </section>
@@ -80,7 +68,7 @@
       --------------------*/
 
       function setAspectRatio() {
-        const container = document.getElementById("aspectContainer");
+        const container = document.getElementById('aspectContainer');
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         const aspectRatio = 16 / 9;
@@ -94,17 +82,19 @@
         }
       }
 
-      window.addEventListener("resize", setAspectRatio);
-      document.addEventListener("DOMContentLoaded", setAspectRatio);
+      window.addEventListener('resize', setAspectRatio);
+      document.addEventListener('DOMContentLoaded', setAspectRatio);
 
       /*--------------------
       top_page_right_adjusting
       --------------------*/
 
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
         function setHeight() {
-          const empty = document.querySelector(".empty");
-          const linkContainer = document.querySelector(".description_link_container");
+          const empty = document.querySelector('.empty');
+          const linkContainer = document.querySelector(
+            '.description_link_container'
+          );
 
           if (empty) {
             const containerHeight = linkContainer.offsetHeight;
@@ -119,8 +109,8 @@
       Set_organization_container_margintop
       --------------------*/
       function setMarginTop() {
-        const organization = document.querySelector(".organization_container");
-        const slide = document.querySelector(".organization_slide");
+        const organization = document.querySelector('.organization_container');
+        const slide = document.querySelector('.organization_slide');
 
         // 332 is the sum of the height of the organization_container and the height of the section_title (including margin).
         // Since this height is fixed, a variable is not used.
@@ -130,26 +120,26 @@
         }
       }
 
-      document.addEventListener("DOMContentLoaded", setMarginTop);
-      window.addEventListener("resize", setMarginTop);
-
+      document.addEventListener('DOMContentLoaded', setMarginTop);
+      window.addEventListener('resize', setMarginTop);
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const languageSelect = document.getElementById("language_select");
+      document.addEventListener('DOMContentLoaded', () => {
+        const languageSelect = document.getElementById('language_select');
 
-        const currentLang = localStorage.getItem("selectedLanguage") || "japanese";
+        const currentLang =
+          localStorage.getItem('selectedLanguage') || 'japanese';
         languageSelect.value = currentLang;
 
-        languageSelect.addEventListener("change", function (event) {
+        languageSelect.addEventListener('change', function (event) {
           const selectedLanguage = event.target.value;
 
-          localStorage.setItem("selectedLanguage", selectedLanguage);
+          localStorage.setItem('selectedLanguage', selectedLanguage);
 
-          if (selectedLanguage === "japanese") {
-            window.location.href = "./index.html";
-          } else if (selectedLanguage === "english") {
-            window.location.href = "./index_en.html";
+          if (selectedLanguage === 'japanese') {
+            window.location.href = './index.html';
+          } else if (selectedLanguage === 'english') {
+            window.location.href = './index_en.html';
           }
         });
       });

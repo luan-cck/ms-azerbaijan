@@ -1,67 +1,63 @@
 @font-face {
-	font-family: "Zen Kaku Gothic New, Medium";
-	src: url("../fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+  font-family: 'Zen Kaku Gothic New, Medium';
+  src: url('./ZenKakuGothicNew-Medium.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: "Zen Kaku Gothic New, Bold";
-	src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format("truetype");
+  font-family: 'Zen Kaku Gothic New, Bold';
+  src: url('./ZenKakuGothicNew-Bold.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: "Avenir, Book";
-	src: url(../fonts/Avenir\ Book.ttf) format("truetype");
+  font-family: 'Avenir, Book';
+  src: url('./Avenir\ Book.ttf') format('truetype');
 }
 
 .outline_contents {
-	background-color: #fff;
-	/* height: 65vh; */
-	margin: 60px auto 0 auto;
-	max-width: 1500px;
-	padding-bottom: 40px;
+  background-color: #fff;
+  /* height: 65vh; */
+  margin: 60px auto 0 auto;
+  max-width: 1500px;
+  padding-bottom: 40px;
 }
 
 .outline_contents_container {
-	height: 100%;
-	padding: 72px 66px 0 66px;
-	 
+  height: 100%;
+  padding: 72px 66px 0 66px;
 }
 
 .outline_text {
-	font-size: 26px;
-	line-height: 40px;
-	list-style-type: disc;
+  font-size: 26px;
+  line-height: 40px;
+  list-style-type: disc;
 }
 
 .outline_text .bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .outline_text:last-of-type {
-	margin-top: 24px;
+  margin-top: 24px;
 }
 
 .outline_text::marker {
-	color: #328ffc;
+  color: #328ffc;
 }
 
 .outline_contents_image {
-	-o-object-fit: contain;
-	object-fit: contain;
-	width: 45%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 45%;
 }
 
 @media screen and (max-width: 1400px) {
+  .outline_contents {
+    margin: 30px auto 0 auto;
+    max-width: 1250px;
+  }
 
-.outline_contents {
-	margin: 30px auto 0 auto;
-	max-width: 1250px;
+  .outline_text {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
-
-.outline_text {
-	font-size: 24px;
-	line-height: 30px;
-}
-
-}
-
