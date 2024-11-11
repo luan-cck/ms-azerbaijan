@@ -37,14 +37,14 @@
 }
 
 .swiper-button-next:after {
-  content: url('../img/chevron-forward-outline.svg');
+  /* content: url('../img/chevron-forward-outline.svg'); */
   height: 80px !important;
   margin-right: 0px;
   width: 68px !important;
 }
 
 .swiper-button-prev:after {
-  content: url('../img/chevron-back-outline.svg');
+  /* content: url('../img/chevron-back-outline.svg'); */
   height: 80px !important;
   margin-left: 0px;
   width: 68px !important;
