@@ -16,11 +16,7 @@
           <div class="header_right_contents flex">
             <a href="./case_select.html" class="case_select_link flex zen_B">
               <span>
-                <img
-                  src="./list-ul-solid.svg"
-                  alt="ケース選択"
-                  class="image"
-                />
+                <img src="./list-ul-solid.svg" alt="ケース選択" class="image" />
               </span>
               <span>ケース選択</span>
             </a>
@@ -212,6 +208,7 @@
                             src="./icon-zoom.svg"
                             alt="magnifier"
                             class="zoom_image"
+                            onclick="handleZoom('./detail3.jpg')"
                           />
                         </div>
                         <div class="image_container blue-border">
@@ -224,6 +221,7 @@
                             src="./icon-zoom.svg"
                             alt="magnifier"
                             class="zoom_image"
+                            onclick="handleZoom('./detail2.jpg')"
                           />
                         </div>
                       </div>
@@ -252,6 +250,7 @@
                             src="./icon-zoom.svg"
                             alt="magnifier"
                             class="zoom_image"
+                            onclick="handleZoom('./casemapfield1.jpg')"
                           />
                         </div>
 
@@ -272,6 +271,7 @@
                             src="./icon-zoom.svg"
                             alt="magnifier"
                             class="zoom_image"
+                            onclick="handleZoom('./casemapfield2.jpg')"
                           />
                         </div>
                       </div>
@@ -287,6 +287,7 @@
                               src="./icon-zoom.svg"
                               alt="magnifier"
                               class="zoom_image"
+                              onclick="handleZoom('./casemapfieldworkers.jpg')"
                             />
                           </div>
                         </div>
@@ -8281,6 +8282,45 @@
       --------------------*/
       const mapContainer = document.querySelector('.map_container');
       const magnifierIcons = document.querySelectorAll('.magnifier_icon');
+
+      function handleZoom(imageSrc) {
+        openModal(imageSrc);
+      }
+
+      function openModal(imgSrc) {
+        const modal = document.getElementById('image_modal');
+
+        let modalImageContainer = modal.querySelector('.image_modal_container');
+        if (!modalImageContainer) {
+          modalImageContainer = document.createElement('div');
+          modalImageContainer.classList.add('image_modal_container');
+          modal.appendChild(modalImageContainer);
+        }
+
+        modalImageContainer.innerHTML = '';
+
+        let modalCloseButton = modal.querySelector('.image_modal_close');
+        if (!modalCloseButton) {
+          modalCloseButton = document.createElement('button');
+          modalCloseButton.classList.add('image_modal_close', 'flex');
+          const closeIcon = document.createElement('img');
+          closeIcon.src = './close-outline.svg';
+          closeIcon.alt = 'close';
+          modalCloseButton.appendChild(closeIcon);
+        }
+        modalImageContainer.appendChild(modalCloseButton);
+
+        const modalImage = document.createElement('img');
+        modalImage.src = imgSrc;
+        modalImage.classList.add('larger_image');
+        modalImageContainer.appendChild(modalImage);
+
+        modal.classList.add('active');
+
+        modalCloseButton.addEventListener('click', () => {
+          modal.classList.remove('active');
+        });
+      }
 
       function setIconPositions() {
         const containerWidth = mapContainer.offsetWidth;

@@ -16,11 +16,7 @@
           <div class="header_right_contents flex">
             <a href="./case_select.html" class="case_select_link flex zen_B">
               <span>
-                <img
-                  src="./list-ul-solid.svg"
-                  alt="ケース選択"
-                  class="image"
-                />
+                <img src="./list-ul-solid.svg" alt="ケース選択" class="image" />
               </span>
               <span>ケース選択</span>
             </a>
@@ -144,10 +140,7 @@
             <div class="detailed_model_content">
               <h3>事業所における雨庭</h3>
               <div class="content">
-                <img
-                  src="./Rain-gardens-at-business-sites.jpg"
-                  alt=""
-                />
+                <img src="./Rain-gardens-at-business-sites.jpg" alt="" />
                 <ul>
                   <li>
                     地上に降った雨水をゆっくりと地中に浸透させたり貯留させたりすることで、急激な河川の増水を防ぎ、洪水の発生を抑制する
@@ -272,7 +265,7 @@
                               <div class="map-section">
                                 <div class="map-image-cover">
                                   <img
-                                    src="./original-levee-footproint.JPG"
+                                    src="./original-levee-footproint.jpg"
                                     alt="Map"
                                     class="map-image clickable_image"
                                   />
@@ -280,6 +273,7 @@
                                     src="./icon-zoom.svg"
                                     alt="magnifier"
                                     class="zoom_image"
+                                    onclick="handleZoom('./original-levee-footproint.jpg')"
                                   />
                                 </div>
 
@@ -305,6 +299,7 @@
                                     src="./icon-zoom.svg"
                                     alt="magnifier"
                                     class="zoom_image"
+                                    onclick="handleZoom('./detail1.jpg')"
                                   />
                                 </div>
                               </div>
@@ -8290,6 +8285,45 @@
       })();
     </script>
     <script>
+      function handleZoom(imageSrc) {
+        openModal(imageSrc);
+      }
+
+      function openModal(imgSrc) {
+        const modal = document.getElementById('image_modal');
+
+        let modalImageContainer = modal.querySelector('.image_modal_container');
+        if (!modalImageContainer) {
+          modalImageContainer = document.createElement('div');
+          modalImageContainer.classList.add('image_modal_container');
+          modal.appendChild(modalImageContainer);
+        }
+
+        modalImageContainer.innerHTML = '';
+
+        let modalCloseButton = modal.querySelector('.image_modal_close');
+        if (!modalCloseButton) {
+          modalCloseButton = document.createElement('button');
+          modalCloseButton.classList.add('image_modal_close', 'flex');
+          const closeIcon = document.createElement('img');
+          closeIcon.src = './close-outline.svg';
+          closeIcon.alt = 'close';
+          modalCloseButton.appendChild(closeIcon);
+        }
+        modalImageContainer.appendChild(modalCloseButton);
+
+        const modalImage = document.createElement('img');
+        modalImage.src = imgSrc;
+        modalImage.classList.add('larger_image');
+        modalImageContainer.appendChild(modalImage);
+
+        modal.classList.add('active');
+
+        modalCloseButton.addEventListener('click', () => {
+          modal.classList.remove('active');
+        });
+      }
+
       document.addEventListener('DOMContentLoaded', () => {
         const images = document.querySelectorAll('.clickable_image');
 
