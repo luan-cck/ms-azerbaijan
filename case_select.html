@@ -8674,6 +8674,45 @@
     </script>
 
     <script>
+      function handleZoom(imageSrc) {
+        openModal(imageSrc);
+      }
+
+      function openModal(imgSrc) {
+        const modal = document.getElementById('image_modal');
+
+        let modalImageContainer = modal.querySelector('.image_modal_container');
+        if (!modalImageContainer) {
+          modalImageContainer = document.createElement('div');
+          modalImageContainer.classList.add('image_modal_container');
+          modal.appendChild(modalImageContainer);
+        }
+
+        modalImageContainer.innerHTML = '';
+
+        let modalCloseButton = modal.querySelector('.image_modal_close');
+        if (!modalCloseButton) {
+          modalCloseButton = document.createElement('button');
+          modalCloseButton.classList.add('image_modal_close', 'flex');
+          const closeIcon = document.createElement('img');
+          closeIcon.src = './close-outline.svg';
+          closeIcon.alt = 'close';
+          modalCloseButton.appendChild(closeIcon);
+        }
+        modalImageContainer.appendChild(modalCloseButton);
+
+        const modalImage = document.createElement('img');
+        modalImage.src = imgSrc;
+        modalImage.classList.add('larger_image');
+        modalImageContainer.appendChild(modalImage);
+
+        modal.classList.add('active');
+
+        modalCloseButton.addEventListener('click', () => {
+          modal.classList.remove('active');
+        });
+      }
+
       document.addEventListener('DOMContentLoaded', () => {
         /*--------------------
           case_select_swiper
@@ -8808,47 +8847,6 @@
         /*--------------------
           zoom modal image
           --------------------*/
-
-        function handleZoom(imageSrc) {
-          openModal(imageSrc);
-        }
-
-        function openModal(imgSrc) {
-          const modal = document.getElementById('image_modal');
-
-          let modalImageContainer = modal.querySelector(
-            '.image_modal_container'
-          );
-          if (!modalImageContainer) {
-            modalImageContainer = document.createElement('div');
-            modalImageContainer.classList.add('image_modal_container');
-            modal.appendChild(modalImageContainer);
-          }
-
-          modalImageContainer.innerHTML = '';
-
-          let modalCloseButton = modal.querySelector('.image_modal_close');
-          if (!modalCloseButton) {
-            modalCloseButton = document.createElement('button');
-            modalCloseButton.classList.add('image_modal_close', 'flex');
-            const closeIcon = document.createElement('img');
-            closeIcon.src = './close-outline.svg';
-            closeIcon.alt = 'close';
-            modalCloseButton.appendChild(closeIcon);
-          }
-          modalImageContainer.appendChild(modalCloseButton);
-
-          const modalImage = document.createElement('img');
-          modalImage.src = imgSrc;
-          modalImage.classList.add('larger_image');
-          modalImageContainer.appendChild(modalImage);
-
-          modal.classList.add('active');
-
-          modalCloseButton.addEventListener('click', () => {
-            modal.classList.remove('active');
-          });
-        }
 
         const images = document.querySelectorAll('.clickable_image');
 
