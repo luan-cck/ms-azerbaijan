@@ -34,18 +34,12 @@
   width: initial;
 }
 
-.swiper-button-next:after {
-  /* content: url('./chevron-forward-outline.svg'); */
-  height: 80px !important;
-  margin-right: 30px;
-  width: 68px !important;
+.swiper-button-next {
+  right: 42px;
 }
 
-.swiper-button-prev:after {
-  /* content: url('./chevron-back-outline.svg'); */
-  height: 80px !important;
-  margin-left: 30px;
-  width: 68px !important;
+.swiper-button-prev {
+  left: 42px;
 }
 
 .section_title {
