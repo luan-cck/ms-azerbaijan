@@ -272,7 +272,7 @@
                               <div class="map-section">
                                 <div class="map-image-cover">
                                   <img
-                                    src="./assets/img/original-levee-footproint.JPG"
+                                    src="./assets/img/original-levee-footproint.jpg"
                                     alt="Map"
                                     class="map-image clickable_image"
                                   />
@@ -280,6 +280,7 @@
                                     src="./assets/img/icon-zoom.svg"
                                     alt="magnifier"
                                     class="zoom_image"
+                                    onclick="handleZoom('./assets/img/original-levee-footproint.jpg')"
                                   />
                                 </div>
 
@@ -305,6 +306,7 @@
                                     src="./assets/img/icon-zoom.svg"
                                     alt="magnifier"
                                     class="zoom_image"
+                                    onclick="handleZoom('./assets/img/detail1.jpg')"
                                   />
                                 </div>
                               </div>
@@ -8290,6 +8292,45 @@
       })();
     </script>
     <script>
+      function handleZoom(imageSrc) {
+        openModal(imageSrc);
+      }
+
+      function openModal(imgSrc) {
+        const modal = document.getElementById('image_modal');
+
+        let modalImageContainer = modal.querySelector('.image_modal_container');
+        if (!modalImageContainer) {
+          modalImageContainer = document.createElement('div');
+          modalImageContainer.classList.add('image_modal_container');
+          modal.appendChild(modalImageContainer);
+        }
+
+        modalImageContainer.innerHTML = '';
+
+        let modalCloseButton = modal.querySelector('.image_modal_close');
+        if (!modalCloseButton) {
+          modalCloseButton = document.createElement('button');
+          modalCloseButton.classList.add('image_modal_close', 'flex');
+          const closeIcon = document.createElement('img');
+          closeIcon.src = './assets/img/close-outline.svg';
+          closeIcon.alt = 'close';
+          modalCloseButton.appendChild(closeIcon);
+        }
+        modalImageContainer.appendChild(modalCloseButton);
+
+        const modalImage = document.createElement('img');
+        modalImage.src = imgSrc;
+        modalImage.classList.add('larger_image');
+        modalImageContainer.appendChild(modalImage);
+
+        modal.classList.add('active');
+
+        modalCloseButton.addEventListener('click', () => {
+          modal.classList.remove('active');
+        });
+      }
+
       document.addEventListener('DOMContentLoaded', () => {
         const images = document.querySelectorAll('.clickable_image');
 
@@ -8828,13 +8869,13 @@
         const languageSelect = document.getElementById('language_select');
 
         const currentLang =
-          localStorage.getItem('selectedLanguage') || 'japanese';
+          sessionStorage.getItem('selectedLanguage') || 'japanese';
         languageSelect.value = currentLang;
 
         languageSelect.addEventListener('change', function (event) {
           const selectedLanguage = event.target.value;
 
-          localStorage.setItem('selectedLanguage', selectedLanguage);
+          sessionStorage.setItem('selectedLanguage', selectedLanguage);
 
           if (selectedLanguage === 'japanese') {
             window.location.href = './case_2.html';

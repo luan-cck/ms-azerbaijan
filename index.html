@@ -31,40 +31,37 @@
               及びファイナンスモデル
             </h1>
 
-              <a href="./case_select.html" class="top_button flex zen_B">
-                <span class="text">シミュレーション開始</span>
+            <a href="./case_select.html" class="top_button flex zen_B">
+              <span class="text">シミュレーション開始</span>
+              <span class="image">
+                <img
+                  src="./assets/img/triangle.svg"
+                  alt="triangle"
+                  class="top_button_image"
+                />
+              </span>
+            </a>
+            <div class="top_button_container flex">
+              <a
+                href="./outline.html"
+                class="outline_link txt_center flex zen_B"
+              >
                 <span class="image">
-                  <img
-                    src="./assets/img/triangle.svg"
-                    alt="triangle"
-                    class="top_button_image"
-                  />
+                  <img src="./assets/img/question.svg" alt="question" />
+                </span>
+                <span class="text"> 本展示の概要説明 </span>
+              </a>
+              <a
+                href="./consortium.html"
+                class="consortium_link txt_center flex zen_B"
+              >
+                <span class="image">
+                  <img src="./assets/img/question.svg" alt="question" />
+                </span>
+                <span class="text">
+                  私たち適応ファイナンスコンソーシアムとは？
                 </span>
               </a>
-              <div class="top_button_container flex">
-                <a
-                  href="./outline.html"
-                  class="outline_link txt_center flex zen_B"
-                >
-                  <span class="image">
-                    <img src="./assets/img/question.svg" alt="question" />
-                  </span>
-                  <span class="text">
-                    本展示の概要説明
-                  </span>
-                </a>
-                <a
-                  href="./consortium.html"
-                  class="consortium_link txt_center flex zen_B"
-                >
-                  <span class="image">
-                    <img src="./assets/img/question.svg" alt="question" />
-                  </span>
-                  <span class="text">
-                    私たち適応ファイナンスコンソーシアムとは？
-                  </span>
-                </a>
-              </div>
             </div>
           </div>
         </section>
@@ -77,7 +74,7 @@
       --------------------*/
 
       function setAspectRatio() {
-        const container = document.getElementById("aspectContainer");
+        const container = document.getElementById('aspectContainer');
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         const aspectRatio = 16 / 9;
@@ -91,17 +88,19 @@
         }
       }
 
-      window.addEventListener("resize", setAspectRatio);
-      document.addEventListener("DOMContentLoaded", setAspectRatio);
+      window.addEventListener('resize', setAspectRatio);
+      document.addEventListener('DOMContentLoaded', setAspectRatio);
 
       /*--------------------
       top_page_right_adjusting
       --------------------*/
 
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
         function setHeight() {
-          const empty = document.querySelector(".empty");
-          const linkContainer = document.querySelector(".description_link_container");
+          const empty = document.querySelector('.empty');
+          const linkContainer = document.querySelector(
+            '.description_link_container'
+          );
 
           if (empty) {
             const containerHeight = linkContainer.offsetHeight;
@@ -116,8 +115,8 @@
       Set_organization_container_margintop
       --------------------*/
       function setMarginTop() {
-        const organization = document.querySelector(".organization_container");
-        const slide = document.querySelector(".organization_slide");
+        const organization = document.querySelector('.organization_container');
+        const slide = document.querySelector('.organization_slide');
 
         // 332 is the sum of the height of the organization_container and the height of the section_title (including margin).
         // Since this height is fixed, a variable is not used.
@@ -127,26 +126,26 @@
         }
       }
 
-      document.addEventListener("DOMContentLoaded", setMarginTop);
-      window.addEventListener("resize", setMarginTop);
-
+      document.addEventListener('DOMContentLoaded', setMarginTop);
+      window.addEventListener('resize', setMarginTop);
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const languageSelect = document.getElementById("language_select");
+      document.addEventListener('DOMContentLoaded', () => {
+        const languageSelect = document.getElementById('language_select');
 
-        const currentLang = localStorage.getItem("selectedLanguage") || "japanese";
+        const currentLang =
+          sessionStorage.getItem('selectedLanguage') || 'japanese';
         languageSelect.value = currentLang;
 
-        languageSelect.addEventListener("change", function (event) {
+        languageSelect.addEventListener('change', function (event) {
           const selectedLanguage = event.target.value;
 
-          localStorage.setItem("selectedLanguage", selectedLanguage);
+          sessionStorage.setItem('selectedLanguage', selectedLanguage);
 
-          if (selectedLanguage === "japanese") {
-            window.location.href = "./index.html";
-          } else if (selectedLanguage === "english") {
-            window.location.href = "./index_en.html";
+          if (selectedLanguage === 'japanese') {
+            window.location.href = './index.html';
+          } else if (selectedLanguage === 'english') {
+            window.location.href = './index_en.html';
           }
         });
       });
