@@ -8213,13 +8213,13 @@
         const languageSelect = document.getElementById('language_select');
 
         const currentLang =
-          localStorage.getItem('selectedLanguage') || 'japanese';
+          sessionStorage.getItem('selectedLanguage') || 'japanese';
         languageSelect.value = currentLang;
 
         languageSelect.addEventListener('change', function (event) {
           const selectedLanguage = event.target.value;
 
-          localStorage.setItem('selectedLanguage', selectedLanguage);
+          sessionStorage.setItem('selectedLanguage', selectedLanguage);
 
           if (selectedLanguage === 'japanese') {
             window.location.href = './consortium.html';
