@@ -763,7 +763,12 @@
 }
 
 .map-section {
-  flex: 1;
+  flex: 1;  background-color: #abadb5;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 30px;
 }
 
 .map-section .map-image-cover {
